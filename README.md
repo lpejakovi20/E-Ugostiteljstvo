@@ -20,6 +20,7 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
 Matej Ritoša | mritosa20@student.foi.hr | 0016150816 | mritosa
 Nikola Parag | nparag20@student.foi.hr | 0035217959 | nparag20
+Lovro Pejaković | lpejakovi20@student.foi.hr | 0016150223 | lpejakovi20
 
 ## Opis domene
 Umjesto ovih uputa opišite domenu ili problem koji pokrivate vašim  projektom. Domena može biti proizvoljna, ali obratite pozornost da sukladno ishodima učenja, domena omogući primjenu zahtijevanih koncepata kako je to navedeno u sljedećem poglavlju. Priložite odgovarajuće skice gdje je to prikladno.
