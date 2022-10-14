@@ -18,7 +18,7 @@ Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
+Matej Ritoša | mritosa20@student.foi.hr | 0016150816 | mritosa
 Nikola Parag | nparag20@student.foi.hr | 0035217959 | nparag20
 
 ## Opis domene
