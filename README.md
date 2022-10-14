@@ -11,8 +11,8 @@ Sav programski kod potrebno je verzionirati u glavnoj **master** grani i **obvez
 
 Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra raditi na ovom projektu. Mentor će vam slati povratne informacije kroz sekciju Discussions također dostupnu na GitHubu vašeg projekta. A sada, vrijeme je da prijavite vaš projekt. Za prijavu vašeg projektnog prijedloga molimo vas koristite **predložak** koji je naveden u nastavku, a započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta :) 
 
-# Naziv projekta
-Sustav za upravljanje količinom namirnica u ugostiteljstvu. (tbd)
+# Sustav za upravljanje količinom namirnica u ugostiteljstvu
+
 
 ## Projektni tim
 
@@ -20,7 +20,7 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
 Matej Ritoša | mritosa20@student.foi.hr | 0016150816 | mritosa
 Nikola Parag | nparag20@student.foi.hr | 0035217959 | nparag20
-Lovro Pejakoivć | lpejakovi20@student.foi.hr | 0016150223 | lpejakovi20
+Lovro Pejaković | lpejakovi20@student.foi.hr | 0016150223 | lpejakovi20
 
 ## Opis domene
 U ugostiteljstvu dolazi do problema organizacije narmirnica. Glavni kuhari često moraju voditi računa o količini namirnica na skladištu i ponekad im je teško procjeniti koliko namirnica troše i koju količinu namirnica trebaju naručiti. Zbog toga dolazi do bacanja hrane zbog prevelikih narudžba ili nedostatka namirnica za kuhanje jela. Zbog tih problema odlučili smo ugostiteljima olakšati proces nabave i upravljanja količinom namirnica.
