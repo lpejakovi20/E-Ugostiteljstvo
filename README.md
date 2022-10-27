@@ -18,15 +18,15 @@ Pristup ovom softveru će imati računovodstvo ugostiteljskih objekata i osobe n
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Login | Za pristup sustavu potrebna je autentikacija korisnika pomoću login funkcionalnosti. Korisnik bira ulogu te sa svojim podacima koji su mu dodijeljenji prilikom registracije dobiva pristup sustavu. | Matej Ritoša
-F02 | Registration | Prije nego što se korisnik može prijaviti potrebno je kreirati korisnički račun. | Lovro Pejaković
-F03 | Pregled namirnica | Korisnicima će biti omogućen pregled trenutne količine namirnica na skladištu. | Nikola Parag
-F04 | Kreiranje narudžbenice | Korisnicima će biti omogućeno dodavanje, brisanje, i izmjena količine namirnica u narudžbenici. | Nikola Parag
-F05 | Unos potrošenih namirnica | Korisnicima će biti omogućen unos dnevnih potrošenih namirnica. Ostali će korisnici će automatski moći vidjeti promjene broja  namirnica. | Lovro Pejaković
-F06 | Pregled narudžbenica | Korisnici koji će biti prijavljeni s ulogom računovodstva će imati mogućnost pregleda svih narudžbenica. | Matej Ritoša
-F07 | Generiranje izvještaja potrošenih namirnica. | Korisnici koji će biti prijavljeni s ulogom računovodstva imati mogućnost generiranja izvještaja koji će sadržavati popis količine potrošene hrane. | Nikola Parag
-F08 | Generiranje izvještaja o troškovima | Korisnici koji će biti prijavljeni s ulogom računovodstva imati mogućnost generiranja izvještaja koji će sadržavati popis svih troškova namirnica. | Lovro Pejaković
-F09 | Statistika iskorištenosti namirnica  | Sustav će računovodstvu omogućiti kreirati statistički izvještaj o iskorištenosti namirnica tokom svakog mjeseca u tekućoj godini. | Matej Ritoša
+F01 | Login i Registracija | Za pristup sustavu potrebna je registracija korisnika u sustav i njegova prijava. Prijava će biti omoguće pomoću skeniranja lica. | Matej Ritoša
+F02 | Unos u katalog namirnica | Korisnik će imati mogućnost unošenja tj, kreiranja namirnica. Svaka namirnica će imati vlasiti generirani QR kod s kojim će se pratiti kretanje namirnice u ugostiteljskom objektu. | Lovro Pejaković
+F03 | Pregled namirnica | Korisnicima će biti omogućeno pretraživanje, sortiranje i filtriranje po različitim kriterijima sve namirnice na skladištu. | Nikola Parag
+F04 | Kreiranje narudžbenice | Korisnicima će biti omogućeno dodavanje, brisanje, i izmjena količine namirnica u narudžbenici. Narudžbenica će se moći kreirati ručno (ručnim dodavanjem stavku po stavku) ili automatski (softver prepoznaje koji artikli su pali ispod minimalnih zaliha i kreiraju stavke sa količinama dostatnim da se dođe do optimalne količine). | Matej Ritoša
+F05 | Unos potrošenih namirnica | Korisnicima će biti omogućeno izdavanje namirnica u kuhinji(pri tome se generira i ispisuje dokument izdatnica). Namirnice se dodaju u stavke izdatnice korištenjem QR koda na namirnici.  | Lovro Pejaković
+F06 | Pregled narudžbenica | Korisnici koji će biti prijavljeni s ulogom računovodstva će imati mogućnost pretraživanja, sortiranja i filtriranja po različitim kriterijima sve narudžbenice. Uz to biti će omogućen prikaz detalja pojedine narudžbenice te njen ispis u obliku PDF dokumenta. | Matej Ritoša
+F07 | Generiranje izvještaja potrošenih namirnica. | Korisnici koji će biti prijavljeni s ulogom računovodstva  imati će mogućnost generiranja i ispis izvještaja sa popisom namirnica kojima se bliži rok uporabe. | Nikola Parag
+F08 | Izrada primke | Korisnici koji će biti prijavljeni s ulogom računovodstva imati mogućnost mogućnost zaprimanja namirnica na temelju izrađene narudžbenice. Sa narudžbenice se automatski dodaju stavke na primku. | Lovro Pejaković
+F09 | Statistika iskorištenosti namirnica  | Sustav će računovodstvu omogućiti kreirati statistički izvještaj o iskorištenosti namirnica tokom svakog mjeseca u tekućoj godini te prikaz namirnica kojima je prošao rok. | Lovro Pejaković
 
 ## Tehnologije i oprema
 Visual studio Code 2022, Visual Paradigm, Figma, Github...
