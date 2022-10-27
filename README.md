@@ -19,7 +19,7 @@ Pristup ovom softveru će imati računovodstvo ugostiteljskih objekata i osobe n
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
 F01 | Login i Registracija | Za pristup sustavu potrebna je registracija korisnika u sustav i njegova prijava. Prijava će biti omoguće pomoću skeniranja lica. | Matej Ritoša
-F02 | Unos u katalog namirnica | Korisnik će imati mogućnost unošenja tj, kreiranja namirnica. Svaka namirnica će imati vlasiti generirani QR kod s kojim će se pratiti kretanje namirnice u ugostiteljskom objektu. | Lovro Pejaković
+F02 | Unos u katalog namirnica | Korisnik će imati mogućnost unošenja tj, kreiranja namirnica. Svaka namirnica će imati vlasiti generirani QR kod s kojim će se pratiti kretanje namirnice u ugostiteljskom objektu. | Nikola Parag
 F03 | Pregled namirnica | Korisnicima će biti omogućeno pretraživanje, sortiranje i filtriranje po različitim kriterijima sve namirnice na skladištu. | Nikola Parag
 F04 | Kreiranje narudžbenice | Korisnicima će biti omogućeno dodavanje, brisanje, i izmjena količine namirnica u narudžbenici. Narudžbenica će se moći kreirati ručno (ručnim dodavanjem stavku po stavku) ili automatski (softver prepoznaje koji artikli su pali ispod minimalnih zaliha i kreiraju stavke sa količinama dostatnim da se dođe do optimalne količine). | Matej Ritoša
 F05 | Unos potrošenih namirnica | Korisnicima će biti omogućeno izdavanje namirnica u kuhinji(pri tome se generira i ispisuje dokument izdatnica). Namirnice se dodaju u stavke izdatnice korištenjem QR koda na namirnici.  | Lovro Pejaković
