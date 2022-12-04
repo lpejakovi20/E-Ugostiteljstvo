@@ -58,6 +58,12 @@
     <Compile Include="FrmDodajNamirnicuUKatalog.Designer.cs">
       <DependentUpon>FrmDodajNamirnicuUKatalog.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIzvjestajBlizuRok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzvjestajBlizuRok.Designer.cs">
+      <DependentUpon>FrmIzvjestajBlizuRok.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmKatalogNamirnica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDodajNamirnicuUKatalog.resx">
       <DependentUpon>FrmDodajNamirnicuUKatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzvjestajBlizuRok.resx">
+      <DependentUpon>FrmIzvjestajBlizuRok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKatalogNamirnica.resx">
       <DependentUpon>FrmKatalogNamirnica.cs</DependentUpon>
