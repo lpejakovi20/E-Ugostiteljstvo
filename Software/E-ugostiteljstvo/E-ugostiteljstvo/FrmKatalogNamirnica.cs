@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace E_ugostiteljstvo
 {
-    public partial class Form1 : Form
+    public partial class FrmKatalogNamirnica : Form
     {
-        public Form1()
+        public FrmKatalogNamirnica()
         {
             InitializeComponent();
         }
 
-
+ 
     }
 }
