@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDodajNamirnicuUKatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajNamirnicuUKatalog.Designer.cs">
+      <DependentUpon>FrmDodajNamirnicuUKatalog.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmKatalogNamirnica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajNamirnicuUKatalog.resx">
+      <DependentUpon>FrmDodajNamirnicuUKatalog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKatalogNamirnica.resx">
       <DependentUpon>FrmKatalogNamirnica.cs</DependentUpon>
