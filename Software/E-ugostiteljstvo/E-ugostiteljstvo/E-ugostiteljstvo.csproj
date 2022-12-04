@@ -58,6 +58,12 @@
     <Compile Include="FrmDodajNamirnicuUKatalog.Designer.cs">
       <DependentUpon>FrmDodajNamirnicuUKatalog.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDodajStavkuIzdatnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajStavkuIzdatnice.Designer.cs">
+      <DependentUpon>FrmDodajStavkuIzdatnice.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIzvjestajBlizuRok.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,30 @@
     <Compile Include="FrmKatalogNamirnica.Designer.cs">
       <DependentUpon>FrmKatalogNamirnica.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNarudzbenice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNarudzbenice.Designer.cs">
+      <DependentUpon>FrmNarudzbenice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStatistikaIskoristenosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStatistikaIskoristenosti.Designer.cs">
+      <DependentUpon>FrmStatistikaIskoristenosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStavkeIzdatnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStavkeIzdatnice.Designer.cs">
+      <DependentUpon>FrmStavkeIzdatnice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStavkeNarudzbenice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStavkeNarudzbenice.Designer.cs">
+      <DependentUpon>FrmStavkeNarudzbenice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -78,11 +108,26 @@
     <EmbeddedResource Include="FrmDodajNamirnicuUKatalog.resx">
       <DependentUpon>FrmDodajNamirnicuUKatalog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajStavkuIzdatnice.resx">
+      <DependentUpon>FrmDodajStavkuIzdatnice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIzvjestajBlizuRok.resx">
       <DependentUpon>FrmIzvjestajBlizuRok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKatalogNamirnica.resx">
       <DependentUpon>FrmKatalogNamirnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNarudzbenice.resx">
+      <DependentUpon>FrmNarudzbenice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStatistikaIskoristenosti.resx">
+      <DependentUpon>FrmStatistikaIskoristenosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStavkeIzdatnice.resx">
+      <DependentUpon>FrmStavkeIzdatnice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStavkeNarudzbenice.resx">
+      <DependentUpon>FrmStavkeNarudzbenice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
