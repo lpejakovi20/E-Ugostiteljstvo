@@ -46,5 +46,15 @@
   <ItemGroup>
     <Folder Include="Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{d0cf52d0-9515-496f-a1f6-0a34c6042cfa}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntitiesLayer\EntitiesLayer.csproj">
+      <Project>{dd687fc1-6da2-4e6a-b7f2-ec15401059bb}</Project>
+      <Name>EntitiesLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
