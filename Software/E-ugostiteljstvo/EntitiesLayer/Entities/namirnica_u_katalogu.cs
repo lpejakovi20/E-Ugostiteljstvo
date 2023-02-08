@@ -38,6 +38,8 @@ namespace EntitiesLayer.Entities
 
         public int zaposlenik_id { get; set; }
 
+        public int rok_uporabe { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<iskoristenost_namirnice> iskoristenost_namirnice { get; set; }
 

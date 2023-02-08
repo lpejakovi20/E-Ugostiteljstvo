@@ -33,9 +33,10 @@ namespace EntitiesLayer.Entities
         [StringLength(255)]
         public string lozinka { get; set; }
 
-        [Required]
-        [StringLength(255)]
-        public string slika { get; set; }
+        
+        
+
+        public byte[] slika { get; set; }
 
         public int uloga_id { get; set; }
 

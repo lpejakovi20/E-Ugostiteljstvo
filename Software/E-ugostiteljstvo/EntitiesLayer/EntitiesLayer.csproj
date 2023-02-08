@@ -47,6 +47,7 @@
     <Compile Include="Entities\namirnica_u_katalogu.cs" />
     <Compile Include="Entities\narudzbenica.cs" />
     <Compile Include="Entities\uloga.cs" />
+    <Compile Include="Entities\uloga.Ext.cs" />
     <Compile Include="Entities\zaposlenik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
