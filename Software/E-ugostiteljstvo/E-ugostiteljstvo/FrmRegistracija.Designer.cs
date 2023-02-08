@@ -41,25 +41,27 @@
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.cmbRadnoMjesto = new System.Windows.Forms.ComboBox();
             this.btnRegistriraj = new System.Windows.Forms.Button();
+            this.btnUkljuci = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSlika)).BeginInit();
             this.SuspendLayout();
             // 
             // pcbSlika
             // 
-            this.pcbSlika.Location = new System.Drawing.Point(75, 41);
+            this.pcbSlika.Location = new System.Drawing.Point(12, 41);
             this.pcbSlika.Name = "pcbSlika";
-            this.pcbSlika.Size = new System.Drawing.Size(219, 194);
+            this.pcbSlika.Size = new System.Drawing.Size(252, 231);
             this.pcbSlika.TabIndex = 0;
             this.pcbSlika.TabStop = false;
             // 
             // btnSlikaj
             // 
-            this.btnSlikaj.Location = new System.Drawing.Point(141, 257);
+            this.btnSlikaj.Location = new System.Drawing.Point(272, 106);
             this.btnSlikaj.Name = "btnSlikaj";
             this.btnSlikaj.Size = new System.Drawing.Size(75, 23);
             this.btnSlikaj.TabIndex = 1;
             this.btnSlikaj.Text = "Slikaj";
             this.btnSlikaj.UseVisualStyleBackColor = true;
+            this.btnSlikaj.Click += new System.EventHandler(this.btnSlikaj_Click);
             // 
             // label1
             // 
@@ -150,12 +152,24 @@
             this.btnRegistriraj.TabIndex = 13;
             this.btnRegistriraj.Text = "Registriraj se";
             this.btnRegistriraj.UseVisualStyleBackColor = true;
+            this.btnRegistriraj.Click += new System.EventHandler(this.btnRegistriraj_Click);
+            // 
+            // btnUkljuci
+            // 
+            this.btnUkljuci.Location = new System.Drawing.Point(272, 56);
+            this.btnUkljuci.Name = "btnUkljuci";
+            this.btnUkljuci.Size = new System.Drawing.Size(75, 44);
+            this.btnUkljuci.TabIndex = 14;
+            this.btnUkljuci.Text = "Uključi kameru";
+            this.btnUkljuci.UseVisualStyleBackColor = true;
+            this.btnUkljuci.Click += new System.EventHandler(this.btnUkljuci_Click);
             // 
             // FrmRegistracija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(359, 571);
+            this.Controls.Add(this.btnUkljuci);
             this.Controls.Add(this.btnRegistriraj);
             this.Controls.Add(this.cmbRadnoMjesto);
             this.Controls.Add(this.txtPrezime);
@@ -171,6 +185,7 @@
             this.Controls.Add(this.pcbSlika);
             this.Name = "FrmRegistracija";
             this.Text = "FrmRegistracija";
+            this.Load += new System.EventHandler(this.FrmRegistracija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbSlika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -192,5 +207,6 @@
         private System.Windows.Forms.TextBox txtPrezime;
         private System.Windows.Forms.ComboBox cmbRadnoMjesto;
         private System.Windows.Forms.Button btnRegistriraj;
+        private System.Windows.Forms.Button btnUkljuci;
     }
 }
