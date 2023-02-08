@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnObrisiPrikaz = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKatalogNamirnica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirniceUSkladistu)).BeginInit();
             this.SuspendLayout();
@@ -57,12 +58,13 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(619, 77);
+            this.btnSearch.Location = new System.Drawing.Point(690, 79);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(130, 30);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Pretraži";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label1
             // 
@@ -83,6 +85,10 @@
             // cmbFilters
             // 
             this.cmbFilters.FormattingEnabled = true;
+            this.cmbFilters.Items.AddRange(new object[] {
+            "Mlijećni proizvodi",
+            "Meso",
+            "Sir"});
             this.cmbFilters.Location = new System.Drawing.Point(419, 83);
             this.cmbFilters.Name = "cmbFilters";
             this.cmbFilters.Size = new System.Drawing.Size(164, 24);
@@ -95,12 +101,17 @@
             this.dgvKatalogNamirnica.Name = "dgvKatalogNamirnica";
             this.dgvKatalogNamirnica.RowHeadersWidth = 51;
             this.dgvKatalogNamirnica.RowTemplate.Height = 24;
-            this.dgvKatalogNamirnica.Size = new System.Drawing.Size(705, 225);
+            this.dgvKatalogNamirnica.Size = new System.Drawing.Size(938, 225);
             this.dgvKatalogNamirnica.TabIndex = 5;
             // 
             // cmbSort
             // 
             this.cmbSort.FormattingEnabled = true;
+            this.cmbSort.Items.AddRange(new object[] {
+            "Sortiraj po najkraćemroku",
+            "Sortiraj po najdužem roku",
+            "Sortiraj po najmanjoj cijeni",
+            "Sortiraj po najvećoj cijeni"});
             this.cmbSort.Location = new System.Drawing.Point(42, 400);
             this.cmbSort.Name = "cmbSort";
             this.cmbSort.Size = new System.Drawing.Size(164, 24);
@@ -114,6 +125,7 @@
             this.btnSort.TabIndex = 7;
             this.btnSort.Text = "Sortiraj";
             this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // btnAddNewNamirnica
             // 
@@ -140,7 +152,7 @@
             this.dgvNamirniceUSkladistu.Name = "dgvNamirniceUSkladistu";
             this.dgvNamirniceUSkladistu.RowHeadersWidth = 51;
             this.dgvNamirniceUSkladistu.RowTemplate.Height = 24;
-            this.dgvNamirniceUSkladistu.Size = new System.Drawing.Size(707, 213);
+            this.dgvNamirniceUSkladistu.Size = new System.Drawing.Size(938, 213);
             this.dgvNamirniceUSkladistu.TabIndex = 10;
             // 
             // label2
@@ -170,11 +182,22 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Izbori za sortiranje";
             // 
+            // btnObrisiPrikaz
+            // 
+            this.btnObrisiPrikaz.Location = new System.Drawing.Point(838, 79);
+            this.btnObrisiPrikaz.Name = "btnObrisiPrikaz";
+            this.btnObrisiPrikaz.Size = new System.Drawing.Size(130, 30);
+            this.btnObrisiPrikaz.TabIndex = 14;
+            this.btnObrisiPrikaz.Text = "Resetiraj prikaz";
+            this.btnObrisiPrikaz.UseVisualStyleBackColor = true;
+            this.btnObrisiPrikaz.Click += new System.EventHandler(this.btnObrisiPrikaz_Click);
+            // 
             // FrmKatalogNamirnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 741);
+            this.Controls.Add(this.btnObrisiPrikaz);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -191,6 +214,7 @@
             this.Controls.Add(this.btnBack);
             this.Name = "FrmKatalogNamirnica";
             this.Text = "FrmKatalogNamirnica";
+            this.Load += new System.EventHandler(this.FrmKatalogNamirnica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKatalogNamirnica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirniceUSkladistu)).EndInit();
             this.ResumeLayout(false);
@@ -214,5 +238,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnObrisiPrikaz;
     }
 }
