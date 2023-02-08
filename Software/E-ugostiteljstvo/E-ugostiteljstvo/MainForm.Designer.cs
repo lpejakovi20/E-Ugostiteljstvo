@@ -30,13 +30,13 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSkeniraj = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegistracija = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtLozinka = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,14 +57,15 @@
             this.btnSkeniraj.Text = "Skeniraj";
             this.btnSkeniraj.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnLogin
             // 
-            this.button2.Location = new System.Drawing.Point(163, 418);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 28);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Login";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLogin.Location = new System.Drawing.Point(163, 418);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(82, 28);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // btnRegistracija
             // 
@@ -74,6 +75,7 @@
             this.btnRegistracija.TabIndex = 3;
             this.btnRegistracija.Text = "Registracija";
             this.btnRegistracija.UseVisualStyleBackColor = true;
+            this.btnRegistracija.Click += new System.EventHandler(this.btnRegistracija_Click_1);
             // 
             // label1
             // 
@@ -102,32 +104,32 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "lozinka:";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 334);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 22);
-            this.textBox1.TabIndex = 7;
+            this.txtEmail.Location = new System.Drawing.Point(106, 334);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(196, 22);
+            this.txtEmail.TabIndex = 7;
             // 
-            // textBox2
+            // txtLozinka
             // 
-            this.textBox2.Location = new System.Drawing.Point(106, 381);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 22);
-            this.textBox2.TabIndex = 8;
+            this.txtLozinka.Location = new System.Drawing.Point(106, 381);
+            this.txtLozinka.Name = "txtLozinka";
+            this.txtLozinka.Size = new System.Drawing.Size(196, 22);
+            this.txtLozinka.TabIndex = 8;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 562);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLozinka);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegistracija);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnSkeniraj);
             this.Controls.Add(this.pictureBox1);
             this.Name = "MainForm";
@@ -142,13 +144,13 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSkeniraj;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnRegistracija;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtLozinka;
     }
 }
 

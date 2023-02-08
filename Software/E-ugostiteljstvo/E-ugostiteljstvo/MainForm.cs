@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLogicLayer.Services;
 
 namespace E_ugostiteljstvo
 {
@@ -15,8 +16,51 @@ namespace E_ugostiteljstvo
         public MainForm()
         {
             InitializeComponent();
+            txtLozinka.PasswordChar = '*';
         }
 
-        
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            var servisZaposlenik = new ZaposlenikServices();
+            var zaposlenik = servisZaposlenik.GetZaposlenikByEmail(txtEmail.Text);
+
+
+            if (zaposlenik == null)
+            {
+                MessageBox.Show("Pogrešni podaci!");
+            }
+            else if (zaposlenik.lozinka != txtLozinka.Text)
+            {
+                MessageBox.Show("Pogrešna lozinka!");
+            }
+            else
+            {
+                if (zaposlenik.uloga_id == 2)
+                {
+                    var frmKuhinja = new FrmKatalogNamirnica();
+                    Hide();
+                    frmKuhinja.ShowDialog();
+                    Close();
+
+                }
+                else if (zaposlenik.uloga_id == 1)
+                {
+                    var frmRacunovodstvo = new FrmIzbornikRacunovodstvo();
+                    Hide();
+                    frmRacunovodstvo.ShowDialog();
+                    Close();
+                }
+
+            }
+        }
+
+        private void btnRegistracija_Click_1(object sender, EventArgs e)
+        {
+            var form = new FrmRegistracija();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }
