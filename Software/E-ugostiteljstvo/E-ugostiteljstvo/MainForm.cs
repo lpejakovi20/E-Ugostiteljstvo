@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer.Services;
+using EntitiesLayer;
 
 namespace E_ugostiteljstvo
 {
@@ -36,6 +37,7 @@ namespace E_ugostiteljstvo
             }
             else
             {
+                LogiraniZaposlenik.Id = zaposlenik.id;
                 if (zaposlenik.uloga_id == 2)
                 {
                     var frmKuhinja = new FrmKatalogNamirnica();
@@ -50,6 +52,7 @@ namespace E_ugostiteljstvo
                     Hide();
                     frmRacunovodstvo.ShowDialog();
                     Close();
+
                 }
 
             }
