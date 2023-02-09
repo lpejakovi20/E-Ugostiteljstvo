@@ -127,6 +127,7 @@
             this.Controls.Add(this.dgvNarudžbenica);
             this.Name = "FrmKreirajNarudžbenicu";
             this.Text = "FrmKreirajNarudžbenicu";
+            this.Load += new System.EventHandler(this.FrmKreirajNarudžbenicu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudžbenica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirnice)).EndInit();
             this.ResumeLayout(false);

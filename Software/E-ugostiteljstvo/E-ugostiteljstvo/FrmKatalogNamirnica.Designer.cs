@@ -144,6 +144,7 @@
             this.btnCreateNarudzbenica.TabIndex = 9;
             this.btnCreateNarudzbenica.Text = "Kreiraj narudžbenicu";
             this.btnCreateNarudzbenica.UseVisualStyleBackColor = true;
+            this.btnCreateNarudzbenica.Click += new System.EventHandler(this.btnCreateNarudzbenica_Click);
             // 
             // dgvNamirniceUSkladistu
             // 
