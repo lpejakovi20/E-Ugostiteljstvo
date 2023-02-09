@@ -93,10 +93,10 @@ namespace E_ugostiteljstvo
                 {
                     id = value,
                     naziv = txtNaziv.Text,
-                    vrsta = cmbVrstanNamirnice.SelectedIndex.ToString(),
+                    vrsta = cmbVrstanNamirnice.SelectedItem.ToString(),
                     minimalne_zalihe = int.Parse(txtMinZalihe.Text),
                     optimalne_zalihe = int.Parse(txtOptZalihe.Text),
-                    mjerna_jedinica = cmbMjJed.SelectedIndex.ToString(),
+                    mjerna_jedinica = cmbMjJed.SelectedItem.ToString(),
                     rok_uporabe = int.Parse(txtRokUporabe.Text),
                     cijena = decimal.Parse(txtCijena.Text),
                     zaposlenik_id = 5
