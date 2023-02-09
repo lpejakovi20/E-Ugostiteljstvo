@@ -4,6 +4,7 @@ namespace EntitiesLayer.Entities
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    
 
     public partial class namirnica_u_katalogu
     {
@@ -12,7 +13,7 @@ namespace EntitiesLayer.Entities
         {
             iskoristenost_namirnice = new HashSet<iskoristenost_namirnice>();
             namirnica = new HashSet<namirnica>();
-            narudzbenica = new HashSet<narudzbenica>();
+            namirnica_narudzbenica = new HashSet<namirnica_narudzbenica>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -36,7 +37,7 @@ namespace EntitiesLayer.Entities
 
         public int optimalne_zalihe { get; set; }
 
-        public int zaposlenik_id { get; set; }
+        public int? zaposlenik_id { get; set; }
 
         public int rok_uporabe { get; set; }
 
@@ -46,9 +47,9 @@ namespace EntitiesLayer.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<namirnica> namirnica { get; set; }
 
-        public virtual zaposlenik zaposlenik { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<narudzbenica> narudzbenica { get; set; }
+        public virtual ICollection<namirnica_narudzbenica> namirnica_narudzbenica { get; set; }
+
+        public virtual zaposlenik zaposlenik { get; set; }
     }
 }
