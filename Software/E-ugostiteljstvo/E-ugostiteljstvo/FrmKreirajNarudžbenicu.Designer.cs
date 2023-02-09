@@ -36,6 +36,8 @@
             this.btnDodaj = new System.Windows.Forms.Button();
             this.txtTraži = new System.Windows.Forms.TextBox();
             this.btnMakni = new System.Windows.Forms.Button();
+            this.txtKolicina = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudžbenica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirnice)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +70,7 @@
             this.btnSpremi.TabIndex = 2;
             this.btnSpremi.Text = "Spremi";
             this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // btnPopuni
             // 
@@ -86,6 +89,7 @@
             this.btnTraži.TabIndex = 4;
             this.btnTraži.Text = "Traži";
             this.btnTraži.UseVisualStyleBackColor = true;
+            this.btnTraži.Click += new System.EventHandler(this.btnTraži_Click);
             // 
             // btnDodaj
             // 
@@ -95,6 +99,7 @@
             this.btnDodaj.TabIndex = 5;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // txtTraži
             // 
@@ -111,12 +116,31 @@
             this.btnMakni.TabIndex = 7;
             this.btnMakni.Text = "Makni";
             this.btnMakni.UseVisualStyleBackColor = true;
+            this.btnMakni.Click += new System.EventHandler(this.btnMakni_Click);
+            // 
+            // txtKolicina
+            // 
+            this.txtKolicina.Location = new System.Drawing.Point(541, 475);
+            this.txtKolicina.Name = "txtKolicina";
+            this.txtKolicina.Size = new System.Drawing.Size(56, 22);
+            this.txtKolicina.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(538, 456);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Količina:";
             // 
             // FrmKreirajNarudžbenicu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 549);
+            this.ClientSize = new System.Drawing.Size(989, 563);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtKolicina);
             this.Controls.Add(this.btnMakni);
             this.Controls.Add(this.txtTraži);
             this.Controls.Add(this.btnDodaj);
@@ -127,6 +151,7 @@
             this.Controls.Add(this.dgvNarudžbenica);
             this.Name = "FrmKreirajNarudžbenicu";
             this.Text = "FrmKreirajNarudžbenicu";
+            this.Load += new System.EventHandler(this.FrmKreirajNarudžbenicu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudžbenica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirnice)).EndInit();
             this.ResumeLayout(false);
@@ -144,5 +169,7 @@
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.TextBox txtTraži;
         private System.Windows.Forms.Button btnMakni;
+        private System.Windows.Forms.TextBox txtKolicina;
+        private System.Windows.Forms.Label label1;
     }
 }

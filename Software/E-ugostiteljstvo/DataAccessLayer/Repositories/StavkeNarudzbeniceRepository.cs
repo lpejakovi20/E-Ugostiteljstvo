@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using EntitiesLayer.Entities;
+
+namespace DataAccessLayer.Repositories
+{
+    public class StavkeNarudzbeniceRepository : Repository<namirnica_narudzbenica>
+    {
+        public StavkeNarudzbeniceRepository() : base(new DBModel())
+        {
+        }
+
+        public override int Update(namirnica_narudzbenica entity, bool saveChanges = true)
+        {
+            if (saveChanges)
+            {
+                return SaveChanges();
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public override int Add(namirnica_narudzbenica entity, bool saveChanges = true)
+        {
+            var narudzbenica = Context.narudzbenica.SingleOrDefault(c => c.id == entity.narudzbenica_id);
+            var namirnica_u_katalogu = Context.namirnica_u_katalogu.SingleOrDefault(c => c.id == entity.namirnica_u_katalogu_id);
+            var _namirnica_narudzbenica = new namirnica_narudzbenica();
+
+            _namirnica_narudzbenica.namirnica_u_katalogu = namirnica_u_katalogu;
+            _namirnica_narudzbenica.narudzbenica = narudzbenica;
+            _namirnica_narudzbenica.kolicina = entity.kolicina;
+
+
+            Entities.Add(_namirnica_narudzbenica);
+            if (saveChanges)
+            {
+                return SaveChanges();
+            }
+            else
+            {
+                return 0;
+            }
+
+        }
+    }
+}

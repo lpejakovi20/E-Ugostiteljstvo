@@ -145,6 +145,14 @@ namespace E_ugostiteljstvo
             dgvKatalogNamirnica.DataSource = bindingSource;
         }
 
+        private void btnCreateNarudzbenica_Click(object sender, EventArgs e)
+        {
+            var frmNarudzbenica = new FrmKreirajNarudžbenicu();
+            Hide();
+            frmNarudzbenica.ShowDialog();
+            Close();
+        }
+
         private void btnAddNewNamirnica_Click(object sender, EventArgs e)
         {
             var form = new FrmDodajNamirnicuUKatalog();
