@@ -15,6 +15,7 @@ namespace DataAccessLayer
 
         public virtual DbSet<iskoristenost_namirnice> iskoristenost_namirnice { get; set; }
         public virtual DbSet<namirnica> namirnica { get; set; }
+        public virtual DbSet<namirnica_narudzbenica> namirnica_narudzbenica { get; set; }
         public virtual DbSet<namirnica_u_katalogu> namirnica_u_katalogu { get; set; }
         public virtual DbSet<narudzbenica> narudzbenica { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
@@ -44,17 +45,24 @@ namespace DataAccessLayer
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<namirnica_u_katalogu>()
-                .HasMany(e => e.narudzbenica)
-                .WithMany(e => e.namirnica_u_katalogu)
-                .Map(m => m.ToTable("namirnica_narudzbenica"));
+                .HasMany(e => e.namirnica_narudzbenica)
+                .WithRequired(e => e.namirnica_u_katalogu)
+                .HasForeignKey(e => e.namirnica_u_katalogu_id)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<narudzbenica>()
-                .Property(e => e.datum_kreiranja)
-                .IsFixedLength();
+            .Property(e => e.datum_kreiranja);
+
 
             modelBuilder.Entity<narudzbenica>()
                 .Property(e => e.sveukupan_iznos)
                 .HasPrecision(19, 4);
+
+            modelBuilder.Entity<narudzbenica>()
+                .HasMany(e => e.namirnica_narudzbenica)
+                .WithRequired(e => e.narudzbenica)
+                .HasForeignKey(e => e.narudzbenica_id)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<uloga>()
                 .HasMany(e => e.zaposlenik)
@@ -64,15 +72,13 @@ namespace DataAccessLayer
 
             modelBuilder.Entity<zaposlenik>()
                 .HasMany(e => e.namirnica_u_katalogu)
-                .WithRequired(e => e.zaposlenik)
-                .HasForeignKey(e => e.zaposlenik_id)
-                .WillCascadeOnDelete(false);
+                .WithOptional(e => e.zaposlenik)
+                .HasForeignKey(e => e.zaposlenik_id);
 
             modelBuilder.Entity<zaposlenik>()
                 .HasMany(e => e.narudzbenica)
-                .WithRequired(e => e.zaposlenik)
-                .HasForeignKey(e => e.zaposlenik_id)
-                .WillCascadeOnDelete(false);
+                .WithOptional(e => e.zaposlenik)
+                .HasForeignKey(e => e.zaposlenik_id);
         }
     }
 }
