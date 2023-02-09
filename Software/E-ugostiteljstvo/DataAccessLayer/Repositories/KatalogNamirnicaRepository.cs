@@ -14,6 +14,33 @@ namespace DataAccessLayer.Repositories
         {
         }
 
+        public override int Add(namirnica_u_katalogu entity, bool saveChanges = true)
+        {
+            var zaposlenik = Context.zaposlenik.SingleOrDefault(c => c.id == entity.zaposlenik_id);
+            var novanamirnica = new namirnica_u_katalogu();
+            novanamirnica.vrsta = entity.vrsta;
+            novanamirnica.naziv = entity.naziv;
+            novanamirnica.id = entity.id;
+            novanamirnica.mjerna_jedinica = entity.mjerna_jedinica;
+            novanamirnica.minimalne_zalihe = entity.minimalne_zalihe;
+            novanamirnica.optimalne_zalihe = entity.optimalne_zalihe;
+            novanamirnica.rok_uporabe = entity.rok_uporabe;
+            novanamirnica.cijena = entity.cijena;
+            novanamirnica.zaposlenik_id = zaposlenik.id;
+
+
+            Entities.Add(novanamirnica);
+            if (saveChanges)
+            {
+                return SaveChanges();
+            }
+            else
+            {
+                return 0;
+            }
+
+        }
+
         public IQueryable<namirnica_u_katalogu> GetAll()
         {
             var query = from p in Entities.Include("zaposlenik")

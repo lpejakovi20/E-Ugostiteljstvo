@@ -10,6 +10,17 @@ namespace BusinessLogicLayer.Services
 {
     public class KatalogNamirnicaServices
     {
+
+        public bool AddNamirnica(namirnica_u_katalogu novanamirnica)
+        {
+            bool isSuccessful = false;
+            using (var repo = new KatalogNamirnicaRepository())
+            {
+                int affectedRows = repo.Add(novanamirnica);
+                isSuccessful = affectedRows > 0;
+            }
+            return isSuccessful;
+        }
         public List<namirnica_u_katalogu> GetKatalogNamirnica()
         {
             using (var repo = new KatalogNamirnicaRepository())

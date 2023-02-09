@@ -11,12 +11,16 @@ using System.Windows.Forms;
 using ZXing.QrCode;
 using ZXing;
 using EntitiesLayer.Entities;
+using BusinessLogicLayer.Services;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace E_ugostiteljstvo
 {
     public partial class FrmDodajNamirnicuUKatalog : Form
     {
         int value = 0;
+        Bitmap qrCode = null;
         public FrmDodajNamirnicuUKatalog()
         {
             InitializeComponent();
@@ -30,7 +34,7 @@ namespace E_ugostiteljstvo
         private void btnGenerateQR_Click(object sender, EventArgs e)
         {
             value = GenerateRandomnumber();
-            Bitmap qrCode = GenerateQRCode(value);
+            qrCode = GenerateQRCode(value);
             pcbQR.Image = qrCode;
         }
 
@@ -47,7 +51,9 @@ namespace E_ugostiteljstvo
             writer.Format = BarcodeFormat.QR_CODE;
             writer.Options = options;
 
-            Bitmap qrCode = writer.Write(value.ToString());
+            qrCode = writer.Write(value.ToString());
+
+
             return qrCode;
         }
 
@@ -72,6 +78,17 @@ namespace E_ugostiteljstvo
             }
             else
             {
+
+                string directoryPath = @"C:\NamirniceQr";
+
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                string filePath = @"C:\NamirniceQr\qrCode_" + value.ToString() + ".png";
+                qrCode.Save(filePath, ImageFormat.Png);
+
                 var novaNamirnica = new namirnica_u_katalogu
                 {
                     id = value,
@@ -81,12 +98,30 @@ namespace E_ugostiteljstvo
                     optimalne_zalihe = int.Parse(txtOptZalihe.Text),
                     mjerna_jedinica = cmbMjJed.SelectedIndex.ToString(),
                     rok_uporabe = int.Parse(txtRokUporabe.Text),
+                    cijena = decimal.Parse(txtCijena.Text),
                     zaposlenik_id = 5
 
                 };
+
+                var services = new KatalogNamirnicaServices();
+
+                if (services.AddNamirnica(novaNamirnica))
+                {
+                    MessageBox.Show("Unešena nova namirnica");
+                }
+                else
+                {
+                    MessageBox.Show("Greška u unosu! Pokušajte ponovo!");
+                }
+                Close();
             }
 
             
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

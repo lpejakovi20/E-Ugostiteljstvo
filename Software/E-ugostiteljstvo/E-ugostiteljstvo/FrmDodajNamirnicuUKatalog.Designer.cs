@@ -46,6 +46,8 @@
             this.pcbQR = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbVrstanNamirnice = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtCijena = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbQR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,21 +60,21 @@
             // 
             // txtRokUporabe
             // 
-            this.txtRokUporabe.Location = new System.Drawing.Point(35, 386);
+            this.txtRokUporabe.Location = new System.Drawing.Point(35, 429);
             this.txtRokUporabe.Name = "txtRokUporabe";
             this.txtRokUporabe.Size = new System.Drawing.Size(135, 22);
             this.txtRokUporabe.TabIndex = 1;
             // 
             // txtOptZalihe
             // 
-            this.txtOptZalihe.Location = new System.Drawing.Point(35, 277);
+            this.txtOptZalihe.Location = new System.Drawing.Point(35, 320);
             this.txtOptZalihe.Name = "txtOptZalihe";
             this.txtOptZalihe.Size = new System.Drawing.Size(135, 22);
             this.txtOptZalihe.TabIndex = 2;
             // 
             // txtMinZalihe
             // 
-            this.txtMinZalihe.Location = new System.Drawing.Point(35, 222);
+            this.txtMinZalihe.Location = new System.Drawing.Point(35, 265);
             this.txtMinZalihe.Name = "txtMinZalihe";
             this.txtMinZalihe.Size = new System.Drawing.Size(135, 22);
             this.txtMinZalihe.TabIndex = 3;
@@ -86,7 +88,7 @@
             "g",
             "ml",
             "l"});
-            this.cmbMjJed.Location = new System.Drawing.Point(35, 330);
+            this.cmbMjJed.Location = new System.Drawing.Point(35, 373);
             this.cmbMjJed.Name = "cmbMjJed";
             this.cmbMjJed.Size = new System.Drawing.Size(135, 24);
             this.cmbMjJed.TabIndex = 5;
@@ -103,7 +105,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 311);
+            this.label2.Location = new System.Drawing.Point(32, 354);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 16);
             this.label2.TabIndex = 7;
@@ -112,7 +114,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 258);
+            this.label3.Location = new System.Drawing.Point(32, 301);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 16);
             this.label3.TabIndex = 8;
@@ -121,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 203);
+            this.label4.Location = new System.Drawing.Point(32, 246);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 9;
@@ -139,7 +141,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 367);
+            this.label6.Location = new System.Drawing.Point(32, 410);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 16);
             this.label6.TabIndex = 11;
@@ -183,6 +185,7 @@
             this.btnOdustani.TabIndex = 15;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // pcbQR
             // 
@@ -221,11 +224,29 @@
             this.cmbVrstanNamirnice.Size = new System.Drawing.Size(135, 24);
             this.cmbVrstanNamirnice.TabIndex = 18;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(32, 195);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 16);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Cijena:";
+            // 
+            // txtCijena
+            // 
+            this.txtCijena.Location = new System.Drawing.Point(35, 214);
+            this.txtCijena.Name = "txtCijena";
+            this.txtCijena.Size = new System.Drawing.Size(135, 22);
+            this.txtCijena.TabIndex = 20;
+            // 
             // FrmDodajNamirnicuUKatalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 513);
+            this.Controls.Add(this.txtCijena);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbVrstanNamirnice);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pcbQR);
@@ -272,5 +293,7 @@
         private System.Windows.Forms.PictureBox pcbQR;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbVrstanNamirnice;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtCijena;
     }
 }
