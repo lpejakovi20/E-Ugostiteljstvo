@@ -32,7 +32,6 @@
             this.txtRokUporabe = new System.Windows.Forms.TextBox();
             this.txtOptZalihe = new System.Windows.Forms.TextBox();
             this.txtMinZalihe = new System.Windows.Forms.TextBox();
-            this.txtVrstaNamirnice = new System.Windows.Forms.TextBox();
             this.cmbMjJed = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.btnOdustani = new System.Windows.Forms.Button();
             this.pcbQR = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cmbVrstanNamirnice = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbQR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,16 +77,15 @@
             this.txtMinZalihe.Size = new System.Drawing.Size(135, 22);
             this.txtMinZalihe.TabIndex = 3;
             // 
-            // txtVrstaNamirnice
-            // 
-            this.txtVrstaNamirnice.Location = new System.Drawing.Point(35, 159);
-            this.txtVrstaNamirnice.Name = "txtVrstaNamirnice";
-            this.txtVrstaNamirnice.Size = new System.Drawing.Size(135, 22);
-            this.txtVrstaNamirnice.TabIndex = 4;
-            // 
             // cmbMjJed
             // 
             this.cmbMjJed.FormattingEnabled = true;
+            this.cmbMjJed.Items.AddRange(new object[] {
+            "kom",
+            "kg",
+            "g",
+            "ml",
+            "l"});
             this.cmbMjJed.Location = new System.Drawing.Point(35, 330);
             this.cmbMjJed.Name = "cmbMjJed";
             this.cmbMjJed.Size = new System.Drawing.Size(135, 24);
@@ -150,10 +149,11 @@
             // 
             this.btnBack.Location = new System.Drawing.Point(35, 12);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(81, 30);
             this.btnBack.TabIndex = 12;
             this.btnBack.Text = "Natrag";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnGenerateQR
             // 
@@ -163,19 +163,21 @@
             this.btnGenerateQR.TabIndex = 13;
             this.btnGenerateQR.Text = "Generiraj QR kod";
             this.btnGenerateQR.UseVisualStyleBackColor = true;
+            this.btnGenerateQR.Click += new System.EventHandler(this.btnGenerateQR_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(430, 367);
+            this.btnSave.Location = new System.Drawing.Point(430, 413);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(116, 48);
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Spremi novu vrstu namirnice";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(597, 367);
+            this.btnOdustani.Location = new System.Drawing.Point(597, 413);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(125, 48);
             this.btnOdustani.TabIndex = 15;
@@ -186,7 +188,7 @@
             // 
             this.pcbQR.Location = new System.Drawing.Point(430, 107);
             this.pcbQR.Name = "pcbQR";
-            this.pcbQR.Size = new System.Drawing.Size(302, 246);
+            this.pcbQR.Size = new System.Drawing.Size(300, 300);
             this.pcbQR.TabIndex = 16;
             this.pcbQR.TabStop = false;
             // 
@@ -199,11 +201,32 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "QR kod:";
             // 
+            // cmbVrstanNamirnice
+            // 
+            this.cmbVrstanNamirnice.FormattingEnabled = true;
+            this.cmbVrstanNamirnice.Items.AddRange(new object[] {
+            "Mliječni",
+            "Meso",
+            "Riba",
+            "Povrće",
+            "Voće",
+            "Prerađeni proizvodi",
+            "Pekarski proizvodi",
+            "Slastice",
+            "Tjestenine",
+            "Začini",
+            "Životinjski proizvodi"});
+            this.cmbVrstanNamirnice.Location = new System.Drawing.Point(35, 159);
+            this.cmbVrstanNamirnice.Name = "cmbVrstanNamirnice";
+            this.cmbVrstanNamirnice.Size = new System.Drawing.Size(135, 24);
+            this.cmbVrstanNamirnice.TabIndex = 18;
+            // 
             // FrmDodajNamirnicuUKatalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(842, 513);
+            this.Controls.Add(this.cmbVrstanNamirnice);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pcbQR);
             this.Controls.Add(this.btnOdustani);
@@ -217,7 +240,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbMjJed);
-            this.Controls.Add(this.txtVrstaNamirnice);
             this.Controls.Add(this.txtMinZalihe);
             this.Controls.Add(this.txtOptZalihe);
             this.Controls.Add(this.txtRokUporabe);
@@ -236,7 +258,6 @@
         private System.Windows.Forms.TextBox txtRokUporabe;
         private System.Windows.Forms.TextBox txtOptZalihe;
         private System.Windows.Forms.TextBox txtMinZalihe;
-        private System.Windows.Forms.TextBox txtVrstaNamirnice;
         private System.Windows.Forms.ComboBox cmbMjJed;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -250,5 +271,6 @@
         private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.PictureBox pcbQR;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbVrstanNamirnice;
     }
 }

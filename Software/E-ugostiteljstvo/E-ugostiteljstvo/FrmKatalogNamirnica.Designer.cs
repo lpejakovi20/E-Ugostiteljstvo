@@ -135,6 +135,7 @@
             this.btnAddNewNamirnica.TabIndex = 8;
             this.btnAddNewNamirnica.Text = "Dodaj novu namirnicu";
             this.btnAddNewNamirnica.UseVisualStyleBackColor = true;
+            this.btnAddNewNamirnica.Click += new System.EventHandler(this.btnAddNewNamirnica_Click);
             // 
             // btnCreateNarudzbenica
             // 
