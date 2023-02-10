@@ -47,5 +47,14 @@ namespace DataAccessLayer.Repositories
             }
 
         }
+        public IQueryable<dynamic> GetStavkeNarudzbenice(int narudzbenicaId)
+        {
+            var query = from nn in Entities
+                        join nk in Context.namirnica_u_katalogu on nn.namirnica_u_katalogu_id equals nk.id
+                        join n in Context.narudzbenica on nn.narudzbenica_id equals n.id
+                        where nn.narudzbenica_id == narudzbenicaId
+                        select new { nk.id, nk.naziv, nk.vrsta, nk.mjerna_jedinica, nk.cijena, nn.kolicina };
+            return query;
+        }
     }
 }

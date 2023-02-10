@@ -28,6 +28,13 @@ namespace BusinessLogicLayer.Services
                 return repo.GetAll().ToList();
             }
         }
+        public List<dynamic> GetStavkeNarudzbenice(int narudzbenicaId)
+        {
+            using (var repo = new StavkeNarudzbeniceRepository())
+            {
+                return repo.GetStavkeNarudzbenice(narudzbenicaId).ToList();
+            }
+        }
 
         public List<namirnica_u_katalogu> GetKatalogNamirnicaByName(string phrase)
         {

@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvStavkeNarudzbenice = new System.Windows.Forms.DataGridView();
             this.lblSveukupanIznos = new System.Windows.Forms.Label();
-            this.txtSveukupanIznos = new System.Windows.Forms.TextBox();
             this.btnIzveziUPdf = new System.Windows.Forms.Button();
             this.btnIzradiPrimku = new System.Windows.Forms.Button();
+            this.lblIznos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavkeNarudzbenice)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,13 +65,6 @@
             this.lblSveukupanIznos.TabIndex = 2;
             this.lblSveukupanIznos.Text = "Sveukupan iznos:";
             // 
-            // txtSveukupanIznos
-            // 
-            this.txtSveukupanIznos.Location = new System.Drawing.Point(144, 346);
-            this.txtSveukupanIznos.Name = "txtSveukupanIznos";
-            this.txtSveukupanIznos.Size = new System.Drawing.Size(134, 22);
-            this.txtSveukupanIznos.TabIndex = 3;
-            // 
             // btnIzveziUPdf
             // 
             this.btnIzveziUPdf.Location = new System.Drawing.Point(530, 349);
@@ -90,19 +83,29 @@
             this.btnIzradiPrimku.Text = "Izradi Primku";
             this.btnIzradiPrimku.UseVisualStyleBackColor = true;
             // 
+            // lblIznos
+            // 
+            this.lblIznos.AutoSize = true;
+            this.lblIznos.Location = new System.Drawing.Point(144, 349);
+            this.lblIznos.Name = "lblIznos";
+            this.lblIznos.Size = new System.Drawing.Size(14, 16);
+            this.lblIznos.TabIndex = 6;
+            this.lblIznos.Text = "0";
+            // 
             // FrmStavkeNarudzbenice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblIznos);
             this.Controls.Add(this.btnIzradiPrimku);
             this.Controls.Add(this.btnIzveziUPdf);
-            this.Controls.Add(this.txtSveukupanIznos);
             this.Controls.Add(this.lblSveukupanIznos);
             this.Controls.Add(this.dgvStavkeNarudzbenice);
             this.Controls.Add(this.label1);
             this.Name = "FrmStavkeNarudzbenice";
             this.Text = "FrmStavkeNarudzbenice";
+            this.Load += new System.EventHandler(this.FrmStavkeNarudzbenice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavkeNarudzbenice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -114,8 +117,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvStavkeNarudzbenice;
         private System.Windows.Forms.Label lblSveukupanIznos;
-        private System.Windows.Forms.TextBox txtSveukupanIznos;
         private System.Windows.Forms.Button btnIzveziUPdf;
         private System.Windows.Forms.Button btnIzradiPrimku;
+        private System.Windows.Forms.Label lblIznos;
     }
 }
