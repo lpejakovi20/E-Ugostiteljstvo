@@ -10,10 +10,9 @@ namespace EntitiesLayer.Entities
     {
         public int id { get; set; }
 
-        [Column(TypeName = "timestamp")]
-        [MaxLength(8)]
-        [Timestamp]
-        public byte[] rok { get; set; }
+        
+        [Column(TypeName = "date")]
+        public DateTime rok { get; set; }
 
         public int kolicina { get; set; }
 

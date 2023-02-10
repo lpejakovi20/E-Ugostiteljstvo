@@ -25,8 +25,8 @@ namespace DataAccessLayer
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<namirnica>()
-                .Property(e => e.rok)
-                .IsFixedLength();
+                .Property(e => e.rok);
+                
 
             modelBuilder.Entity<namirnica_u_katalogu>()
                 .Property(e => e.cijena)

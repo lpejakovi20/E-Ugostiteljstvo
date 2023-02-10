@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Entities\iskoristenost_namirnice.cs" />
     <Compile Include="Entities\namirnica.cs" />
+    <Compile Include="Entities\namirnica.Ext.cs" />
     <Compile Include="Entities\namirnica_narudzbenica.cs" />
     <Compile Include="Entities\namirnica_u_katalogu.cs" />
     <Compile Include="Entities\narudzbenica.cs" />

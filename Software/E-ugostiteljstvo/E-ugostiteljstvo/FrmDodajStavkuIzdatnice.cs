@@ -70,6 +70,12 @@ namespace E_ugostiteljstvo
                     txtNaziv.Text = namirnicaKatalog.naziv;
                     txtVrsta.Text = namirnicaKatalog.vrsta;
 
+                    var servisNamirnica = new NamirnicaServices();
+                    var namirnice = servisNamirnica.GetAll(Int32.Parse(result.ToString()));
+
+                    cmbRokTrajanja.DataSource = namirnice;
+                    cmbRokTrajanja.SelectedIndex = 0;
+
                     timer1.Stop();
                     if (captureDevice.IsRunning)
                     {
