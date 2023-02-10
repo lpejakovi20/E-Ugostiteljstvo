@@ -15,6 +15,12 @@ namespace DataAccessLayer.Repositories
 
         public override int Update(namirnica entity, bool saveChanges = true)
         {
+            var namirnicaKatalog = Context.namirnica_u_katalogu.SingleOrDefault(c => c.id == entity.namirnica_u_katalogu_id);
+
+            var namirnica = Entities.SingleOrDefault(p => p.namirnica_u_katalogu_id == entity.namirnica_u_katalogu_id && p.rok == entity.rok);
+            namirnica.namirnica_u_katalogu = namirnicaKatalog;
+            namirnica.kolicina -= entity.kolicina;
+
             if (saveChanges)
             {
                 return SaveChanges();
@@ -32,5 +38,6 @@ namespace DataAccessLayer.Repositories
                         select p;
             return query;
         }
+
     }
 }

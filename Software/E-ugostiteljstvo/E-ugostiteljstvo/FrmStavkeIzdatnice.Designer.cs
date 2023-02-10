@@ -63,6 +63,7 @@
             this.btnIspis.TabIndex = 2;
             this.btnIspis.Text = "Ispiši Dokument";
             this.btnIspis.UseVisualStyleBackColor = true;
+            this.btnIspis.Click += new System.EventHandler(this.btnIspis_Click);
             // 
             // btnDodaj
             // 
