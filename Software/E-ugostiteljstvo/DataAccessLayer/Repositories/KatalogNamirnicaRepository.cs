@@ -54,6 +54,14 @@ namespace DataAccessLayer.Repositories
             return query;
         }
 
+        public namirnica_u_katalogu GetKatalogNamirnicaById(int id)
+        {
+            var query = (from p in Entities.Include("zaposlenik")
+                        where p.id == id
+                        select p).FirstOrDefault<namirnica_u_katalogu>();
+            return query;
+        }
+
         public IQueryable<namirnica_u_katalogu> GetMlijecni()
         {
             var query = from p in Entities.Include("zaposlenik")

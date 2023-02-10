@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
+using BusinessLogicLayer.Services;
 using ZXing;
 
 namespace E_ugostiteljstvo
@@ -62,7 +63,13 @@ namespace E_ugostiteljstvo
                 Result result = barcodeReader.Decode((Bitmap)pictureBox1.Image);
                 if(result != null)
                 {
+                    var servis = new KatalogNamirnicaServices();
+                    var namirnicaKatalog = servis.GetKatalogNamirnicaById(Int32.Parse(result.ToString()));
+
                     txtId.Text = result.ToString();
+                    txtNaziv.Text = namirnicaKatalog.naziv;
+                    txtVrsta.Text = namirnicaKatalog.vrsta;
+
                     timer1.Stop();
                     if (captureDevice.IsRunning)
                     {

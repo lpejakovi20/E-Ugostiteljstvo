@@ -37,6 +37,14 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        public namirnica_u_katalogu GetKatalogNamirnicaById(int id)
+        {
+            using (var repo = new KatalogNamirnicaRepository())
+            {
+                return repo.GetKatalogNamirnicaById(id);
+            }
+        }
+
         public List<namirnica_u_katalogu> GetMlijecni()
         {
             using (var repo = new KatalogNamirnicaRepository())
