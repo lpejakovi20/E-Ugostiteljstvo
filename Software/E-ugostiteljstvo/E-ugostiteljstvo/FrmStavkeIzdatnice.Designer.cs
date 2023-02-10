@@ -72,6 +72,7 @@
             this.btnDodaj.TabIndex = 3;
             this.btnDodaj.Text = "Dodaj Namirnicu";
             this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // btnUkloni
             // 

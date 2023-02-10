@@ -16,5 +16,11 @@ namespace E_ugostiteljstvo
         {
             InitializeComponent();
         }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            FrmDodajStavkuIzdatnice form = new FrmDodajStavkuIzdatnice();
+            form.ShowDialog();
+        }
     }
 }

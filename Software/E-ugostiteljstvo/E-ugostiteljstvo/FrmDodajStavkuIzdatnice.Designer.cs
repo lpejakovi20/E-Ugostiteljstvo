@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,6 +42,10 @@
             this.cmbRokTrajanja = new System.Windows.Forms.ComboBox();
             this.btnOdustani = new System.Windows.Forms.Button();
             this.btnDodaj = new System.Windows.Forms.Button();
+            this.btnStartScan = new System.Windows.Forms.Button();
+            this.cboDevices = new System.Windows.Forms.ComboBox();
+            this.lblCam = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,11 +156,46 @@
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
             // 
+            // btnStartScan
+            // 
+            this.btnStartScan.Location = new System.Drawing.Point(213, 345);
+            this.btnStartScan.Name = "btnStartScan";
+            this.btnStartScan.Size = new System.Drawing.Size(130, 29);
+            this.btnStartScan.TabIndex = 14;
+            this.btnStartScan.Text = "Uključi skener";
+            this.btnStartScan.UseVisualStyleBackColor = true;
+            this.btnStartScan.Click += new System.EventHandler(this.btnStartScan_Click);
+            // 
+            // cboDevices
+            // 
+            this.cboDevices.FormattingEnabled = true;
+            this.cboDevices.Location = new System.Drawing.Point(172, 22);
+            this.cboDevices.Name = "cboDevices";
+            this.cboDevices.Size = new System.Drawing.Size(280, 24);
+            this.cboDevices.TabIndex = 15;
+            // 
+            // lblCam
+            // 
+            this.lblCam.AutoSize = true;
+            this.lblCam.Location = new System.Drawing.Point(99, 25);
+            this.lblCam.Name = "lblCam";
+            this.lblCam.Size = new System.Drawing.Size(57, 16);
+            this.lblCam.TabIndex = 16;
+            this.lblCam.Text = "Kamera:";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmDodajStavkuIzdatnice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCam);
+            this.Controls.Add(this.cboDevices);
+            this.Controls.Add(this.btnStartScan);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.cmbRokTrajanja);
@@ -171,6 +211,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "FrmDodajStavkuIzdatnice";
             this.Text = "FrmDodajStavkuIzdatnice";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDodajStavkuIzdatnice_FormClosing);
+            this.Load += new System.EventHandler(this.FrmDodajStavkuIzdatnice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -192,5 +234,9 @@
         private System.Windows.Forms.ComboBox cmbRokTrajanja;
         private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.Button btnDodaj;
+        private System.Windows.Forms.Button btnStartScan;
+        private System.Windows.Forms.ComboBox cboDevices;
+        private System.Windows.Forms.Label lblCam;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -43,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnObrisiPrikaz = new System.Windows.Forms.Button();
+            this.btnCreateIzdatnica = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKatalogNamirnica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirniceUSkladistu)).BeginInit();
             this.SuspendLayout();
@@ -194,11 +195,22 @@
             this.btnObrisiPrikaz.UseVisualStyleBackColor = true;
             this.btnObrisiPrikaz.Click += new System.EventHandler(this.btnObrisiPrikaz_Click);
             // 
+            // btnCreateIzdatnica
+            // 
+            this.btnCreateIzdatnica.Location = new System.Drawing.Point(758, 394);
+            this.btnCreateIzdatnica.Name = "btnCreateIzdatnica";
+            this.btnCreateIzdatnica.Size = new System.Drawing.Size(130, 44);
+            this.btnCreateIzdatnica.TabIndex = 15;
+            this.btnCreateIzdatnica.Text = "Kreiraj izdatnicu";
+            this.btnCreateIzdatnica.UseVisualStyleBackColor = true;
+            this.btnCreateIzdatnica.Click += new System.EventHandler(this.btnCreateIzdatnica_Click);
+            // 
             // FrmKatalogNamirnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 741);
+            this.Controls.Add(this.btnCreateIzdatnica);
             this.Controls.Add(this.btnObrisiPrikaz);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -241,5 +253,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnObrisiPrikaz;
+        private System.Windows.Forms.Button btnCreateIzdatnica;
     }
 }

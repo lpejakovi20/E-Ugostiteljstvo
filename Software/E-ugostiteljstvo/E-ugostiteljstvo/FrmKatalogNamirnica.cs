@@ -159,5 +159,13 @@ namespace E_ugostiteljstvo
             form.ShowDialog();
             
         }
+
+        private void btnCreateIzdatnica_Click(object sender, EventArgs e)
+        {
+            FrmStavkeIzdatnice form = new FrmStavkeIzdatnice();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }
