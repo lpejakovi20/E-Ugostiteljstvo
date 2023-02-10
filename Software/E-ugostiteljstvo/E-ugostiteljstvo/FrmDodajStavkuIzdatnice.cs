@@ -55,10 +55,14 @@ namespace E_ugostiteljstvo
 
         private void FrmDodajStavkuIzdatnice_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (captureDevice.IsRunning)
+            if(captureDevice != null)
             {
-                captureDevice.Stop();
+                if (captureDevice.IsRunning)
+                {
+                    captureDevice.Stop();
+                }
             }
+            
         }
 
         namirnica_u_katalogu namirnicaKatalog;
@@ -143,6 +147,12 @@ namespace E_ugostiteljstvo
             tempstring = tempstring.Substring(5);
             int random = int.Parse(tempstring);
             return random;
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Close();
         }
     }
 }

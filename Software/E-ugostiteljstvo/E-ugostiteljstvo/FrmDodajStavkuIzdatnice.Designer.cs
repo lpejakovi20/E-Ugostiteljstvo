@@ -146,6 +146,7 @@
             this.btnOdustani.TabIndex = 12;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnDodaj
             // 
