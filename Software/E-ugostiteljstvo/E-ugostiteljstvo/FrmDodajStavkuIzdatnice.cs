@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using BusinessLogicLayer.Services;
+using DataAccessLayer;
+using EntitiesLayer.Entities;
 using ZXing;
 
 namespace E_ugostiteljstvo
@@ -26,6 +28,10 @@ namespace E_ugostiteljstvo
 
         private void FrmDodajStavkuIzdatnice_Load(object sender, EventArgs e)
         {
+            txtId.Enabled = false;
+            txtNaziv.Enabled = false;
+            txtVrsta.Enabled = false;
+
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach(FilterInfo filterInfo in filterInfoCollection)
             {
@@ -55,6 +61,7 @@ namespace E_ugostiteljstvo
             }
         }
 
+        namirnica_u_katalogu namirnicaKatalog;
         private void timer1_Tick(object sender, EventArgs e)
         {
             if(pictureBox1.Image != null)
@@ -64,7 +71,7 @@ namespace E_ugostiteljstvo
                 if(result != null)
                 {
                     var servis = new KatalogNamirnicaServices();
-                    var namirnicaKatalog = servis.GetKatalogNamirnicaById(Int32.Parse(result.ToString()));
+                    namirnicaKatalog = servis.GetKatalogNamirnicaById(Int32.Parse(result.ToString()));
 
                     txtId.Text = result.ToString();
                     txtNaziv.Text = namirnicaKatalog.naziv;
@@ -81,6 +88,50 @@ namespace E_ugostiteljstvo
                     {
                         captureDevice.Stop();
                     }
+                }
+            }
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            if (txtKolicina.Text == "")
+            {
+                MessageBox.Show("Potrebno je unijeti količinu!");
+            }
+            else if(Int32.Parse(txtKolicina.Text) < 0)
+            {
+                MessageBox.Show("Količina mora biti pozitivan broj!");
+            }
+            else
+            {
+                var selected = cmbRokTrajanja.SelectedItem as namirnica;
+
+                var ukupnaKolicina = 0;
+                var listaPostojecih = StavkaIzdatniceRepository.lista.FindAll(n => n.Rok_trajanja == selected.rok);
+
+                if (listaPostojecih != null)
+                {
+                    foreach (var nam in listaPostojecih)
+                    {
+                        ukupnaKolicina += nam.Kolicina;
+                    }
+                }
+                var total = ukupnaKolicina + Int32.Parse(txtKolicina.Text);
+
+                if (total > selected.kolicina)
+                {
+                    MessageBox.Show("Nema dovoljne količine odabrane namirnice, dostupna količina = " + (selected.kolicina - ukupnaKolicina));
+                }
+                else if (selected.kolicina < Int32.Parse(txtKolicina.Text))
+                {
+                    MessageBox.Show("Nema dovoljne količine odabrane namirnice, dostupna količina = " + selected.kolicina);
+                }
+                else
+                {
+                    StavkaIzdatnice novaStavka = new StavkaIzdatnice(Int32.Parse(txtId.Text), txtNaziv.Text, txtVrsta.Text, Int32.Parse(txtKolicina.Text), namirnicaKatalog.mjerna_jedinica, selected.rok);
+                    StavkaIzdatniceRepository.AddToList(novaStavka);
+                    Hide();
+                    Close();
                 }
             }
         }

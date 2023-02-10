@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccessLayer;
+using EntitiesLayer.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +23,20 @@ namespace E_ugostiteljstvo
         {
             FrmDodajStavkuIzdatnice form = new FrmDodajStavkuIzdatnice();
             form.ShowDialog();
+            OsvjeziStavkeIzdatnice();
+        }
+
+        private void FrmStavkeIzdatnice_Load(object sender, EventArgs e)
+        {
+            StavkaIzdatniceRepository.lista = new List<StavkaIzdatnice>();
+            OsvjeziStavkeIzdatnice();
+        }
+
+        public void OsvjeziStavkeIzdatnice()
+        {
+            var stavke = StavkaIzdatniceRepository.GetList();
+            dgvStavkeIzdatnice.DataSource = stavke.ToList();
+
         }
     }
 }

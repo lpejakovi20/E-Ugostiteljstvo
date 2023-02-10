@@ -95,6 +95,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmStavkeIzdatnice";
             this.Text = "FrmStavkeIzdatnice";
+            this.Load += new System.EventHandler(this.FrmStavkeIzdatnice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavkeIzdatnice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

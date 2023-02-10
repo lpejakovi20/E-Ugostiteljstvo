@@ -59,6 +59,7 @@
     <Compile Include="Repositories\StavkeNarudzbeniceRepository.cs" />
     <Compile Include="Repositories\UlogaRepository.cs" />
     <Compile Include="Repositories\ZaposlenikRepository.cs" />
+    <Compile Include="StavkaIzdatniceRepository.cs" />
     <Compile Include="sysdiagrams.cs" />
   </ItemGroup>
   <ItemGroup />
