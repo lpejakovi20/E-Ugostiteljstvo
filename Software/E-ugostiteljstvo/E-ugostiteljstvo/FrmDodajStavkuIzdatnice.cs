@@ -128,12 +128,21 @@ namespace E_ugostiteljstvo
                 }
                 else
                 {
-                    StavkaIzdatnice novaStavka = new StavkaIzdatnice(Int32.Parse(txtId.Text), txtNaziv.Text, txtVrsta.Text, Int32.Parse(txtKolicina.Text), namirnicaKatalog.mjerna_jedinica, selected.rok);
+                    StavkaIzdatnice novaStavka = new StavkaIzdatnice(Int32.Parse(txtId.Text), txtNaziv.Text, txtVrsta.Text, Int32.Parse(txtKolicina.Text), namirnicaKatalog.mjerna_jedinica, selected.rok,GenerateRandomnumber());
                     StavkaIzdatniceRepository.AddToList(novaStavka);
                     Hide();
                     Close();
                 }
             }
+        }
+
+        private int GenerateRandomnumber()
+        {
+            long milliseconds = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+            var tempstring = milliseconds.ToString();
+            tempstring = tempstring.Substring(5);
+            int random = int.Parse(tempstring);
+            return random;
         }
     }
 }

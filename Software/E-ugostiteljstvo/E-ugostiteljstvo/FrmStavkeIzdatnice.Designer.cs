@@ -82,6 +82,7 @@
             this.btnUkloni.TabIndex = 4;
             this.btnUkloni.Text = "Ukloni Namirnicu";
             this.btnUkloni.UseVisualStyleBackColor = true;
+            this.btnUkloni.Click += new System.EventHandler(this.btnUkloni_Click);
             // 
             // FrmStavkeIzdatnice
             // 
