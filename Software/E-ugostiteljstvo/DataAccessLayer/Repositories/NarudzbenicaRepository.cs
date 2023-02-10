@@ -48,5 +48,13 @@ namespace DataAccessLayer.Repositories
             }
 
         }
+        public narudzbenica GetNarudzbenicaById(int narudzbenicaId)
+        {
+            var query = (from p in Entities
+                         where p.id == narudzbenicaId
+                         select p).FirstOrDefault<narudzbenica>();
+
+            return query;
+        }
     }
 }

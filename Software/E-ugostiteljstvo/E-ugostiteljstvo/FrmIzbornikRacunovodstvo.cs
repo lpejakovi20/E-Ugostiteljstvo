@@ -16,5 +16,13 @@ namespace E_ugostiteljstvo
         {
             InitializeComponent();
         }
+
+        private void btnPregledNarudzbenica_Click(object sender, EventArgs e)
+        {
+            var frmNarudzbenice = new FrmNarudzbenice();
+            Hide();
+            frmNarudzbenice.ShowDialog();
+            Close();
+        }
     }
 }

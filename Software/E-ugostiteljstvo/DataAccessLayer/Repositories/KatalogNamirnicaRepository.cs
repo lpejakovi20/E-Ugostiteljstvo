@@ -47,6 +47,12 @@ namespace DataAccessLayer.Repositories
                         select p;
             return query;
         }
+
+      
+
+
+
+
         public IQueryable<namirnica_u_katalogu> GetKatalogNamirnicaByName(string phrase)
         {
             var query = from p in Entities.Include("zaposlenik") where p.naziv.Contains(phrase)
