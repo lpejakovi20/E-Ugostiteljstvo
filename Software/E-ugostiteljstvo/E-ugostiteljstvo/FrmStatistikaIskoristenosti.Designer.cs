@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbMjesec = new System.Windows.Forms.ComboBox();
-            this.btnFiltriraj = new System.Windows.Forms.Button();
             this.dgvIskoristenostNamirnica = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirniceIstekaoRok)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIskoristenostNamirnica)).BeginInit();
@@ -88,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(395, 483);
+            this.label4.Location = new System.Drawing.Point(565, 483);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 16);
             this.label4.TabIndex = 5;
@@ -97,19 +96,11 @@
             // cmbMjesec
             // 
             this.cmbMjesec.FormattingEnabled = true;
-            this.cmbMjesec.Location = new System.Drawing.Point(464, 480);
+            this.cmbMjesec.Location = new System.Drawing.Point(634, 480);
             this.cmbMjesec.Name = "cmbMjesec";
             this.cmbMjesec.Size = new System.Drawing.Size(121, 24);
             this.cmbMjesec.TabIndex = 6;
-            // 
-            // btnFiltriraj
-            // 
-            this.btnFiltriraj.Location = new System.Drawing.Point(601, 480);
-            this.btnFiltriraj.Name = "btnFiltriraj";
-            this.btnFiltriraj.Size = new System.Drawing.Size(93, 24);
-            this.btnFiltriraj.TabIndex = 7;
-            this.btnFiltriraj.Text = "Filtriraj";
-            this.btnFiltriraj.UseVisualStyleBackColor = true;
+            this.cmbMjesec.SelectedIndexChanged += new System.EventHandler(this.cmbMjesec_SelectedIndexChanged);
             // 
             // dgvIskoristenostNamirnica
             // 
@@ -127,7 +118,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 822);
             this.Controls.Add(this.dgvIskoristenostNamirnica);
-            this.Controls.Add(this.btnFiltriraj);
             this.Controls.Add(this.cmbMjesec);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -154,7 +144,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbMjesec;
-        private System.Windows.Forms.Button btnFiltriraj;
         private System.Windows.Forms.DataGridView dgvIskoristenostNamirnica;
     }
 }

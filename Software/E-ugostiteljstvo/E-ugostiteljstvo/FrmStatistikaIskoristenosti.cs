@@ -37,6 +37,26 @@ namespace E_ugostiteljstvo
             dgvNamirniceIstekaoRok.Columns[6].Visible = false;
 
             txtSveukupnaVrijednost.Text = Math.Round(sveukupno, 2).ToString() + "€";
+
+
+            var mjeseci = new List<string> {"siječanj","veljača","ožujak","travanj","svibanj","lipanj","srpanj","kolovoz","rujan","listopad","studeni","prosinac"};
+
+            var trenutniMjesec = DateTime.Today.Month;
+            cmbMjesec.DataSource = mjeseci.Take(trenutniMjesec).ToList();
+            cmbMjesec.SelectedIndex = 0;
+        }
+
+        private void cmbMjesec_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var mjesec = cmbMjesec.SelectedIndex + 1;
+            var godina = DateTime.Today.Year;
+
+            var service = new IskoristenostNamirnicaServices();
+
+            var iskoristenostNamirnica = service.GetNamirniceIstecenogRoka(mjesec,godina);
+            dgvIskoristenostNamirnica.DataSource = iskoristenostNamirnica;
+
+            dgvIskoristenostNamirnica.Columns["namirnica_u_katalogu_id"].HeaderText = "namirnica_id";
         }
     }
 }
