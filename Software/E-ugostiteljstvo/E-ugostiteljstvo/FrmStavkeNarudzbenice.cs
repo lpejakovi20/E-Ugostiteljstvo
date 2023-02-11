@@ -83,7 +83,7 @@ namespace E_ugostiteljstvo
             }
             MessageBox.Show("Namirnice uspješno zaprimljene u bazu!");
 
-            var forma = new FrmNarudzbenice();
+            var forma = new FrmIzvjestajPrimka(SelektiranaNarudzbenica);
             Hide();
             forma.ShowDialog();
             Close();
