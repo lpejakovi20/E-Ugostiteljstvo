@@ -14,11 +14,6 @@ namespace DataAccessLayer.Repositories
 
         }
 
-        public override int Update(iskoristenost_namirnice entity, bool saveChanges = true)
-        {
-            throw new NotImplementedException();
-        }
-
         public IQueryable<dynamic> GetIskoristeneNamirniceByMonth(int month, int year)
         {
             var result = from p in Entities
@@ -34,6 +29,49 @@ namespace DataAccessLayer.Repositories
                          };
 
             return result;
+        }
+
+        public override int Update(iskoristenost_namirnice entity, bool saveChanges = true)
+        {
+            var namirnicaKatalog = Context.namirnica_u_katalogu.SingleOrDefault(c => c.id == entity.namirnica_u_katalogu_id);
+
+            var mjesec = entity.datum.Month;
+            var godina = entity.datum.Year;
+
+            var namirnica = Entities.SingleOrDefault(p => p.namirnica_u_katalogu_id == entity.namirnica_u_katalogu_id && p.datum.Month == mjesec && p.datum.Year == godina);
+            namirnica.namirnica_u_katalogu = namirnicaKatalog;
+            namirnica.iskoristeno += entity.iskoristeno;
+
+            if (saveChanges)
+            {
+                return SaveChanges();
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public override int Add(iskoristenost_namirnice entity, bool saveChanges = true)
+        {
+            var namirnicaKatalog = Context.namirnica_u_katalogu.SingleOrDefault(c => c.id == entity.namirnica_u_katalogu_id);
+            var _namirnica = new iskoristenost_namirnice();
+
+            _namirnica.iskoristeno = entity.iskoristeno;
+            _namirnica.neiskoristeno = 0;
+            _namirnica.datum = entity.datum;
+            _namirnica.namirnica_u_katalogu = namirnicaKatalog;
+
+            Entities.Add(_namirnica);
+            if (saveChanges)
+            {
+                return SaveChanges();
+            }
+            else
+            {
+                return 0;
+            }
+
         }
 
     }

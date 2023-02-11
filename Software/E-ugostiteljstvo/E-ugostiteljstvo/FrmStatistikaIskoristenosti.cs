@@ -53,7 +53,7 @@ namespace E_ugostiteljstvo
 
             var service = new IskoristenostNamirnicaServices();
 
-            var iskoristenostNamirnica = service.GetNamirniceIstecenogRoka(mjesec,godina);
+            var iskoristenostNamirnica = service.GetIskoristeneNamirniceByMonth(mjesec,godina);
             dgvIskoristenostNamirnica.DataSource = iskoristenostNamirnica;
 
             dgvIskoristenostNamirnica.Columns["namirnica_u_katalogu_id"].HeaderText = "namirnica_id";

@@ -65,10 +65,37 @@ namespace E_ugostiteljstvo
 
                     var servis = new NamirnicaServices();
                     servis.UpdateNamirnica(novaNamirnica);
+
+                    var servisIskoristenostNamirnica = new IskoristenostNamirnicaServices();
+                    var mjesec = DateTime.Today.Month;
+                    var godina = DateTime.Today.Year;
+
+                    var mjesecString = "";
+
+                    var datum = "";
+                    if (mjesec < 10) mjesecString = "0" + mjesec;
+                    else mjesecString = mjesec.ToString();
+
+                    datum = godina + "-" + mjesecString + "-01";
+
+                    var postojeca = servisIskoristenostNamirnica.GetIskoristeneNamirniceByMonth(mjesec,godina);
+
+                    var nova = new iskoristenost_namirnice()
+                    {
+                        iskoristeno = novaNamirnica.kolicina,
+                        namirnica_u_katalogu_id = novaNamirnica.namirnica_u_katalogu_id,
+                        datum = DateTime.Parse(datum)
+                    };
+
+                    if (postojeca.Count > 0)
+                    {
+                        servisIskoristenostNamirnica.UpdateIskoristenostNamirnice(nova);
+                    }
+                    else
+                    {
+                        servisIskoristenostNamirnica.AddIskoristenostNamirnice(nova);
+                    }
                 }
-                //StavkaIzdatniceRepository.lista.Clear();
-                //OsvjeziStavkeIzdatnice();
-                //MessageBox.Show("Uspješno kreirana izdatnica!");
                 var form = new FrmIzvjestajIzdatnica();
                 form.Show();
                 StavkaIzdatniceRepository.lista.Clear();
