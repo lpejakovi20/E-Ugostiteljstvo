@@ -1,4 +1,5 @@
-﻿using EntitiesLayer.Entities;
+﻿using EntitiesLayer;
+using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,6 +62,27 @@ namespace DataAccessLayer.Repositories
                 return 0;
             }
 
+        }
+
+        public IQueryable<dynamic> GetNamirniceIstecenogRoka()
+        {
+            var today = DateTime.Today;
+
+            var result = from p in Context.namirnica_u_katalogu
+                         join n in Context.namirnica on p.id equals n.namirnica_u_katalogu_id into pn
+                         from n in pn.Where(x => x.rok < DateTime.Today)
+                         select new
+                         {
+                             p.id,
+                             p.naziv,
+                             p.vrsta,
+                             kolicina = n.kolicina,
+                             p.mjerna_jedinica,
+                             p.cijena,
+                             iznos = n.kolicina * p.cijena
+                         };
+            
+            return result;
         }
     }
 }

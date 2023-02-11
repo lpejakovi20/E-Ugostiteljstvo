@@ -71,7 +71,7 @@
             // 
             // txtSveukupnaVrijednost
             // 
-            this.txtSveukupnaVrijednost.Location = new System.Drawing.Point(322, 368);
+            this.txtSveukupnaVrijednost.Location = new System.Drawing.Point(334, 368);
             this.txtSveukupnaVrijednost.Name = "txtSveukupnaVrijednost";
             this.txtSveukupnaVrijednost.Size = new System.Drawing.Size(115, 22);
             this.txtSveukupnaVrijednost.TabIndex = 3;
@@ -104,9 +104,9 @@
             // 
             // btnFiltriraj
             // 
-            this.btnFiltriraj.Location = new System.Drawing.Point(615, 481);
+            this.btnFiltriraj.Location = new System.Drawing.Point(601, 480);
             this.btnFiltriraj.Name = "btnFiltriraj";
-            this.btnFiltriraj.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltriraj.Size = new System.Drawing.Size(93, 24);
             this.btnFiltriraj.TabIndex = 7;
             this.btnFiltriraj.Text = "Filtriraj";
             this.btnFiltriraj.UseVisualStyleBackColor = true;
@@ -137,6 +137,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmStatistikaIskoristenosti";
             this.Text = "FrmStatistikaIskoristenosti";
+            this.Load += new System.EventHandler(this.FrmStatistikaIskoristenosti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirniceIstekaoRok)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIskoristenostNamirnica)).EndInit();
             this.ResumeLayout(false);

@@ -24,5 +24,13 @@ namespace E_ugostiteljstvo
             frmNarudzbenice.ShowDialog();
             Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var form = new FrmStatistikaIskoristenosti();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }

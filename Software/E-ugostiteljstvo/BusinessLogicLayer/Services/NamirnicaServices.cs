@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Repositories;
+using EntitiesLayer;
 using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,14 @@ namespace BusinessLogicLayer.Services
             using (var repo = new NamirnicaRepository())
             {
                 return repo.GetAll(id).ToList();
+            }
+        }
+
+        public List<dynamic> GetNamirniceIstecenogRoka()
+        {
+            using (var repo = new NamirnicaRepository())
+            {
+                return repo.GetNamirniceIstecenogRoka().ToList();
             }
         }
 
