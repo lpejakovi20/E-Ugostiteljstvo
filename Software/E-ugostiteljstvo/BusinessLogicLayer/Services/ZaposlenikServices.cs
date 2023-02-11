@@ -35,5 +35,12 @@ namespace BusinessLogicLayer.Services
                 return repo.GetZaposlenikByEmail(phrase);
             }
         }
+        public zaposlenik GetZaposlenikNarudzbenice(int zaposlenikId)
+        {
+            using (var repo = new ZaposlenikRepository())
+            {
+                return repo.GetZaposlenikZaNarzdzbenicu(zaposlenikId);
+            }
+        }
     }
 }

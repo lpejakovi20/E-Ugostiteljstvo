@@ -34,6 +34,7 @@
             this.cmbSortiraj = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSortiraj = new System.Windows.Forms.Button();
+            this.btnIzvjestaj = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudzbenice)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,11 +100,22 @@
             this.btnSortiraj.UseVisualStyleBackColor = true;
             this.btnSortiraj.Click += new System.EventHandler(this.btnSortiraj_Click);
             // 
+            // btnIzvjestaj
+            // 
+            this.btnIzvjestaj.Location = new System.Drawing.Point(26, 366);
+            this.btnIzvjestaj.Name = "btnIzvjestaj";
+            this.btnIzvjestaj.Size = new System.Drawing.Size(120, 36);
+            this.btnIzvjestaj.TabIndex = 9;
+            this.btnIzvjestaj.Text = "Kreiraj izvještaj";
+            this.btnIzvjestaj.UseVisualStyleBackColor = true;
+            this.btnIzvjestaj.Click += new System.EventHandler(this.btnIzvjestaj_Click);
+            // 
             // FrmNarudzbenice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnIzvjestaj);
             this.Controls.Add(this.btnSortiraj);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbSortiraj);
@@ -127,5 +139,6 @@
         private System.Windows.Forms.ComboBox cmbSortiraj;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSortiraj;
+        private System.Windows.Forms.Button btnIzvjestaj;
     }
 }

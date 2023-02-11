@@ -105,5 +105,12 @@ namespace E_ugostiteljstvo
             frmStavkeNarudzbenice.ShowDialog();
             Close();
         }
+
+        private void btnIzvjestaj_Click(object sender, EventArgs e)
+        {
+            var selektiranaNarudzbenica = dgvNarudzbenice.CurrentRow.DataBoundItem as narudzbenica;
+            var frmIzvjestaj = new FrmIzvjestajNarudzbenica(selektiranaNarudzbenica);
+            frmIzvjestaj.ShowDialog();
+        }
     }
 }

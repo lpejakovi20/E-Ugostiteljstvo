@@ -22,6 +22,15 @@ namespace DataAccessLayer.Repositories
             return query;
         }
 
+        public zaposlenik GetZaposlenikZaNarzdzbenicu(int zaposlenikId)
+        {
+            var query = (from p in Entities
+                         where p.id == zaposlenikId
+                         select p).FirstOrDefault<zaposlenik>();
+
+            return query;
+        }
+
         public override int Update(zaposlenik entity, bool saveChanges = true)
         {
             var zaposlenik = Entities.SingleOrDefault(c => c.id == entity.id);

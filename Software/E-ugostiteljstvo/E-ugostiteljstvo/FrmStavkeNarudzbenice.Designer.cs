@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvStavkeNarudzbenice = new System.Windows.Forms.DataGridView();
             this.lblSveukupanIznos = new System.Windows.Forms.Label();
-            this.btnIzveziUPdf = new System.Windows.Forms.Button();
             this.btnIzradiPrimku = new System.Windows.Forms.Button();
             this.lblIznos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavkeNarudzbenice)).BeginInit();
@@ -65,15 +64,6 @@
             this.lblSveukupanIznos.TabIndex = 2;
             this.lblSveukupanIznos.Text = "Sveukupan iznos:";
             // 
-            // btnIzveziUPdf
-            // 
-            this.btnIzveziUPdf.Location = new System.Drawing.Point(530, 349);
-            this.btnIzveziUPdf.Name = "btnIzveziUPdf";
-            this.btnIzveziUPdf.Size = new System.Drawing.Size(101, 35);
-            this.btnIzveziUPdf.TabIndex = 4;
-            this.btnIzveziUPdf.Text = "Izvezi u PDF";
-            this.btnIzveziUPdf.UseVisualStyleBackColor = true;
-            // 
             // btnIzradiPrimku
             // 
             this.btnIzradiPrimku.Location = new System.Drawing.Point(649, 349);
@@ -99,7 +89,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblIznos);
             this.Controls.Add(this.btnIzradiPrimku);
-            this.Controls.Add(this.btnIzveziUPdf);
             this.Controls.Add(this.lblSveukupanIznos);
             this.Controls.Add(this.dgvStavkeNarudzbenice);
             this.Controls.Add(this.label1);
@@ -117,7 +106,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvStavkeNarudzbenice;
         private System.Windows.Forms.Label lblSveukupanIznos;
-        private System.Windows.Forms.Button btnIzveziUPdf;
         private System.Windows.Forms.Button btnIzradiPrimku;
         private System.Windows.Forms.Label lblIznos;
     }
