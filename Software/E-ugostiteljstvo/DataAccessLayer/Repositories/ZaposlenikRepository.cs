@@ -22,6 +22,15 @@ namespace DataAccessLayer.Repositories
             return query;
         }
 
+        public zaposlenik GetZaposlenikById(int id)
+        {
+            var query = (from p in Entities.Include("uloga")
+                         where p.id == id
+                         select p).FirstOrDefault<zaposlenik>();
+
+            return query;
+        }
+
         public zaposlenik GetZaposlenikZaNarzdzbenicu(int zaposlenikId)
         {
             var query = (from p in Entities

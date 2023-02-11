@@ -28,6 +28,14 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        public object GetZaposlenikById(int id)
+        {
+            using (var repo = new ZaposlenikRepository())
+            {
+                return repo.GetZaposlenikById(id);
+            }
+        }
+
         public zaposlenik GetZaposlenikByEmail(string phrase)
         {
             using (var repo = new ZaposlenikRepository())

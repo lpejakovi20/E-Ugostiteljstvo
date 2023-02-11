@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>PRIMKA</Value>
+                <Value>IZDATNICA</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -21,74 +21,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.589cm</Top>
+        <Top>0.41967cm</Top>
         <Left>6.67692cm</Left>
         <Height>0.6cm</Height>
         <Width>3.15617cm</Width>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox2">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>ID primke:</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>2.24cm</Top>
-        <Left>0.97487cm</Left>
-        <Height>0.6cm</Height>
-        <Width>1.99906cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="id">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!id.Value, "DSNarudzbenica")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>id</rd:DefaultName>
-        <Top>2.24cm</Top>
-        <Left>3.11504cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.58466cm</Width>
-        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -116,43 +52,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>3.15017cm</Top>
-        <Left>0.97487cm</Left>
+        <Top>2.24cm</Top>
+        <Left>0.65147cm</Left>
         <Height>0.6cm</Height>
         <Width>1.99906cm</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="prezime">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!prezime.Value, "DSZaposlenik")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>prezime</rd:DefaultName>
-        <Top>3.15017cm</Top>
-        <Left>3.15032cm</Left>
-        <Height>0.6cm</Height>
-        <Width>1.54608cm</Width>
-        <ZIndex>4</ZIndex>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -181,10 +85,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>2.24cm</Top>
-        <Left>10.70099cm</Left>
+        <Left>10.91266cm</Left>
         <Height>0.6cm</Height>
         <Width>3.05034cm</Width>
-        <ZIndex>5</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -213,10 +117,10 @@
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
         <Top>2.24cm</Top>
-        <Left>13.92772cm</Left>
+        <Left>14.13939cm</Left>
         <Height>0.6cm</Height>
         <Width>2.03189cm</Width>
-        <ZIndex>6</ZIndex>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -228,11 +132,11 @@
         </Style>
       </Textbox>
       <Line Name="Line1">
-        <Top>4.29683cm</Top>
-        <Left>0.36925cm</Left>
+        <Top>3.47133cm</Top>
+        <Left>0.39978cm</Left>
         <Height>0cm</Height>
         <Width>15.7715cm</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -243,25 +147,58 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.30527cm</Width>
+              <Width>1.90014cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.30527cm</Width>
+              <Width>3.45719cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.30527cm</Width>
+              <Width>2.45767cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.3636cm</Width>
+              <Width>1.52414cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.26294cm</Width>
+              <Width>2.881cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
               <Height>0.6cm</Height>
               <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox7">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Id</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox9">
@@ -271,7 +208,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id</Value>
+                              <Value>Naziv</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -301,7 +238,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>naziv</Value>
+                              <Value>Vrsta</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -331,7 +268,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>vrsta</Value>
+                              <Value>Kolicina</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -361,7 +298,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>mjerna jedinica</Value>
+                              <Value>Mjerna Jedinica</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -391,7 +328,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cijena</Value>
+                              <Value>Rok trajanja</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -419,21 +356,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id1">
+                    <Textbox Name="Id">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id.Value</Value>
+                              <Value>=Fields!Id.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id1</rd:DefaultName>
+                      <rd:DefaultName>Id</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -449,14 +386,74 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="naziv">
+                    <Textbox Name="Naziv">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!naziv.Value</Value>
+                              <Value>=Fields!Naziv.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Naziv</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Vrsta">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Vrsta.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Vrsta</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Kolicina">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Kolicina.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -465,7 +462,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>naziv</rd:DefaultName>
+                      <rd:DefaultName>Kolicina</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -481,21 +478,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="vrsta">
+                    <Textbox Name="MjernaJedinica">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!vrsta.Value</Value>
+                              <Value>=Fields!MjernaJedinica.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>vrsta</rd:DefaultName>
+                      <rd:DefaultName>MjernaJedinica</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -511,55 +508,23 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="mjerna_jedinica">
+                    <Textbox Name="Rok_trajanja">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!mjerna_jedinica.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>mjerna_jedinica</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="cijena">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!cijena.Value</Value>
+                              <Value>=Fields!Rok_trajanja.Value</Value>
                               <Style>
-                                <Format>0.00'€';(0.00'€')</Format>
+                                <Format>d</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>cijena</rd:DefaultName>
+                      <rd:DefaultName>Rok_trajanja</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -569,7 +534,6 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
-                        <rd:FormatSymbolCulture>de-IT</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -580,6 +544,7 @@
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
+            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -597,147 +562,38 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DSStavke</DataSetName>
-        <Top>5.08cm</Top>
-        <Left>0.97487cm</Left>
+        <DataSetName>DSStavka</DataSetName>
+        <Top>4.47887cm</Top>
+        <Left>1.03025cm</Left>
         <Height>1.2cm</Height>
-        <Width>12.54233cm</Width>
-        <ZIndex>8</ZIndex>
+        <Width>14.72014cm</Width>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Tablix Name="Tablix2">
-        <TablixBody>
-          <TablixColumns>
-            <TablixColumn>
-              <Width>2.23894cm</Width>
-            </TablixColumn>
-          </TablixColumns>
-          <TablixRows>
-            <TablixRow>
-              <Height>0.6cm</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox19">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>kolicina</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox19</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>0.6cm</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="kolicina">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!kolicina.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>kolicina</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-          </TablixRows>
-        </TablixBody>
-        <TablixColumnHierarchy>
-          <TablixMembers>
-            <TablixMember />
-          </TablixMembers>
-        </TablixColumnHierarchy>
-        <TablixRowHierarchy>
-          <TablixMembers>
-            <TablixMember>
-              <KeepWithGroup>After</KeepWithGroup>
-            </TablixMember>
-            <TablixMember>
-              <Group Name="Details1" />
-            </TablixMember>
-          </TablixMembers>
-        </TablixRowHierarchy>
-        <DataSetName>DSPoveznica</DataSetName>
-        <Top>5.08cm</Top>
-        <Left>13.5172cm</Left>
-        <Height>1.2cm</Height>
-        <Width>2.23894cm</Width>
-        <ZIndex>9</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Tablix>
-      <Textbox Name="Textbox5">
+      <Textbox Name="prezime">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Sveukupan trošak:</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
+                <Value>=First(Fields!prezime.Value, "DSZaposlenik")</Value>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.80875cm</Top>
-        <Left>9.86714cm</Left>
+        <rd:DefaultName>prezime</rd:DefaultName>
+        <Top>2.24cm</Top>
+        <Left>2.93039cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.47367cm</Width>
-        <ZIndex>10</ZIndex>
+        <Width>2.3095cm</Width>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -746,41 +602,6 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="sveukupan_iznos">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!sveukupan_iznos.Value, "DSNarudzbenica")</Value>
-                <Style>
-                  <Format>0.00'€';(0.00'€')</Format>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>sveukupan_iznos</rd:DefaultName>
-        <Top>6.80875cm</Top>
-        <Left>13.5172cm</Left>
-        <Height>0.6cm</Height>
-        <Width>1.31467cm</Width>
-        <ZIndex>11</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-          <rd:FormatSymbolCulture>fr-FR</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="ime">
@@ -798,11 +619,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ime</rd:DefaultName>
-        <Top>3.15017cm</Top>
-        <Left>4.87279cm</Left>
+        <Top>2.24cm</Top>
+        <Left>5.41628cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.44075cm</Width>
-        <ZIndex>12</ZIndex>
+        <Width>2.246cm</Width>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -814,13 +635,13 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>3.16411in</Height>
+    <Height>2.59411in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>6.56571in</Width>
   <Page>
     <PageHeader>
-      <Height>1.9685cm</Height>
+      <Height>1.94733cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -841,8 +662,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>0.80067cm</Top>
-          <Left>13.03872cm</Left>
+          <Top>0.61017cm</Top>
+          <Left>13.25039cm</Left>
           <Height>0.6cm</Height>
           <Width>2.92089cm</Width>
           <Style>
@@ -863,7 +684,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.94733cm</Height>
+      <Height>1.7145cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -882,8 +703,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.67367cm</Top>
-          <Left>13.45961cm</Left>
+          <Top>0.63133cm</Top>
+          <Left>13.67128cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -919,124 +740,61 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>6d40ff0b-9b93-43fb-ad94-a9334c504b2e</rd:DataSourceID>
+      <rd:DataSourceID>e799328d-84fa-432e-9b50-7bd9587982ca</rd:DataSourceID>
     </DataSource>
     <DataSource Name="EntitiesLayerEntities1">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>2cda3d74-45b0-4ae5-ba5c-ab5127904475</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="EntitiesLayerEntities2">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>0003b0d2-ead2-46de-9ec4-b24d2edb55da</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="EntitiesLayerEntities3">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>0dca5ca4-2114-4910-96c5-316c1c532937</rd:DataSourceID>
+      <rd:DataSourceID>b553577b-b801-4dcf-9e15-00a5ecbf2137</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DSNarudzbenica">
+    <DataSet Name="DSStavka">
       <Query>
         <DataSourceName>EntitiesLayerEntities</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="broj_stavki">
-          <DataField>broj_stavki</DataField>
+        <Field Name="Id">
+          <DataField>Id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="datum_kreiranja">
-          <DataField>datum_kreiranja</DataField>
+        <Field Name="Kolicina">
+          <DataField>Kolicina</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MjernaJedinica">
+          <DataField>MjernaJedinica</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Naziv">
+          <DataField>Naziv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Rok_trajanja">
+          <DataField>Rok_trajanja</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="id">
-          <DataField>id</DataField>
+        <Field Name="Temp_id">
+          <DataField>Temp_id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="sveukupan_iznos">
-          <DataField>sveukupan_iznos</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="zaposlenik">
-          <DataField>zaposlenik</DataField>
-          <rd:TypeName>EntitiesLayer.Entities.zaposlenik</rd:TypeName>
-        </Field>
-        <Field Name="zaposlenik_id">
-          <DataField>zaposlenik_id</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        <Field Name="Vrsta">
+          <DataField>Vrsta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>EntitiesLayer.Entities</rd:DataSetName>
-        <rd:TableName>narudzbenica</rd:TableName>
-        <rd:ObjectDataSourceType>EntitiesLayer.Entities.narudzbenica, EntitiesLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DSStavke">
-      <Query>
-        <DataSourceName>EntitiesLayerEntities1</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="cijena">
-          <DataField>cijena</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="id">
-          <DataField>id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="minimalne_zalihe">
-          <DataField>minimalne_zalihe</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="mjerna_jedinica">
-          <DataField>mjerna_jedinica</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="naziv">
-          <DataField>naziv</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="optimalne_zalihe">
-          <DataField>optimalne_zalihe</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="rok_uporabe">
-          <DataField>rok_uporabe</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="vrsta">
-          <DataField>vrsta</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="zaposlenik">
-          <DataField>zaposlenik</DataField>
-          <rd:TypeName>EntitiesLayer.Entities.zaposlenik</rd:TypeName>
-        </Field>
-        <Field Name="zaposlenik_id">
-          <DataField>zaposlenik_id</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>EntitiesLayer.Entities</rd:DataSetName>
-        <rd:TableName>namirnica_u_katalogu</rd:TableName>
-        <rd:ObjectDataSourceType>EntitiesLayer.Entities.namirnica_u_katalogu, EntitiesLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>StavkaIzdatnice</rd:TableName>
+        <rd:ObjectDataSourceType>EntitiesLayer.Entities.StavkaIzdatnice, EntitiesLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="DSZaposlenik">
       <Query>
-        <DataSourceName>EntitiesLayerEntities2</DataSourceName>
+        <DataSourceName>EntitiesLayerEntities1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1079,40 +837,7 @@
         <rd:ObjectDataSourceType>EntitiesLayer.Entities.zaposlenik, EntitiesLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="DSPoveznica">
-      <Query>
-        <DataSourceName>EntitiesLayerEntities3</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="kolicina">
-          <DataField>kolicina</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="namirnica_u_katalogu">
-          <DataField>namirnica_u_katalogu</DataField>
-          <rd:TypeName>EntitiesLayer.Entities.namirnica_u_katalogu</rd:TypeName>
-        </Field>
-        <Field Name="namirnica_u_katalogu_id">
-          <DataField>namirnica_u_katalogu_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="narudzbenica">
-          <DataField>narudzbenica</DataField>
-          <rd:TypeName>EntitiesLayer.Entities.narudzbenica</rd:TypeName>
-        </Field>
-        <Field Name="narudzbenica_id">
-          <DataField>narudzbenica_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>EntitiesLayer.Entities</rd:DataSetName>
-        <rd:TableName>namirnica_narudzbenica</rd:TableName>
-        <rd:ObjectDataSourceType>EntitiesLayer.Entities.namirnica_narudzbenica, EntitiesLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
-      </rd:DataSetInfo>
-    </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>1e0edc21-642f-4cd7-8f11-13b23f321084</rd:ReportID>
+  <rd:ReportID>eae85dbf-891d-45eb-8775-dbfa37116703</rd:ReportID>
 </Report>

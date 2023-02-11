@@ -66,9 +66,13 @@ namespace E_ugostiteljstvo
                     var servis = new NamirnicaServices();
                     servis.UpdateNamirnica(novaNamirnica);
                 }
+                //StavkaIzdatniceRepository.lista.Clear();
+                //OsvjeziStavkeIzdatnice();
+                //MessageBox.Show("Uspješno kreirana izdatnica!");
+                var form = new FrmIzvjestajIzdatnica();
+                form.Show();
                 StavkaIzdatniceRepository.lista.Clear();
                 OsvjeziStavkeIzdatnice();
-                MessageBox.Show("Uspješno kreirana izdatnica!");
             }
             else
             {

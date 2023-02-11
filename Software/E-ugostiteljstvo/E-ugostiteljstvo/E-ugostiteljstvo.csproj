@@ -114,6 +114,12 @@
     <Compile Include="FrmIzbornikRacunovodstvo.Designer.cs">
       <DependentUpon>FrmIzbornikRacunovodstvo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIzvjestajIzdatnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzvjestajIzdatnica.Designer.cs">
+      <DependentUpon>FrmIzvjestajIzdatnica.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIzvjestajNarudzbenica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     <EmbeddedResource Include="FrmIzbornikRacunovodstvo.resx">
       <DependentUpon>FrmIzbornikRacunovodstvo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzvjestajIzdatnica.resx">
+      <DependentUpon>FrmIzvjestajIzdatnica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIzvjestajNarudzbenica.resx">
       <DependentUpon>FrmIzvjestajNarudzbenica.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +219,7 @@
     <EmbeddedResource Include="FrmRegistracija.resx">
       <DependentUpon>FrmRegistracija.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IzvjestajIzdatnica.rdlc" />
     <EmbeddedResource Include="IzvjestajNarudzbenica.rdlc" />
     <EmbeddedResource Include="IzvjestajPrimka.rdlc" />
     <EmbeddedResource Include="MainForm.resx">
@@ -253,6 +263,7 @@
     <None Include="Properties\DataSources\EntitiesLayer.Entities.namirnica_narudzbenica.datasource" />
     <None Include="Properties\DataSources\EntitiesLayer.Entities.namirnica_u_katalogu.datasource" />
     <None Include="Properties\DataSources\EntitiesLayer.Entities.narudzbenica.datasource" />
+    <None Include="Properties\DataSources\EntitiesLayer.Entities.StavkaIzdatnice.datasource" />
     <None Include="Properties\DataSources\EntitiesLayer.Entities.zaposlenik.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
