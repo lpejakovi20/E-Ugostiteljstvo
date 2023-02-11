@@ -82,6 +82,7 @@
             this.btnIzradiPrimku.TabIndex = 5;
             this.btnIzradiPrimku.Text = "Izradi Primku";
             this.btnIzradiPrimku.UseVisualStyleBackColor = true;
+            this.btnIzradiPrimku.Click += new System.EventHandler(this.btnIzradiPrimku_Click);
             // 
             // lblIznos
             // 

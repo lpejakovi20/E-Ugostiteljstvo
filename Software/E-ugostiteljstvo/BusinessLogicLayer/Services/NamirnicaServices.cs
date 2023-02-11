@@ -28,5 +28,16 @@ namespace BusinessLogicLayer.Services
             }
             return isSuccessful;
         }
+
+        public bool AddNamirnica(namirnica _namirnica)
+        {
+            bool isSuccessful = false;
+            using (var repo = new NamirnicaRepository())
+            {
+                int affectedRows = repo.Add(_namirnica);
+                isSuccessful = affectedRows > 0;
+            }
+            return isSuccessful;
+        }
     }
 }

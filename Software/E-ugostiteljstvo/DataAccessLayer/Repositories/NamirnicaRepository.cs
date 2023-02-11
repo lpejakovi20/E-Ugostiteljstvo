@@ -39,5 +39,28 @@ namespace DataAccessLayer.Repositories
             return query;
         }
 
+        public override int Add(namirnica entity, bool saveChanges = true)
+        {
+            var namirnicaKatalog = Context.namirnica_u_katalogu.SingleOrDefault(c => c.id == entity.namirnica_u_katalogu_id);
+            var _namirnica = new namirnica();
+
+            var noviRok = entity.rok.AddDays(namirnicaKatalog.rok_uporabe);
+
+            _namirnica.kolicina = entity.kolicina;
+            _namirnica.rok = noviRok;
+            _namirnica.namirnica_u_katalogu = namirnicaKatalog;
+
+
+            Entities.Add(_namirnica);
+            if (saveChanges)
+            {
+                return SaveChanges();
+            }
+            else
+            {
+                return 0;
+            }
+
+        }
     }
 }
