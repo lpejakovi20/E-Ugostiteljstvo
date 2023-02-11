@@ -56,7 +56,10 @@ namespace E_ugostiteljstvo
             var iskoristenostNamirnica = service.GetIskoristeneNamirniceByMonth(mjesec,godina);
             dgvIskoristenostNamirnica.DataSource = iskoristenostNamirnica;
 
-            dgvIskoristenostNamirnica.Columns["namirnica_u_katalogu_id"].HeaderText = "namirnica_id";
+            if(dgvIskoristenostNamirnica.Rows.Count > 0)
+            {
+                dgvIskoristenostNamirnica.Columns["namirnica_u_katalogu_id"].HeaderText = "namirnica_id";
+            }
         }
     }
 }
