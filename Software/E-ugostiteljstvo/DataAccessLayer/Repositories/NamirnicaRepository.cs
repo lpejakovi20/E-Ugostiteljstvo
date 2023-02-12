@@ -50,6 +50,8 @@ namespace DataAccessLayer.Repositories
             return query;
         }
 
+
+
         public override int Add(namirnica entity, bool saveChanges = true)
         {
             var namirnicaKatalog = Context.namirnica_u_katalogu.SingleOrDefault(c => c.id == entity.namirnica_u_katalogu_id);
@@ -72,6 +74,26 @@ namespace DataAccessLayer.Repositories
                 return 0;
             }
 
+        }
+
+
+        public IQueryable<StavkaIzvjestajaBlizuRoka> GetNamirniceBlizuRoka()
+        {
+            var today = DateTime.Today;
+            var date = today.AddDays(7);
+
+            var query = from p in Context.namirnica_u_katalogu
+                        join n in Context.namirnica on p.id equals n.namirnica_u_katalogu_id into pn
+                        from n in pn.Where(x => x.rok >= today && x.rok <= date)
+                        select new StavkaIzvjestajaBlizuRoka
+                        {
+                            id = n.id,
+                            kolicina = n.kolicina,
+                            rok = n.rok,
+                            naziv = p.naziv
+
+                        };
+            return query;
         }
 
         public IQueryable<dynamic> GetNamirniceIstecenogRoka()

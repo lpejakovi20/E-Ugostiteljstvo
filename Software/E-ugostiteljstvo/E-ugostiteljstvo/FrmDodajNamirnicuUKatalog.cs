@@ -14,6 +14,7 @@ using EntitiesLayer.Entities;
 using BusinessLogicLayer.Services;
 using System.Drawing.Imaging;
 using System.IO;
+using EntitiesLayer;
 
 namespace E_ugostiteljstvo
 {
@@ -85,7 +86,7 @@ namespace E_ugostiteljstvo
                 {
                     Directory.CreateDirectory(directoryPath);
                 }
-
+                
                 string filePath = @"C:\NamirniceQr\qrCode_" + value.ToString() + ".png";
                 qrCode.Save(filePath, ImageFormat.Png);
 
@@ -99,7 +100,7 @@ namespace E_ugostiteljstvo
                     mjerna_jedinica = cmbMjJed.SelectedItem.ToString(),
                     rok_uporabe = int.Parse(txtRokUporabe.Text),
                     cijena = decimal.Parse(txtCijena.Text),
-                    zaposlenik_id = 5
+                    zaposlenik_id = LogiraniZaposlenik.Id
 
                 };
 

@@ -35,6 +35,14 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        public List<StavkaIzvjestajaBlizuRoka> GetNamirniceBlizuRoka()
+        {
+            using (var repo = new NamirnicaRepository())
+            {
+                return repo.GetNamirniceBlizuRoka().ToList();
+            }
+        }
+
 
         public List<StavkaNarudzbenice> GetDostupneKolicineNamirnica()
         {

@@ -54,6 +54,7 @@
     <Compile Include="Entities\zaposlenik.cs" />
     <Compile Include="LogiraniZaposlenik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StavkaIzvjestajaBlizuRoka.cs" />
     <Compile Include="StavkaNarudzbenice.cs" />
   </ItemGroup>
   <ItemGroup />

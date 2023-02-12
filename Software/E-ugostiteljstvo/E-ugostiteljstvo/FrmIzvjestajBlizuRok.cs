@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicLayer.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace E_ugostiteljstvo
 {
     public partial class FrmIzvjestajBlizuRok : Form
     {
+        NamirnicaServices services = new NamirnicaServices();
         public FrmIzvjestajBlizuRok()
         {
             InitializeComponent();
+        }
+
+        private void FrmIzvjestajBlizuRok_Load(object sender, EventArgs e)
+        {
+            var izvjestajLista = services.GetNamirniceBlizuRoka();
+            stavkaIzvjestajaBlizuRokaBindingSource.DataSource = izvjestajLista;
+            this.reportViewerRok.RefreshReport();
         }
 
 

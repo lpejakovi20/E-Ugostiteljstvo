@@ -28,71 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGenerate = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.dgvIzvjestaj = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIzvjestaj)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.namirnicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewerRok = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.stavkaIzvjestajaBlizuRokaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.namirnicaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stavkaIzvjestajaBlizuRokaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnGenerate
+            // namirnicaBindingSource
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(529, 37);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(106, 40);
-            this.btnGenerate.TabIndex = 0;
-            this.btnGenerate.Text = "Generiraj Izvještaj";
-            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.namirnicaBindingSource.DataSource = typeof(EntitiesLayer.Entities.namirnica);
             // 
-            // btnBack
+            // reportViewerRok
             // 
-            this.btnBack.Location = new System.Drawing.Point(25, 12);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(125, 34);
-            this.btnBack.TabIndex = 1;
-            this.btnBack.Text = "Natrag";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.reportViewerRok.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DSNamirnice";
+            reportDataSource1.Value = this.namirnicaBindingSource;
+            reportDataSource2.Name = "DSStavkeBlizuRoka";
+            reportDataSource2.Value = this.stavkaIzvjestajaBlizuRokaBindingSource;
+            this.reportViewerRok.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewerRok.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewerRok.LocalReport.ReportEmbeddedResource = "E_ugostiteljstvo.IzvjestajBlizuRok.rdlc";
+            this.reportViewerRok.Location = new System.Drawing.Point(0, 0);
+            this.reportViewerRok.Name = "reportViewerRok";
+            this.reportViewerRok.ServerReport.BearerToken = null;
+            this.reportViewerRok.Size = new System.Drawing.Size(800, 450);
+            this.reportViewerRok.TabIndex = 0;
             // 
-            // btnSave
+            // stavkaIzvjestajaBlizuRokaBindingSource
             // 
-            this.btnSave.Location = new System.Drawing.Point(41, 367);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(109, 55);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Spremi";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // dgvIzvjestaj
-            // 
-            this.dgvIzvjestaj.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIzvjestaj.Location = new System.Drawing.Point(36, 95);
-            this.dgvIzvjestaj.Name = "dgvIzvjestaj";
-            this.dgvIzvjestaj.RowHeadersWidth = 51;
-            this.dgvIzvjestaj.RowTemplate.Height = 24;
-            this.dgvIzvjestaj.Size = new System.Drawing.Size(601, 266);
-            this.dgvIzvjestaj.TabIndex = 3;
+            this.stavkaIzvjestajaBlizuRokaBindingSource.DataSource = typeof(EntitiesLayer.StavkaIzvjestajaBlizuRoka);
             // 
             // FrmIzvjestajBlizuRok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvIzvjestaj);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnGenerate);
+            this.Controls.Add(this.reportViewerRok);
             this.Name = "FrmIzvjestajBlizuRok";
             this.Text = "FrmIzvjestajBlizuRok";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIzvjestaj)).EndInit();
+            this.Load += new System.EventHandler(this.FrmIzvjestajBlizuRok_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.namirnicaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stavkaIzvjestajaBlizuRokaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DataGridView dgvIzvjestaj;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerRok;
+        private System.Windows.Forms.BindingSource namirnicaBindingSource;
+        private System.Windows.Forms.BindingSource stavkaIzvjestajaBlizuRokaBindingSource;
     }
 }
