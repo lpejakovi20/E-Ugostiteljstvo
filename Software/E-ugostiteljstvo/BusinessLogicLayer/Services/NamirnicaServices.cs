@@ -27,6 +27,15 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        public List<namirnica> GetNamirniceUSkladistu(int namirnica_id)
+        {
+            using (var repo = new NamirnicaRepository())
+            {
+                return repo.GetNamirniceByKatalogId(namirnica_id).ToList();
+            }
+        }
+
+
         public List<StavkaNarudzbenice> GetDostupneKolicineNamirnica()
         {
             using (var repo = new NamirnicaRepository())

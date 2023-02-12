@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer.Services;
+using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace E_ugostiteljstvo
     public partial class FrmKatalogNamirnica : Form
     {
         private KatalogNamirnicaServices services = new KatalogNamirnicaServices();
+        private NamirnicaServices servicesNamirnica = new NamirnicaServices();  
         public FrmKatalogNamirnica()
         {
             InitializeComponent();
@@ -36,6 +38,8 @@ namespace E_ugostiteljstvo
             dgvKatalogNamirnica.Columns[10].Visible = false;
             dgvKatalogNamirnica.Columns[11].Visible = false;
             dgvKatalogNamirnica.Columns[12].Visible = false;
+
+            
 
         }
 
@@ -166,6 +170,20 @@ namespace E_ugostiteljstvo
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void dgvKatalogNamirnica_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedRowIndex = e.RowIndex;
+            if (selectedRowIndex >= 0)
+            {
+                var selectedNamirnica = dgvKatalogNamirnica.CurrentRow.DataBoundItem as namirnica_u_katalogu;
+                var namirniceSkladiste = servicesNamirnica.GetNamirniceUSkladistu(selectedNamirnica.id);
+                dgvNamirniceUSkladistu.DataSource = namirniceSkladiste;
+                dgvNamirniceUSkladistu.Columns[3].Visible = false;
+                dgvNamirniceUSkladistu.Columns[4].Visible = false;
+
+            }
         }
     }
 }

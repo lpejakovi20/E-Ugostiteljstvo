@@ -102,8 +102,10 @@
             this.dgvKatalogNamirnica.Name = "dgvKatalogNamirnica";
             this.dgvKatalogNamirnica.RowHeadersWidth = 51;
             this.dgvKatalogNamirnica.RowTemplate.Height = 24;
+            this.dgvKatalogNamirnica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKatalogNamirnica.Size = new System.Drawing.Size(938, 225);
             this.dgvKatalogNamirnica.TabIndex = 5;
+            this.dgvKatalogNamirnica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKatalogNamirnica_CellContentClick);
             // 
             // cmbSort
             // 
@@ -130,7 +132,7 @@
             // 
             // btnAddNewNamirnica
             // 
-            this.btnAddNewNamirnica.Location = new System.Drawing.Point(613, 394);
+            this.btnAddNewNamirnica.Location = new System.Drawing.Point(682, 394);
             this.btnAddNewNamirnica.Name = "btnAddNewNamirnica";
             this.btnAddNewNamirnica.Size = new System.Drawing.Size(130, 44);
             this.btnAddNewNamirnica.TabIndex = 8;
@@ -140,7 +142,7 @@
             // 
             // btnCreateNarudzbenica
             // 
-            this.btnCreateNarudzbenica.Location = new System.Drawing.Point(477, 394);
+            this.btnCreateNarudzbenica.Location = new System.Drawing.Point(546, 394);
             this.btnCreateNarudzbenica.Name = "btnCreateNarudzbenica";
             this.btnCreateNarudzbenica.Size = new System.Drawing.Size(130, 44);
             this.btnCreateNarudzbenica.TabIndex = 9;
@@ -197,7 +199,7 @@
             // 
             // btnCreateIzdatnica
             // 
-            this.btnCreateIzdatnica.Location = new System.Drawing.Point(758, 394);
+            this.btnCreateIzdatnica.Location = new System.Drawing.Point(818, 394);
             this.btnCreateIzdatnica.Name = "btnCreateIzdatnica";
             this.btnCreateIzdatnica.Size = new System.Drawing.Size(130, 44);
             this.btnCreateIzdatnica.TabIndex = 15;

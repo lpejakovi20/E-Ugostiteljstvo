@@ -40,6 +40,16 @@ namespace DataAccessLayer.Repositories
             return query;
         }
 
+        public IQueryable<namirnica> GetNamirniceByKatalogId(int namirnica_id)
+        {
+            var today = DateTime.Today;
+
+            var query = from p in Entities.Include("namirnica_u_katalogu")
+                        where p.namirnica_u_katalogu_id == namirnica_id && p.rok >= today
+                        select p;
+            return query;
+        }
+
         public override int Add(namirnica entity, bool saveChanges = true)
         {
             var namirnicaKatalog = Context.namirnica_u_katalogu.SingleOrDefault(c => c.id == entity.namirnica_u_katalogu_id);
