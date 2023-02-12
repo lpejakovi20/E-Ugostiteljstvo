@@ -75,6 +75,7 @@ namespace DataAccessLayer.Repositories
                          {
                              p.id,
                              p.naziv,
+                             istekao_rok = n.rok,
                              p.vrsta,
                              kolicina = n.kolicina,
                              p.mjerna_jedinica,

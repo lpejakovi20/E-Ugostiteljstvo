@@ -30,11 +30,10 @@ namespace E_ugostiteljstvo
 
             foreach (DataGridViewRow row in dgvNamirniceIstekaoRok.Rows)
             {
-
-                sveukupno += decimal.Parse(row.Cells[6].Value.ToString());   
+                sveukupno += decimal.Parse(row.Cells[7].Value.ToString());   
             }
 
-            dgvNamirniceIstekaoRok.Columns[6].Visible = false;
+            dgvNamirniceIstekaoRok.Columns[7].Visible = false;
 
             txtSveukupnaVrijednost.Text = Math.Round(sveukupno, 2).ToString() + "€";
 
