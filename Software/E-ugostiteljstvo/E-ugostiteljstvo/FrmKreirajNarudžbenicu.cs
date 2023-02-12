@@ -18,6 +18,7 @@ namespace E_ugostiteljstvo
         KatalogNamirnicaServices servisNamirnica = new KatalogNamirnicaServices();
         NarudzbenicaServices servisNarudzbenica = new NarudzbenicaServices();
         StavkeNarudzbeniceServices servisStavke = new StavkeNarudzbeniceServices();
+        NamirnicaServices namirnica = new NamirnicaServices();
 
         public FrmKreirajNarudžbenicu()
         {
@@ -50,7 +51,12 @@ namespace E_ugostiteljstvo
         }
 
        
-        List<StavkaNarudzbenice> stavkeNarudzbenice = new List<StavkaNarudzbenice>();
+        
+        List<StavkaNarudzbenice> dohvaceneStavke = new List<StavkaNarudzbenice>();
+
+
+
+
         private void btnDodaj_Click(object sender, EventArgs e)
         {
             
@@ -65,17 +71,21 @@ namespace E_ugostiteljstvo
             {
                 var selektiranaNamirnica = dgvNamirnice.CurrentRow.DataBoundItem as namirnica_u_katalogu;
                 StavkaNarudzbenice novaStavka = new StavkaNarudzbenice
-                (
+                {
 
-                    selektiranaNamirnica.id,
-                    selektiranaNamirnica.naziv,
-                    selektiranaNamirnica.vrsta,
-                    Int32.Parse(txtKolicina.Text),
-                    selektiranaNamirnica.mjerna_jedinica,
-                    selektiranaNamirnica.cijena,
-                    selektiranaNamirnica.cijena * Int32.Parse(txtKolicina.Text)
-                );
-                stavkeNarudzbenice.Add(novaStavka);
+                   Id = selektiranaNamirnica.id,
+                   Naziv = selektiranaNamirnica.naziv,
+                   Vrsta = selektiranaNamirnica.vrsta,
+                   Kolicina = Int32.Parse(txtKolicina.Text),
+                   MjernaJedinica = selektiranaNamirnica.mjerna_jedinica,
+                  Cijena =  selektiranaNamirnica.cijena,
+                  Iznos =  selektiranaNamirnica.cijena * Int32.Parse(txtKolicina.Text)
+                };
+
+               
+               
+                
+                dohvaceneStavke.Add(novaStavka);
                 OsvjeziStavkeNarudzbenice();
                 txtKolicina.Text = "";
             }
@@ -87,52 +97,73 @@ namespace E_ugostiteljstvo
 
         private void OsvjeziStavkeNarudzbenice()
         {
-            dgvNarudžbenica.DataSource = stavkeNarudzbenice.ToList();
-        
+            dgvNarudžbenica.DataSource = null;
+            dgvNarudžbenica.Rows.Clear();
+            dgvNarudžbenica.Refresh();
+            dgvNarudžbenica.DataSource = dohvaceneStavke.ToList();
+
+                  
         }
+      
+
 
         private void btnMakni_Click(object sender, EventArgs e)
         {
-            var selektiranaStavka = dgvNarudžbenica.CurrentRow.DataBoundItem as StavkaNarudzbenice;
+            if (dgvNarudžbenica.Rows.Count > 0)
+            {
+                var selektiranaStavka = dgvNarudžbenica.CurrentRow.DataBoundItem as StavkaNarudzbenice;
 
-            stavkeNarudzbenice.RemoveAll(R => R.Id == selektiranaStavka.Id);
-            OsvjeziStavkeNarudzbenice();
+                dohvaceneStavke.RemoveAll(R => R.Id == selektiranaStavka.Id);
+                OsvjeziStavkeNarudzbenice();
+            }
+          
 
+          
         }
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
-            int _id = GenerateRandomnumber();
-            
-            decimal sveukupanIznos = 0;
-            foreach (var stavka in stavkeNarudzbenice)
-            {
-                sveukupanIznos += stavka.Iznos;
 
-            }
-            DateTime datumKreiranja = DateTime.Now;
-            narudzbenica _narudzbenica = new narudzbenica
+            if(dgvNarudžbenica.Rows.Count > 0)
             {
-                id = _id,
-                datum_kreiranja = datumKreiranja,
-                sveukupan_iznos = sveukupanIznos,
-                broj_stavki = stavkeNarudzbenice.Count,
-                zaposlenik_id = LogiraniZaposlenik.Id
-            };
-            servisNarudzbenica.AddNarudzbenica(_narudzbenica);
+                int _id = GenerateRandomnumber();
 
-            foreach (DataGridViewRow row in dgvNarudžbenica.Rows)
-            {
-                var selectedRow = row.DataBoundItem as StavkaNarudzbenice;
-                var novaStavka = new namirnica_narudzbenica { 
-                kolicina = selectedRow.Kolicina,
-                narudzbenica_id = _id,
-                namirnica_u_katalogu_id = selectedRow.Id               
+                decimal sveukupanIznos = 0;
+                foreach (var stavka in dohvaceneStavke)
+                {
+                    sveukupanIznos += stavka.Iznos;
+
+                }
+                DateTime datumKreiranja = DateTime.Now;
+                narudzbenica _narudzbenica = new narudzbenica
+                {
+                    id = _id,
+                    datum_kreiranja = datumKreiranja,
+                    sveukupan_iznos = sveukupanIznos,
+                    broj_stavki = dohvaceneStavke.Count,
+                    zaposlenik_id = LogiraniZaposlenik.Id
                 };
-                servisStavke.AddStavkeNarudzbenice(novaStavka);
-            }
+                servisNarudzbenica.AddNarudzbenica(_narudzbenica);
 
-            MessageBox.Show("Narudžbenica je usjpešo kreirana.");
+                foreach (DataGridViewRow row in dgvNarudžbenica.Rows)
+                {
+                    var selectedRow = row.DataBoundItem as StavkaNarudzbenice;
+                    var novaStavka = new namirnica_narudzbenica
+                    {
+                        kolicina = selectedRow.Kolicina,
+                        narudzbenica_id = _id,
+                        namirnica_u_katalogu_id = selectedRow.Id
+                    };
+                    servisStavke.AddStavkeNarudzbenice(novaStavka);
+                }
+
+                MessageBox.Show("Narudžbenica je uspješno kreirana.");
+            }
+            else
+            {
+                MessageBox.Show("Nije moguće kreirati praznu narudžbenicu!");
+            }
+           
 
         }
 
@@ -144,6 +175,15 @@ namespace E_ugostiteljstvo
             tempstring = tempstring.Substring(5);
             int random = int.Parse(tempstring);
             return random;
+        }
+
+        private void btnPopuni_Click(object sender, EventArgs e)
+        {
+            
+            
+            dohvaceneStavke = namirnica.GetDostupneKolicineNamirnica();
+            dgvNarudžbenica.DataSource = dohvaceneStavke;
+
         }
     }
 }

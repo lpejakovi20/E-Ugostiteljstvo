@@ -27,6 +27,13 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        public List<StavkaNarudzbenice> GetDostupneKolicineNamirnica()
+        {
+            using (var repo = new NamirnicaRepository())
+            {
+                return repo.GetDostupneKolicineNamirnica().ToList();
+            }
+        }
         public bool UpdateNamirnica(namirnica product)
         {
             bool isSuccessful = false;

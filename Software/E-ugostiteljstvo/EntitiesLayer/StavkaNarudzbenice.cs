@@ -8,7 +8,7 @@ namespace EntitiesLayer
 {
     public class StavkaNarudzbenice
     {
-        public StavkaNarudzbenice(int id, string naziv, string vrsta, int kolicina, string mjernajedinica, decimal cijena,decimal iznos)
+      /*  public StavkaNarudzbenice(int id, string naziv, string vrsta, int kolicina, string mjernajedinica, decimal cijena,decimal iznos)
         {
             Id = id;
             Naziv = naziv;
@@ -17,7 +17,7 @@ namespace EntitiesLayer
             MjernaJedinica = mjernajedinica;
             Cijena = cijena;
             Iznos = iznos;
-        }
+        }*/
 
         public int Id { get; set; }
         public string Naziv { get; set; }

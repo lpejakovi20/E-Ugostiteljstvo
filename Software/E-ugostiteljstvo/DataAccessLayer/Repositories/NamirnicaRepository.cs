@@ -84,5 +84,26 @@ namespace DataAccessLayer.Repositories
             
             return result;
         }
+        public IQueryable<StavkaNarudzbenice> GetDostupneKolicineNamirnica()
+        {
+            var today = DateTime.Today;
+            var result = from p in Context.namirnica_u_katalogu
+                         join n in Context.namirnica on p.id equals n.namirnica_u_katalogu_id into pn
+                         from n in pn.Where(x => x.rok >= DateTime.Today)
+                         group n by p into g
+                         where g.Key.optimalne_zalihe > g.Sum(x => x.kolicina)
+                         select new StavkaNarudzbenice
+                         {
+                            Id =  g.Key.id,
+                            Naziv = g.Key.naziv,
+                            Vrsta = g.Key.vrsta,
+                            Kolicina = g.Key.optimalne_zalihe - g.Sum(x => x.kolicina),
+                            MjernaJedinica = g.Key.mjerna_jedinica,
+                            Cijena = g.Key.cijena,
+                            Iznos = (g.Key.optimalne_zalihe - g.Sum(x => x.kolicina)) * g.Key.cijena
+                         };
+           
+            return result;
+        }
     }
 }

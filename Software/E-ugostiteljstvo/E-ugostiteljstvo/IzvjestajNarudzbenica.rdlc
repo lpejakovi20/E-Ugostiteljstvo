@@ -183,7 +183,7 @@
         <Top>3.36183cm</Top>
         <Left>0.73236cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.89323cm</Width>
+        <Width>1.96379cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -212,9 +212,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ime</rd:DefaultName>
-        <Top>3.99711cm</Top>
-        <Left>2.66087cm</Left>
-        <Height>0.6cm</Height>
+        <Top>3.92655cm</Top>
+        <Left>2.80198cm</Left>
+        <Height>0.49587cm</Height>
         <Width>1.74505cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
@@ -245,8 +245,8 @@
         </Paragraphs>
         <rd:DefaultName>prezime</rd:DefaultName>
         <Top>3.36183cm</Top>
-        <Left>2.62559cm</Left>
-        <Height>0.6cm</Height>
+        <Left>2.73142cm</Left>
+        <Height>0.52945cm</Height>
         <Width>1.78033cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
@@ -303,7 +303,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id</Value>
+                              <Value>Id</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -333,7 +333,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>naziv</Value>
+                              <Value>Naziv</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -363,7 +363,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>vrsta</Value>
+                              <Value>Vrsta</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -393,7 +393,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>mjerna jedinica</Value>
+                              <Value>Mjerna jedinica</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -423,7 +423,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cijena</Value>
+                              <Value>Cijena</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -654,21 +654,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox19">
+                    <Textbox Name="Textbox12">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>kolicina</Value>
+                              <Value>Kolicina</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox19</rd:DefaultName>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -819,7 +819,7 @@
     <Height>3.83333in</Height>
     <Style />
   </Body>
-  <Width>6.98092in</Width>
+  <Width>7.73092in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>

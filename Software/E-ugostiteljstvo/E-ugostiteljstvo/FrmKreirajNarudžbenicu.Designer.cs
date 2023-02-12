@@ -80,6 +80,7 @@
             this.btnPopuni.TabIndex = 3;
             this.btnPopuni.Text = "Popuni automatski";
             this.btnPopuni.UseVisualStyleBackColor = true;
+            this.btnPopuni.Click += new System.EventHandler(this.btnPopuni_Click);
             // 
             // btnTraži
             // 
@@ -114,7 +115,7 @@
             this.btnMakni.Name = "btnMakni";
             this.btnMakni.Size = new System.Drawing.Size(75, 35);
             this.btnMakni.TabIndex = 7;
-            this.btnMakni.Text = "Makni";
+            this.btnMakni.Text = "Ukloni";
             this.btnMakni.UseVisualStyleBackColor = true;
             this.btnMakni.Click += new System.EventHandler(this.btnMakni_Click);
             // 
