@@ -76,5 +76,11 @@ namespace E_ugostiteljstvo
         {
             Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "Statistika");
         }
+
+        private void btnReportIskoristenost_Click(object sender, EventArgs e)
+        {
+            var form = new FrmIzvjestajIskoristenostNamirnica(LogiraniZaposlenik.Id, cmbMjesec.SelectedIndex + 1);
+            form.ShowDialog();
+        }
     }
 }

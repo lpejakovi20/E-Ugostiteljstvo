@@ -601,7 +601,7 @@
         <Top>5.08cm</Top>
         <Left>0.97487cm</Left>
         <Height>1.2cm</Height>
-        <Width>12.54233cm</Width>
+        <Width>12.54235cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -941,6 +941,13 @@
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>0dca5ca4-2114-4910-96c5-316c1c532937</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="EntitiesLayer">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>2721cb62-24fa-4119-a7db-431371a665c0</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>

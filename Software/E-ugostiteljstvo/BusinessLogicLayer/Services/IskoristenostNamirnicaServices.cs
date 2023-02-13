@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Repositories;
+using EntitiesLayer;
 using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace BusinessLogicLayer.Services
 {
     public class IskoristenostNamirnicaServices
     {
-        public List<dynamic> GetIskoristeneNamirniceByMonth(int month, int year)
+        public List<StavkaIskoristenostNamirnice> GetIskoristeneNamirniceByMonth(int month, int year)
         {
             using (var repo = new IskoristenostNamirnicaRepository())
             {

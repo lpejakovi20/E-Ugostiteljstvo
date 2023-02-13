@@ -37,6 +37,7 @@
             this.cmbMjesec = new System.Windows.Forms.ComboBox();
             this.dgvIskoristenostNamirnica = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnReportIskoristenost = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirniceIstekaoRok)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIskoristenostNamirnica)).BeginInit();
             this.SuspendLayout();
@@ -79,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 464);
+            this.label3.Location = new System.Drawing.Point(38, 447);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 16);
             this.label3.TabIndex = 4;
@@ -88,7 +89,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(572, 464);
+            this.label4.Location = new System.Drawing.Point(572, 447);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 16);
             this.label4.TabIndex = 5;
@@ -97,7 +98,7 @@
             // cmbMjesec
             // 
             this.cmbMjesec.FormattingEnabled = true;
-            this.cmbMjesec.Location = new System.Drawing.Point(641, 461);
+            this.cmbMjesec.Location = new System.Drawing.Point(641, 444);
             this.cmbMjesec.Name = "cmbMjesec";
             this.cmbMjesec.Size = new System.Drawing.Size(121, 24);
             this.cmbMjesec.TabIndex = 6;
@@ -106,7 +107,7 @@
             // dgvIskoristenostNamirnica
             // 
             this.dgvIskoristenostNamirnica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIskoristenostNamirnica.Location = new System.Drawing.Point(41, 500);
+            this.dgvIskoristenostNamirnica.Location = new System.Drawing.Point(41, 483);
             this.dgvIskoristenostNamirnica.Name = "dgvIskoristenostNamirnica";
             this.dgvIskoristenostNamirnica.RowHeadersWidth = 51;
             this.dgvIskoristenostNamirnica.RowTemplate.Height = 24;
@@ -124,11 +125,22 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnReportIskoristenost
+            // 
+            this.btnReportIskoristenost.Location = new System.Drawing.Point(641, 797);
+            this.btnReportIskoristenost.Name = "btnReportIskoristenost";
+            this.btnReportIskoristenost.Size = new System.Drawing.Size(121, 32);
+            this.btnReportIskoristenost.TabIndex = 10;
+            this.btnReportIskoristenost.Text = "Kreiraj izvještaj";
+            this.btnReportIskoristenost.UseVisualStyleBackColor = true;
+            this.btnReportIskoristenost.Click += new System.EventHandler(this.btnReportIskoristenost_Click);
+            // 
             // FrmStatistikaIskoristenosti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 822);
+            this.ClientSize = new System.Drawing.Size(801, 841);
+            this.Controls.Add(this.btnReportIskoristenost);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvIskoristenostNamirnica);
             this.Controls.Add(this.cmbMjesec);
@@ -163,5 +175,6 @@
         private System.Windows.Forms.ComboBox cmbMjesec;
         private System.Windows.Forms.DataGridView dgvIskoristenostNamirnica;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnReportIskoristenost;
     }
 }

@@ -1,4 +1,5 @@
-﻿using EntitiesLayer.Entities;
+﻿using EntitiesLayer;
+using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,18 +15,18 @@ namespace DataAccessLayer.Repositories
 
         }
 
-        public IQueryable<dynamic> GetIskoristeneNamirniceByMonth(int month, int year)
+        public IQueryable<StavkaIskoristenostNamirnice> GetIskoristeneNamirniceByMonth(int month, int year)
         {
             var result = from p in Entities
                          join n in Context.namirnica_u_katalogu on p.namirnica_u_katalogu_id equals n.id into pn
                          from n in pn where p.datum.Month == month && p.datum.Year == year
-                         select new
+                         select new StavkaIskoristenostNamirnice
                          {
-                             p.namirnica_u_katalogu_id,
-                             n.naziv,
-                             n.vrsta,
-                             p.iskoristeno,
-                             n.mjerna_jedinica
+                             Namirnica_u_katalogu_id = p.namirnica_u_katalogu_id,
+                             Naziv = n.naziv,
+                             Vrsta = n.vrsta,
+                             Iskoristeno = p.iskoristeno,
+                             Mjerna_jedinica = n.mjerna_jedinica
                          };
 
             return result;
