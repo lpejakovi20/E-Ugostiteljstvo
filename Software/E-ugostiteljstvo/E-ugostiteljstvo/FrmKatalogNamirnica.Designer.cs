@@ -88,10 +88,18 @@
             // 
             this.cmbFilters.FormattingEnabled = true;
             this.cmbFilters.Items.AddRange(new object[] {
-            "Mlijećni proizvodi",
+            "Mliječni",
             "Meso",
-            "Sir"});
-            this.cmbFilters.Location = new System.Drawing.Point(682, 91);
+            "Riba",
+            "Povrće",
+            "Voće",
+            "Prerađeni proizvodi",
+            "Pekarski proizvodi",
+            "Slastice",
+            "Tjestenine",
+            "Začini",
+            "Životinjski proizvodi"});
+            this.cmbFilters.Location = new System.Drawing.Point(659, 91);
             this.cmbFilters.Name = "cmbFilters";
             this.cmbFilters.Size = new System.Drawing.Size(111, 24);
             this.cmbFilters.TabIndex = 4;
@@ -113,13 +121,13 @@
             // 
             this.cmbSort.FormattingEnabled = true;
             this.cmbSort.Items.AddRange(new object[] {
-            "Sortiraj po najkraćemroku",
+            "Sortiraj po najkraćem roku",
             "Sortiraj po najdužem roku",
             "Sortiraj po najmanjoj cijeni",
             "Sortiraj po najvećoj cijeni"});
-            this.cmbSort.Location = new System.Drawing.Point(888, 91);
+            this.cmbSort.Location = new System.Drawing.Point(863, 91);
             this.cmbSort.Name = "cmbSort";
-            this.cmbSort.Size = new System.Drawing.Size(145, 24);
+            this.cmbSort.Size = new System.Drawing.Size(176, 24);
             this.cmbSort.TabIndex = 6;
             this.cmbSort.SelectedIndexChanged += new System.EventHandler(this.cmbSort_SelectedIndexChanged_1);
             // 
@@ -156,7 +164,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(634, 95);
+            this.label2.Location = new System.Drawing.Point(611, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 16);
             this.label2.TabIndex = 11;
@@ -165,7 +173,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(815, 94);
+            this.label4.Location = new System.Drawing.Point(790, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 13;

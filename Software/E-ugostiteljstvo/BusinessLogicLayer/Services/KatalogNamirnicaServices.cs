@@ -52,19 +52,11 @@ namespace BusinessLogicLayer.Services
             }
         }
 
-        public List<namirnica_u_katalogu> GetMlijecni()
+        public List<namirnica_u_katalogu> GetFiltered(string selecteditem)
         {
             using (var repo = new KatalogNamirnicaRepository())
             {
-                return repo.GetMlijecni().ToList();
-            }
-        }
-
-        public List<namirnica_u_katalogu> GetMeso()
-        {
-            using (var repo = new KatalogNamirnicaRepository())
-            {
-                return repo.GetMeso().ToList();
+                return repo.GetFiltered(selecteditem).ToList();
             }
         }
 

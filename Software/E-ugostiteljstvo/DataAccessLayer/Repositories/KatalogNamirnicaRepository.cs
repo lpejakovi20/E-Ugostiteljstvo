@@ -68,23 +68,13 @@ namespace DataAccessLayer.Repositories
             return query;
         }
 
-        public IQueryable<namirnica_u_katalogu> GetMlijecni()
+        public IQueryable<namirnica_u_katalogu> GetFiltered(string selecteditem)
         {
             var query = from p in Entities.Include("zaposlenik")
-                        where p.vrsta.Contains("Mliječni")
+                        where p.vrsta.Contains(selecteditem)
                         select p;
             return query;
         }
-
-        public IQueryable<namirnica_u_katalogu> GetMeso()
-        {
-            var query = from p in Entities.Include("zaposlenik")
-                        where p.vrsta.Contains("Meso")
-                        select p;
-            return query;
-        }
-
-
         public override int Update(namirnica_u_katalogu entity, bool saveChanges = true)
         {
             throw new NotImplementedException();

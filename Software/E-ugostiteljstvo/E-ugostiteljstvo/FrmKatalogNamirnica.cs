@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZedGraph;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace E_ugostiteljstvo
 {
@@ -57,31 +58,10 @@ namespace E_ugostiteljstvo
          
         }
 
-        private void Filtered(int optionIndex)
+        private void ShowFiltered(string selecteditem)
         {
-            switch (optionIndex)
-            {
-                case 0: ShowMlijecni(); break;
-                case 1: ShowMeso(); break;
-                default:
-                    break;
-            }
-        }
-
-        private void ShowMeso()
-        {
-            var katalogNamirnica = services.GetMeso();
-            BindingSource bindingSource = new BindingSource();
-            bindingSource.DataSource = katalogNamirnica;
-            dgvKatalogNamirnica.DataSource = bindingSource;
-        }
-
-        private void ShowMlijecni()
-        {
-            var katalogNamirnica = services.GetMlijecni();
-            BindingSource bindingSource = new BindingSource();
-            bindingSource.DataSource = katalogNamirnica;
-            dgvKatalogNamirnica.DataSource = bindingSource;
+            var katalogNamirnica = services.GetFiltered(selecteditem);
+            dgvKatalogNamirnica.DataSource = katalogNamirnica;
         }
 
         private void btnObrisiPrikaz_Click(object sender, EventArgs e)
@@ -186,9 +166,11 @@ namespace E_ugostiteljstvo
 
         private void cmbFilters_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             if (cmbFilters.SelectedIndex >= 0)
             {
-                Filtered(cmbFilters.SelectedIndex);
+                string selectedItem = cmbFilters.SelectedItem.ToString();
+                ShowFiltered(selectedItem);
                 
             }
         }
