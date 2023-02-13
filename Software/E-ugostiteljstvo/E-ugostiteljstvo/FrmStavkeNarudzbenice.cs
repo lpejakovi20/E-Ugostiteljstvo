@@ -40,7 +40,7 @@ namespace E_ugostiteljstvo
             dgvStavkeNarudzbenice.DataSource = stavkeNarudzbenice;
 
             var selektiranaNarudzbenica = servisNarudzbenice.GetNarudzbenicaById(idNarudzbenice);
-            lblIznos.Text = selektiranaNarudzbenica.sveukupan_iznos.ToString();
+            lblIznos.Text = selektiranaNarudzbenica.sveukupan_iznos.ToString() + "€";
 
 
         }
@@ -49,7 +49,7 @@ namespace E_ugostiteljstvo
         {
             foreach(DataGridViewRow row in dgvStavkeNarudzbenice.Rows)
             {
-                //var stavka = row.DataBoundItem as StavkaNarudzbenice;
+              
 
                 DateTime trenutniDatum = DateTime.Now;
 
@@ -80,12 +80,18 @@ namespace E_ugostiteljstvo
                     nova.rok = namirniceIstiDatum.rok;
                     servisNamirnica.UpdateNamirnica(nova);
                 }
-            }
-            MessageBox.Show("Namirnice uspješno zaprimljene u bazu!");
+            }            
 
-            var forma = new FrmIzvjestajPrimka(SelektiranaNarudzbenica);
-            Hide();
+            var forma = new FrmIzvjestajPrimka(SelektiranaNarudzbenica);            
             forma.ShowDialog();
+            
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            var form = new FrmNarudzbenice();
+            Hide();
+            form.ShowDialog();
             Close();
         }
     }

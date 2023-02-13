@@ -30,7 +30,7 @@ namespace DataAccessLayer
 
             modelBuilder.Entity<namirnica_u_katalogu>()
                 .Property(e => e.cijena)
-                .HasPrecision(19, 4);
+                .HasPrecision(19, 2);
 
             modelBuilder.Entity<namirnica_u_katalogu>()
                 .HasMany(e => e.iskoristenost_namirnice)
@@ -56,7 +56,7 @@ namespace DataAccessLayer
 
             modelBuilder.Entity<narudzbenica>()
                 .Property(e => e.sveukupan_iznos)
-                .HasPrecision(19, 4);
+                .HasPrecision(19, 2);
 
             modelBuilder.Entity<narudzbenica>()
                 .HasMany(e => e.namirnica_narudzbenica)

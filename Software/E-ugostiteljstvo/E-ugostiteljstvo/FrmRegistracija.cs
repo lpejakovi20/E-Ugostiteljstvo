@@ -155,5 +155,13 @@ namespace E_ugostiteljstvo
             var uloge = ulogaServices.GetUloge();
             cmbRadnoMjesto.DataSource = uloge;
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            var form = new MainForm();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }

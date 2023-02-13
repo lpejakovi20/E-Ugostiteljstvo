@@ -32,5 +32,13 @@ namespace E_ugostiteljstvo
             form.ShowDialog();
             Close();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            var form = new MainForm();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }

@@ -106,5 +106,13 @@ namespace E_ugostiteljstvo
                 MessageBox.Show("Nije unešena niti jedna stavka!");
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            var form = new FrmKatalogNamirnica();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }
