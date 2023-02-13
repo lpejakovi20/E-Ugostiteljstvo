@@ -98,7 +98,11 @@ namespace E_ugostiteljstvo
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            if (txtKolicina.Text == "")
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Potrebno je skenirati QR kod nammirnice!");
+            }
+            else if (txtKolicina.Text == "")
             {
                 MessageBox.Show("Potrebno je unijeti količinu!");
             }
