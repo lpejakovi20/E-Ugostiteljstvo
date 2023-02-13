@@ -115,6 +115,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stavke Izdatnice";
             this.Load += new System.EventHandler(this.FrmStavkeIzdatnice_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmStavkeIzdatnice_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavkeIzdatnice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

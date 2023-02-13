@@ -15,6 +15,7 @@ namespace E_ugostiteljstvo
         public FrmIzbornikRacunovodstvo()
         {
             InitializeComponent();
+            this.HelpRequested += FrmIzbornikRacunovodstvo_HelpRequested;
         }
 
         private void btnPregledNarudzbenica_Click(object sender, EventArgs e)
@@ -47,6 +48,11 @@ namespace E_ugostiteljstvo
             
             form.ShowDialog();
             
+        }
+
+        private void FrmIzbornikRacunovodstvo_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "IzbornikRacunovodstva");
         }
     }
 }

@@ -259,6 +259,7 @@
             this.Name = "FrmDodajNamirnicuUKatalog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj Namirnicu U Katalog";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmDodajNamirnicuUKatalog_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.pcbQR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

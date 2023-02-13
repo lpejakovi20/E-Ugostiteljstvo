@@ -26,6 +26,7 @@ namespace E_ugostiteljstvo
         {
             InitializeComponent();
             SelektiranaNarudzbenica = _narudzbenica;
+            this.HelpRequested += FrmStavkeNarudzbenice_HelpRequested;
         }
 
         
@@ -93,6 +94,11 @@ namespace E_ugostiteljstvo
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void FrmStavkeNarudzbenice_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "PregledStavkiNarudzbenice");
         }
     }
 }

@@ -89,6 +89,7 @@
             this.Name = "FrmIzbornikRacunovodstvo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Računovodstvo";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmIzbornikRacunovodstvo_HelpRequested);
             this.ResumeLayout(false);
 
         }

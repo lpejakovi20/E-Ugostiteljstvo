@@ -112,6 +112,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stavke Narudžbenice";
             this.Load += new System.EventHandler(this.FrmStavkeNarudzbenice_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmStavkeNarudzbenice_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavkeNarudzbenice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

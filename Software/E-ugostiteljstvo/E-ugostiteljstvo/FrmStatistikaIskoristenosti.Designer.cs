@@ -49,7 +49,6 @@
             this.label1.Size = new System.Drawing.Size(244, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Namirnice kojima je istekao rok trajanja:";
-            
             // 
             // dgvNamirniceIstekaoRok
             // 
@@ -60,7 +59,6 @@
             this.dgvNamirniceIstekaoRok.RowTemplate.Height = 24;
             this.dgvNamirniceIstekaoRok.Size = new System.Drawing.Size(724, 262);
             this.dgvNamirniceIstekaoRok.TabIndex = 1;
-            
             // 
             // label2
             // 
@@ -70,7 +68,6 @@
             this.label2.Size = new System.Drawing.Size(285, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Sveukupna vrijednost neiskorištenih namirnica:";
-            
             // 
             // txtSveukupnaVrijednost
             // 
@@ -78,7 +75,6 @@
             this.txtSveukupnaVrijednost.Name = "txtSveukupnaVrijednost";
             this.txtSveukupnaVrijednost.Size = new System.Drawing.Size(115, 22);
             this.txtSveukupnaVrijednost.TabIndex = 3;
-           
             // 
             // label3
             // 
@@ -88,7 +84,6 @@
             this.label3.Size = new System.Drawing.Size(146, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Iskorištenost namirnica:";
-            
             // 
             // label4
             // 
@@ -98,7 +93,6 @@
             this.label4.Size = new System.Drawing.Size(54, 16);
             this.label4.TabIndex = 5;
             this.label4.Text = "Mjesec:";
-            
             // 
             // cmbMjesec
             // 
@@ -118,7 +112,6 @@
             this.dgvIskoristenostNamirnica.RowTemplate.Height = 24;
             this.dgvIskoristenostNamirnica.Size = new System.Drawing.Size(721, 291);
             this.dgvIskoristenostNamirnica.TabIndex = 8;
-          
             // 
             // btnBack
             // 
@@ -151,6 +144,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Statistika Iskorištenosti";
             this.Load += new System.EventHandler(this.FrmStatistikaIskoristenosti_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmStatistikaIskoristenosti_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirniceIstekaoRok)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIskoristenostNamirnica)).EndInit();
             this.ResumeLayout(false);

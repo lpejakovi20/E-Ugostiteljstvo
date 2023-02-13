@@ -126,7 +126,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(144, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 39);
+            this.label4.Size = new System.Drawing.Size(117, 38);
             this.label4.TabIndex = 9;
             this.label4.Text = "Prijava";
             // 
@@ -150,6 +150,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.MainForm_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -21,6 +21,7 @@ namespace E_ugostiteljstvo
         public FrmDodajStavkuIzdatnice()
         {
             InitializeComponent();
+            this.HelpRequested += FrmDodajStavkuIzdatnice_HelpRequested;
         }
 
         FilterInfoCollection filterInfoCollection;
@@ -157,6 +158,11 @@ namespace E_ugostiteljstvo
         {
             Hide();
             Close();
+        }
+
+        private void FrmDodajStavkuIzdatnice_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "DodajStavkuIzdatnice");
         }
     }
 }

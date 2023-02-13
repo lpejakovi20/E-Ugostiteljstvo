@@ -25,6 +25,7 @@ namespace E_ugostiteljstvo
         private void FrmNarudzbenice_Load(object sender, EventArgs e)
         {
             PrikaziNarudzbenice();
+            this.HelpRequested += FrmNarudzbenice_HelpRequested;
 
         }
 
@@ -119,6 +120,11 @@ namespace E_ugostiteljstvo
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void FrmNarudzbenice_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "PregledNarudzbenica");
         }
     }
 }

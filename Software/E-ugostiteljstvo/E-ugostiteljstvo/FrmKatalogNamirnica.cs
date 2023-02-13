@@ -20,6 +20,7 @@ namespace E_ugostiteljstvo
         public FrmKatalogNamirnica()
         {
             InitializeComponent();
+            this.HelpRequested += FrmKatalogNamirnica_HelpRequested;
         }
 
         private void FrmKatalogNamirnica_Load(object sender, EventArgs e)
@@ -203,6 +204,11 @@ namespace E_ugostiteljstvo
                 dgvNamirniceUSkladistu.Columns[3].Visible = false;
                 dgvNamirniceUSkladistu.Columns[4].Visible = false;
             }
+        }
+
+        private void FrmKatalogNamirnica_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "KatalogNamirnica");
         }
     }
 }

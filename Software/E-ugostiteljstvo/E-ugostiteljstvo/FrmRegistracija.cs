@@ -31,6 +31,7 @@ namespace E_ugostiteljstvo
         {
             InitializeComponent();
             txtLozinka.PasswordChar = '*';
+            this.HelpRequested += FrmRegistracija_HelpRequested;
         }
 
         private void btnSlikaj_Click(object sender, EventArgs e)
@@ -162,6 +163,11 @@ namespace E_ugostiteljstvo
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void FrmRegistracija_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "Registracija");
         }
     }
 }

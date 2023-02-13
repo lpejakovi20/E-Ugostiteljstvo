@@ -18,6 +18,7 @@ namespace E_ugostiteljstvo
         public FrmStavkeIzdatnice()
         {
             InitializeComponent();
+            this.HelpRequested += FrmStavkeIzdatnice_HelpRequested;
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)
@@ -113,6 +114,11 @@ namespace E_ugostiteljstvo
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void FrmStavkeIzdatnice_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "StavkeIzdatnice");
         }
     }
 }

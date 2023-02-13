@@ -23,6 +23,7 @@ namespace E_ugostiteljstvo
         public FrmKreirajNarudžbenicu()
         {
             InitializeComponent();
+            this.HelpRequested += FrmKreirajNarudžbenicu_HelpRequested;
         }
 
         private void FrmKreirajNarudžbenicu_Load(object sender, EventArgs e)
@@ -192,6 +193,12 @@ namespace E_ugostiteljstvo
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void FrmKreirajNarudžbenicu_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+
+            Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "Narudzbenica");
         }
     }
 }

@@ -219,6 +219,7 @@
             this.Text = "Dodaj Stavku Izdatnice";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDodajStavkuIzdatnice_FormClosing);
             this.Load += new System.EventHandler(this.FrmDodajStavkuIzdatnice_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmDodajStavkuIzdatnice_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

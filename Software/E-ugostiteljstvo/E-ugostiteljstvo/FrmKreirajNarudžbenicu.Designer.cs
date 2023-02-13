@@ -190,6 +190,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kreiraj Narudžbenicu";
             this.Load += new System.EventHandler(this.FrmKreirajNarudžbenicu_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmKreirajNarudžbenicu_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudžbenica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirnice)).EndInit();
             this.ResumeLayout(false);

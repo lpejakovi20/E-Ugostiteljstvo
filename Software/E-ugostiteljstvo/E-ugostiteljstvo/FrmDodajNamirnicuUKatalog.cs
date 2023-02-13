@@ -25,6 +25,7 @@ namespace E_ugostiteljstvo
         public FrmDodajNamirnicuUKatalog()
         {
             InitializeComponent();
+            this.HelpRequested += FrmDodajNamirnicuUKatalog_HelpRequested;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -123,6 +124,11 @@ namespace E_ugostiteljstvo
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void FrmDodajNamirnicuUKatalog_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "DodajNamirnicuUKatalog");
         }
     }
 }

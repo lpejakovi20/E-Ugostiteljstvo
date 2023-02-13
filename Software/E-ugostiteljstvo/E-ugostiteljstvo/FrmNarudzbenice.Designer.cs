@@ -141,6 +141,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Narudžbenice";
             this.Load += new System.EventHandler(this.FrmNarudzbenice_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmNarudzbenice_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudzbenice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

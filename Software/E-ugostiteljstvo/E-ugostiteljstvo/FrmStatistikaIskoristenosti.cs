@@ -17,6 +17,7 @@ namespace E_ugostiteljstvo
         public FrmStatistikaIskoristenosti()
         {
             InitializeComponent();
+            this.HelpRequested += FrmStatistikaIskoristenosti_HelpRequested;
         }
 
         private void FrmStatistikaIskoristenosti_Load(object sender, EventArgs e)
@@ -71,6 +72,9 @@ namespace E_ugostiteljstvo
             Close();
         }
 
-        
+        private void FrmStatistikaIskoristenosti_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "Statistika");
+        }
     }
 }

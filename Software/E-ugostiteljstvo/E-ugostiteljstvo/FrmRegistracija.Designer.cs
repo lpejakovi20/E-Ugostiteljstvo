@@ -215,6 +215,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registracija";
             this.Load += new System.EventHandler(this.FrmRegistracija_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmRegistracija_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.pcbSlika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

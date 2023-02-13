@@ -226,6 +226,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Katalog Namirnica";
             this.Load += new System.EventHandler(this.FrmKatalogNamirnica_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.FrmKatalogNamirnica_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKatalogNamirnica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirniceUSkladistu)).EndInit();
             this.ResumeLayout(false);
