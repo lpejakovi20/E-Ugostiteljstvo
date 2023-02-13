@@ -39,7 +39,8 @@ namespace E_ugostiteljstvo
             dgvKatalogNamirnica.Columns[11].Visible = false;
             dgvKatalogNamirnica.Columns[12].Visible = false;
 
-            
+            cmbFilters.SelectedIndex = -1;
+            cmbSort.SelectedIndex = -1;
 
         }
 
@@ -52,8 +53,7 @@ namespace E_ugostiteljstvo
             dgvKatalogNamirnica.DataSource = bindingSource;
 
 
-            Filtered(cmbFilters.SelectedIndex);
-            cmbFilters.SelectedIndex = -1;
+         
         }
 
         private void Filtered(int optionIndex)
@@ -89,11 +89,6 @@ namespace E_ugostiteljstvo
 
             ShowKatalogNamirnica();
 
-        }
-
-        private void btnSort_Click(object sender, EventArgs e)
-        {
-            Sort(cmbSort.SelectedIndex);
         }
 
         private void Sort(int selectedIndex)
@@ -172,9 +167,34 @@ namespace E_ugostiteljstvo
             Close();
         }
 
-        private void dgvKatalogNamirnica_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            int selectedRowIndex = e.RowIndex;
+            var form = new MainForm();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
+
+        private void cmbSort_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            Sort(cmbSort.SelectedIndex);
+            
+        }
+
+        private void cmbFilters_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbFilters.SelectedIndex >= 0)
+            {
+                Filtered(cmbFilters.SelectedIndex);
+                
+            }
+        }
+
+        private void dgvKatalogNamirnica_SelectionChanged(object sender, EventArgs e)
+        {
+            int selectedRowIndex = dgvKatalogNamirnica.CurrentRow.Index;
             if (selectedRowIndex >= 0)
             {
                 var selectedNamirnica = dgvKatalogNamirnica.CurrentRow.DataBoundItem as namirnica_u_katalogu;
@@ -182,7 +202,6 @@ namespace E_ugostiteljstvo
                 dgvNamirniceUSkladistu.DataSource = namirniceSkladiste;
                 dgvNamirniceUSkladistu.Columns[3].Visible = false;
                 dgvNamirniceUSkladistu.Columns[4].Visible = false;
-
             }
         }
     }

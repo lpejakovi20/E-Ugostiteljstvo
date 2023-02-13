@@ -112,5 +112,13 @@ namespace E_ugostiteljstvo
             var frmIzvjestaj = new FrmIzvjestajNarudzbenica(selektiranaNarudzbenica);
             frmIzvjestaj.ShowDialog();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            var form = new FrmIzbornikRacunovodstvo();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }

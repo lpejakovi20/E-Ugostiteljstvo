@@ -21,6 +21,8 @@ namespace E_ugostiteljstvo
 
         private void FrmStatistikaIskoristenosti_Load(object sender, EventArgs e)
         {
+            txtSveukupnaVrijednost.Enabled = false;
+
             var servis = new NamirnicaServices();
             var listaNamirnica = servis.GetNamirniceIstecenogRoka();
 
@@ -60,5 +62,15 @@ namespace E_ugostiteljstvo
                 dgvIskoristenostNamirnica.Columns["namirnica_u_katalogu_id"].HeaderText = "namirnica_id";
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            var form = new FrmIzbornikRacunovodstvo();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
+
+        
     }
 }

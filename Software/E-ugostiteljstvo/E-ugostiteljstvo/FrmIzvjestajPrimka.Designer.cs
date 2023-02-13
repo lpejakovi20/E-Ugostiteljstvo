@@ -33,16 +33,32 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.narudzbenicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.namirnicaukataloguBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.zaposlenikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.namirnicanarudzbenicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.narudzbenicaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.namirnicaukataloguBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.namirnicanarudzbenicaBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // narudzbenicaBindingSource
+            // 
+            this.narudzbenicaBindingSource.DataSource = typeof(EntitiesLayer.Entities.narudzbenica);
+            // 
+            // namirnicaukataloguBindingSource
+            // 
+            this.namirnicaukataloguBindingSource.DataSource = typeof(EntitiesLayer.Entities.namirnica_u_katalogu);
+            // 
+            // zaposlenikBindingSource
+            // 
+            this.zaposlenikBindingSource.DataSource = typeof(EntitiesLayer.Entities.zaposlenik);
+            // 
+            // namirnicanarudzbenicaBindingSource
+            // 
+            this.namirnicanarudzbenicaBindingSource.DataSource = typeof(EntitiesLayer.Entities.namirnica_narudzbenica);
             // 
             // reportViewer1
             // 
@@ -66,22 +82,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(892, 511);
             this.reportViewer1.TabIndex = 0;
             // 
-            // narudzbenicaBindingSource
-            // 
-            this.narudzbenicaBindingSource.DataSource = typeof(EntitiesLayer.Entities.narudzbenica);
-            // 
-            // namirnicaukataloguBindingSource
-            // 
-            this.namirnicaukataloguBindingSource.DataSource = typeof(EntitiesLayer.Entities.namirnica_u_katalogu);
-            // 
-            // zaposlenikBindingSource
-            // 
-            this.zaposlenikBindingSource.DataSource = typeof(EntitiesLayer.Entities.zaposlenik);
-            // 
-            // namirnicanarudzbenicaBindingSource
-            // 
-            this.namirnicanarudzbenicaBindingSource.DataSource = typeof(EntitiesLayer.Entities.namirnica_narudzbenica);
-            // 
             // FrmIzvjestajPrimka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -89,7 +89,8 @@
             this.ClientSize = new System.Drawing.Size(892, 511);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FrmIzvjestajPrimka";
-            this.Text = "FrmIzvjestajPrimka";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Izvještaj Primka";
             this.Load += new System.EventHandler(this.FrmIzvjestajPrimka_Load);
             ((System.ComponentModel.ISupportInitialize)(this.narudzbenicaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.namirnicaukataloguBindingSource)).EndInit();

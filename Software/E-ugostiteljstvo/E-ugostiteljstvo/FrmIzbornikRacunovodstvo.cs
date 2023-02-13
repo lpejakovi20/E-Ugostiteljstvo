@@ -33,6 +33,14 @@ namespace E_ugostiteljstvo
             Close();
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            var form = new MainForm();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             var form = new FrmIzvjestajBlizuRok();

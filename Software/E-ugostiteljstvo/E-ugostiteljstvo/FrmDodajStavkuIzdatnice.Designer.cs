@@ -51,6 +51,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(80, 65);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(402, 270);
@@ -160,7 +161,7 @@
             // 
             // btnStartScan
             // 
-            this.btnStartScan.Location = new System.Drawing.Point(213, 345);
+            this.btnStartScan.Location = new System.Drawing.Point(213, 352);
             this.btnStartScan.Name = "btnStartScan";
             this.btnStartScan.Size = new System.Drawing.Size(130, 29);
             this.btnStartScan.TabIndex = 14;
@@ -194,7 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 435);
             this.Controls.Add(this.lblCam);
             this.Controls.Add(this.cboDevices);
             this.Controls.Add(this.btnStartScan);
@@ -211,8 +212,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FrmDodajStavkuIzdatnice";
-            this.Text = "FrmDodajStavkuIzdatnice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dodaj Stavku Izdatnice";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDodajStavkuIzdatnice_FormClosing);
             this.Load += new System.EventHandler(this.FrmDodajStavkuIzdatnice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

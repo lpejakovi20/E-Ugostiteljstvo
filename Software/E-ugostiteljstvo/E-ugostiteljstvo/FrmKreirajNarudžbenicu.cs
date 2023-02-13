@@ -185,5 +185,13 @@ namespace E_ugostiteljstvo
             dgvNarudžbenica.DataSource = dohvaceneStavke;
 
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            var form = new FrmKatalogNamirnica();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }
