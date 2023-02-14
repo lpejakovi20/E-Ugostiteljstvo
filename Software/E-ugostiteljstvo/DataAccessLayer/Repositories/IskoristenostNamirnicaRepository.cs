@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
+    ///<author>Lovro Pejaković</author>
     public class IskoristenostNamirnicaRepository : Repository<iskoristenost_namirnice>
     {
         public IskoristenostNamirnicaRepository() : base(new DBModel())

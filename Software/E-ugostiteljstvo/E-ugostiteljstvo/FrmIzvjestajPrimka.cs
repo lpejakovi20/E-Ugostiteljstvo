@@ -12,6 +12,7 @@ using EntitiesLayer.Entities;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Lovro Pejaković</author>
     public partial class FrmIzvjestajPrimka : Form
     {
         private narudzbenica SelektiranaNarudzbenica;

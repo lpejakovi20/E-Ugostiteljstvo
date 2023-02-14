@@ -14,6 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Nikola Parag</author>
     public partial class FrmKatalogNamirnica : Form
     {
         private KatalogNamirnicaServices services = new KatalogNamirnicaServices();

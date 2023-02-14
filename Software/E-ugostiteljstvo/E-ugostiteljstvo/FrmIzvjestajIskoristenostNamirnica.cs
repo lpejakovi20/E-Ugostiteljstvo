@@ -11,6 +11,7 @@ using BusinessLogicLayer.Services;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Lovro Pejaković</author>
     public partial class FrmIzvjestajIskoristenostNamirnica : Form
     {
         private int idZaposlenika;

@@ -13,6 +13,7 @@ using System.Windows.Forms;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Lovro Pejaković</author>
     public partial class FrmIzvjestajIzdatnica : Form
     {
         public FrmIzvjestajIzdatnica()

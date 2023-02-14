@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
+    ///<author>Lovro Pejaković, Matej Ritoša, Nikola Parag</author>
     public abstract class Repository<T> : IDisposable where T : class
     {
         protected DBModel Context { get; set; }

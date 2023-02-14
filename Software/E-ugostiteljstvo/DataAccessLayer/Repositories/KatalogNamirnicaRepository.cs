@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
+    ///<author>Nikola Parag</author>
     public class KatalogNamirnicaRepository : Repository<namirnica_u_katalogu>
     {
         public KatalogNamirnicaRepository() : base(new DBModel())
@@ -47,11 +48,6 @@ namespace DataAccessLayer.Repositories
                         select p;
             return query;
         }
-
-      
-
-
-
 
         public IQueryable<namirnica_u_katalogu> GetKatalogNamirnicaByName(string phrase)
         {

@@ -5,7 +5,7 @@ namespace EntitiesLayer.Entities
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-
+    ///<author>Lovro Pejakoviæ</author>
     public partial class iskoristenost_namirnice
     {
         public int id { get; set; }

@@ -12,6 +12,7 @@ using EntitiesLayer;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Matej Ritoša</author>
     public partial class MainForm : Form
     {
         public MainForm()

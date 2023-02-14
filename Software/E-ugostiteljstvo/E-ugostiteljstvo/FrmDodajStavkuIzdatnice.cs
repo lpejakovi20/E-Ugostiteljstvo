@@ -16,6 +16,7 @@ using ZXing;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Lovro Pejaković</author>
     public partial class FrmDodajStavkuIzdatnice : Form
     {
         public FrmDodajStavkuIzdatnice()

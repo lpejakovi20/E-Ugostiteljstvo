@@ -11,6 +11,7 @@ namespace BusinessLogicLayer.Services
 {
     public class IskoristenostNamirnicaServices
     {
+        ///<author>Lovro Pejaković</author>
         public List<StavkaIskoristenostNamirnice> GetIskoristeneNamirniceByMonth(int month, int year)
         {
             using (var repo = new IskoristenostNamirnicaRepository())
@@ -18,6 +19,7 @@ namespace BusinessLogicLayer.Services
                 return repo.GetIskoristeneNamirniceByMonth(month,year).ToList();
             }
         }
+        ///<author>Lovro Pejaković</author>
         public bool UpdateIskoristenostNamirnice(iskoristenost_namirnice nam)
         {
             bool isSuccessful = false;
@@ -28,7 +30,7 @@ namespace BusinessLogicLayer.Services
             }
             return isSuccessful;
         }
-
+        ///<author>Lovro Pejaković</author>
         public bool AddIskoristenostNamirnice(iskoristenost_namirnice _namirnica)
         {
             bool isSuccessful = false;

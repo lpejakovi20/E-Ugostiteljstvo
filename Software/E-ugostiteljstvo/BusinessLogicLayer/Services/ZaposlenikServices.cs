@@ -10,6 +10,7 @@ namespace BusinessLogicLayer.Services
 {
     public class ZaposlenikServices
     {
+        ///<author>Matej Ritoša</author>
         public bool AddZaposlenik(zaposlenik _zaposlenik)
         {
             bool isSuccessful = false;
@@ -20,6 +21,7 @@ namespace BusinessLogicLayer.Services
             }
             return isSuccessful;
         }
+        ///<author>Matej Ritoša</author>
         public List<zaposlenik> GetZaposlenici()
         {
             using (var repo = new ZaposlenikRepository())
@@ -27,7 +29,7 @@ namespace BusinessLogicLayer.Services
                 return repo.GetAll().ToList();
             }
         }
-
+        ///<author>Lovro Pejaković</author>
         public object GetZaposlenikById(int id)
         {
             using (var repo = new ZaposlenikRepository())
@@ -35,7 +37,7 @@ namespace BusinessLogicLayer.Services
                 return repo.GetZaposlenikById(id);
             }
         }
-
+        ///<author>Matej Ritoša</author>
         public zaposlenik GetZaposlenikByEmail(string phrase)
         {
             using (var repo = new ZaposlenikRepository())
@@ -43,6 +45,7 @@ namespace BusinessLogicLayer.Services
                 return repo.GetZaposlenikByEmail(phrase);
             }
         }
+        ///<author>Matej Ritoša</author>
         public zaposlenik GetZaposlenikNarudzbenice(int zaposlenikId)
         {
             using (var repo = new ZaposlenikRepository())

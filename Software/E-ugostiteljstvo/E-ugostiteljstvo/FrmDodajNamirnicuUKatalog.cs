@@ -18,6 +18,7 @@ using EntitiesLayer;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Nikola Parag</author>
     public partial class FrmDodajNamirnicuUKatalog : Form
     {
         int value = 0;

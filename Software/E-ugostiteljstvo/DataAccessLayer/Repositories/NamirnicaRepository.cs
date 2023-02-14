@@ -13,7 +13,7 @@ namespace DataAccessLayer.Repositories
         public NamirnicaRepository() : base(new DBModel())
         {
         }
-
+        ///<author>Lovro Pejaković</author>
         public override int Update(namirnica entity, bool saveChanges = true)
         {
             var namirnicaKatalog = Context.namirnica_u_katalogu.SingleOrDefault(c => c.id == entity.namirnica_u_katalogu_id);
@@ -31,7 +31,7 @@ namespace DataAccessLayer.Repositories
                 return 0;
             }
         }
-
+        ///<author>Nikola Parag</author>
         public IQueryable<namirnica> GetAll(int id)
         {
             var query = from p in Entities.Include("namirnica_u_katalogu")
@@ -39,7 +39,7 @@ namespace DataAccessLayer.Repositories
                         select p;
             return query;
         }
-
+        ///<author>Nikola Parag</author>
         public IQueryable<namirnica> GetNamirniceByKatalogId(int namirnica_id)
         {
             var today = DateTime.Today;
@@ -51,7 +51,7 @@ namespace DataAccessLayer.Repositories
         }
 
 
-
+        ///<author>Lovro Pejaković</author>
         public override int Add(namirnica entity, bool saveChanges = true)
         {
             var namirnicaKatalog = Context.namirnica_u_katalogu.SingleOrDefault(c => c.id == entity.namirnica_u_katalogu_id);
@@ -76,7 +76,7 @@ namespace DataAccessLayer.Repositories
 
         }
 
-
+        ///<author>Nikola Parag</author>
         public IQueryable<StavkaIzvjestajaBlizuRoka> GetNamirniceBlizuRoka()
         {
             var today = DateTime.Today;
@@ -95,7 +95,7 @@ namespace DataAccessLayer.Repositories
                         };
             return query;
         }
-
+        ///<author>Lovro Pejaković</author>
         public IQueryable<dynamic> GetNamirniceIstecenogRoka()
         {
             var today = DateTime.Today;
@@ -117,6 +117,7 @@ namespace DataAccessLayer.Repositories
             
             return result;
         }
+        ///<author>Matej Ritoša</author>
         public IQueryable<StavkaNarudzbenice> GetDostupneKolicineNamirnica()
         {
             var today = DateTime.Today;

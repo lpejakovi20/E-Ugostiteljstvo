@@ -8,6 +8,7 @@ using EntitiesLayer.Entities;
 
 namespace BusinessLogicLayer.Services
 {
+    ///<author>Matej Ritoša</author>
     public class UlogaServices
     {
         public List<uloga> GetUloge()

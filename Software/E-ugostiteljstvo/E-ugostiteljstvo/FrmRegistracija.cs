@@ -17,6 +17,7 @@ using System.IO;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Matej Ritoša</author>
     public partial class FrmRegistracija : Form
     {
         private Capture snimkaLica = null;

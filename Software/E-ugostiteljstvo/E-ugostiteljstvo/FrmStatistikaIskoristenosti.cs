@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Lovro Pejaković</author>
     public partial class FrmStatistikaIskoristenosti : Form
     {
         public FrmStatistikaIskoristenosti()

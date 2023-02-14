@@ -11,6 +11,7 @@ namespace BusinessLogicLayer.Services
 {
     public class NamirnicaServices
     {
+        ///<author>Matej Ritoša</author>
         public List<namirnica> GetAll(int id)
         {
             using (var repo = new NamirnicaRepository())
@@ -18,7 +19,7 @@ namespace BusinessLogicLayer.Services
                 return repo.GetAll(id).ToList();
             }
         }
-
+        ///<author>Lovro Pejaković</author>
         public List<dynamic> GetNamirniceIstecenogRoka()
         {
             using (var repo = new NamirnicaRepository())
@@ -26,7 +27,7 @@ namespace BusinessLogicLayer.Services
                 return repo.GetNamirniceIstecenogRoka().ToList();
             }
         }
-
+        ///<author>Nikola Parag</author>
         public List<namirnica> GetNamirniceUSkladistu(int namirnica_id)
         {
             using (var repo = new NamirnicaRepository())
@@ -34,7 +35,7 @@ namespace BusinessLogicLayer.Services
                 return repo.GetNamirniceByKatalogId(namirnica_id).ToList();
             }
         }
-
+        ///<author>Nikola Parag</author>
         public List<StavkaIzvjestajaBlizuRoka> GetNamirniceBlizuRoka()
         {
             using (var repo = new NamirnicaRepository())
@@ -42,8 +43,7 @@ namespace BusinessLogicLayer.Services
                 return repo.GetNamirniceBlizuRoka().ToList();
             }
         }
-
-
+        ///<author>Matej Ritoša</author>
         public List<StavkaNarudzbenice> GetDostupneKolicineNamirnica()
         {
             using (var repo = new NamirnicaRepository())
@@ -51,6 +51,7 @@ namespace BusinessLogicLayer.Services
                 return repo.GetDostupneKolicineNamirnica().ToList();
             }
         }
+        ///<author>Lovro Pejaković</author>
         public bool UpdateNamirnica(namirnica product)
         {
             bool isSuccessful = false;
@@ -61,7 +62,7 @@ namespace BusinessLogicLayer.Services
             }
             return isSuccessful;
         }
-
+        ///<author>Lovro Pejaković</author>
         public bool AddNamirnica(namirnica _namirnica)
         {
             bool isSuccessful = false;

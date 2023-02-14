@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Nikola Parag</author>
     public partial class FrmIzvjestajBlizuRok : Form
     {
         NamirnicaServices services = new NamirnicaServices();

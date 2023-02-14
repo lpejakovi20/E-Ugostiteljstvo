@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer.Entities
 {
+    ///<author>Lovro Pejaković</author>
     public partial class namirnica
     {
         public override string ToString()

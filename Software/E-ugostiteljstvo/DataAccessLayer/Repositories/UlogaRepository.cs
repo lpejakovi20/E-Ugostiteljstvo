@@ -7,6 +7,7 @@ using EntitiesLayer.Entities;
 
 namespace DataAccessLayer.Repositories
 {
+    ///<author>Matej Ritoša</author>
     public class UlogaRepository : Repository<uloga>
     {
         public UlogaRepository() : base(new DBModel())

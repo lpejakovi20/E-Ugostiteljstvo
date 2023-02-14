@@ -13,6 +13,7 @@ using EntitiesLayer.Entities;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Matej Ritoša</author>
     public partial class FrmKreirajNarudžbenicu : Form
     {
         KatalogNamirnicaServices servisNamirnica = new KatalogNamirnicaServices();

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer
 {
+    ///<author>Lovro Pejaković</author>
     public class StavkaIskoristenostNamirnice
     {
         public int Namirnica_u_katalogu_id { get; set; }

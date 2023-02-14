@@ -8,6 +8,7 @@ using EntitiesLayer.Entities;
 
 namespace BusinessLogicLayer.Services
 {
+    ///<author>Matej Ritoša</author>
     public class NarudzbenicaServices
     {
         public bool AddNarudzbenica(narudzbenica _narudzbenica)

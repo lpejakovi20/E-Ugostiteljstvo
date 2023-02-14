@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace E_ugostiteljstvo
 {
+    ///<author>Lovro Pejaković, Matej Ritoša, Nikola Parag</author>
     public partial class FrmIzbornikRacunovodstvo : Form
     {
         public FrmIzbornikRacunovodstvo()

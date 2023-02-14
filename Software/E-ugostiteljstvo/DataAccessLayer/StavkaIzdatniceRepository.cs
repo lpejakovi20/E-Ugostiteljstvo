@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
+    ///<author>Lovro Pejaković</author>
     public static class StavkaIzdatniceRepository
     {
         public static List<StavkaIzdatnice> lista;
