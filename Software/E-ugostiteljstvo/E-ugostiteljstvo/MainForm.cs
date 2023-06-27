@@ -26,8 +26,8 @@ namespace E_ugostiteljstvo {
         byte[] imageBytes;
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice captureDevice;
-        private const string BaseDirectoryName = "source\\repos\\tkipp-nparag20-mritosa20-lpejakovi20\\Software\\E-ugostiteljstvo\\FaceRec";
-        private const string ModelsDirectoryName = "source\\repos\\tkipp-nparag20-mritosa20-lpejakovi20\\Software\\E-ugostiteljstvo\\E-ugostiteljstvo\\bin\\Debug\\models";
+        private const string BaseDirectoryName = "source\\repos\\rpp22-mritosa20-nparag20-lpejakovi20\\Software\\E-ugostiteljstvo\\FaceRec";
+        private const string ModelsDirectoryName = "source\\repos\\rpp22-mritosa20-nparag20-lpejakovi20\\Software\\E-ugostiteljstvo\\E-ugostiteljstvo\\bin\\Debug\\models";
         private string baseDirectory;
         private string modelsDirectory;
         int departmentCheck;
