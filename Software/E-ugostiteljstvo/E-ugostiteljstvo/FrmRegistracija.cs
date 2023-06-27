@@ -14,160 +14,128 @@ using Emgu.CV.CvEnum;
 using BusinessLogicLayer.Services;
 using EntitiesLayer.Entities;
 using System.IO;
+using DataAccessLayer.Repositories;
+using AForge.Video.DirectShow;
+using AForge.Video;
+using System.Drawing.Imaging;
+using System.Diagnostics.Eventing.Reader;
 
-namespace E_ugostiteljstvo
-{
+namespace E_ugostiteljstvo {
     ///<author>Matej Ritoša</author>
-    public partial class FrmRegistracija : Form
-    {
-        private Capture snimkaLica = null;
-        private Image<Bgr, Byte> currentFrame = null;
-        Mat frame = new Mat();
-        private bool detektiranoLice = false;
-        CascadeClassifier faceCascadeClassifier = new CascadeClassifier("haarcascade_frontalface_alt.xml");
-        Rectangle[] lica;
-        private Image<Bgr, byte> faceImage = null;
+    public partial class FrmRegistracija : Form {
+        byte[] imageBytes;
 
-        public FrmRegistracija()
-        {
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice captureDevice;
+
+        public FrmRegistracija() {
             InitializeComponent();
             txtLozinka.PasswordChar = '*';
             this.HelpRequested += FrmRegistracija_HelpRequested;
         }
 
-        private void btnSlikaj_Click(object sender, EventArgs e)
-        {
-            if (detektiranoLice)
-            {
-                
-                Rectangle lice = lica[0];
+        private void btnSlikaj_Click(object sender, EventArgs e) {
+            pcbSlika2.Image = pcbSlika.Image;
+            Bitmap bitmap = new Bitmap(pcbSlika2.Width, pcbSlika2.Height);
+            pcbSlika2.DrawToBitmap(bitmap, pcbSlika2.ClientRectangle);
 
-
-                faceImage = currentFrame.GetSubRect(lice);
-
-
-                snimkaLica.Stop();
-                detektiranoLice = false;
-
-                MessageBox.Show("Face captured and saved successfully.");
+            using (var stream = new MemoryStream()) {
+                bitmap.Save(stream, ImageFormat.Jpeg);
+                imageBytes = stream.ToArray();
             }
-            else
-            {
-                MessageBox.Show("No face detected. Please try again.");
-            }
+            pcbSlika2.Image = bitmap;
         }
 
-        private void ProcessFrame(object sender, EventArgs e)
-        {
-            snimkaLica.Retrieve(frame, 0);
-            currentFrame = frame.ToImage<Bgr, Byte>().Resize(pcbSlika.Width, pcbSlika.Height, Inter.Cubic);
-            detektiranoLice = true;
-            if (detektiranoLice)
-             {
-                 Mat grayImage = new Mat();
-                 CvInvoke.CvtColor(currentFrame, grayImage, ColorConversion.Bgr2Gray);
 
-
-                 lica = faceCascadeClassifier.DetectMultiScale(grayImage, 1.1, 3, Size.Empty, Size.Empty);
-
-
-                if (lica.Length>0)
-                {
-                    foreach (var lice in lica)
-                    {
-                        CvInvoke.Rectangle(currentFrame, lice, new Bgr(Color.Red).MCvScalar, 2);
-                    }
-                }
-                
-            }
-            
-            
-            pcbSlika.Image = currentFrame.Bitmap;
+        private void btnUkljuci_Click(object sender, EventArgs e) {
+            startCamera();
         }
 
-        private void btnUkljuci_Click(object sender, EventArgs e)
-        {
-            snimkaLica = new Capture();
-            snimkaLica.ImageGrabbed += ProcessFrame;
-            snimkaLica.Start();
+        private void startCamera() {
+            captureDevice = new VideoCaptureDevice(filterInfoCollection[cboDevices.SelectedIndex].MonikerString);
+            captureDevice.NewFrame += Camera_On;
+            captureDevice.Start();
+
         }
 
-        private void btnRegistriraj_Click(object sender, EventArgs e)
-        {
-            MemoryStream memoryStream = new MemoryStream();
-            if (faceImage != null)
-            {
-                faceImage.Bitmap.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Jpeg);
-            }
-            
-            
-            byte[] imageBytes = memoryStream.ToArray();
+        private void Camera_On(object sender, NewFrameEventArgs eventArgs) {
+            pcbSlika.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
 
-            var _zaposlenik = new zaposlenik
-            {
-                ime = txtIme.Text,
-                prezime = txtPrezime.Text,
-                email = txtEmail.Text,
-                lozinka = txtLozinka.Text,
-                uloga = cmbRadnoMjesto.SelectedItem as uloga,
-                slika = imageBytes,
-                
-                
-            };
+        private void btnRegistriraj_Click(object sender, EventArgs e) {
 
-            if (validacijaMail(txtEmail.Text) && txtLozinka.Text.Length >= 6)
-            {
-                var zaposlenikServices = new ZaposlenikServices();
+            var zaposlenikServices = new ZaposlenikServices();
+
+            var provjeraLozinke = zaposlenikServices.PasswordStrenght(txtLozinka.Text);
+            if (!provjeraLozinke) {
+                MessageBox.Show("Lozinka mora sadržavati minimalno 8 znakova, jedno veliko slovo, jedno malo slovo i jedan broj!");
+
+            } else if (!validacijaMail(txtEmail.Text)) {
+                MessageBox.Show("E-mail format nije ispravan!");
+
+            } else if (pcbSlika2.Image == null) {
+                MessageBox.Show("Slika je obavezna!");
+            } else if (txtIme.Text == "") {
+                MessageBox.Show("Ime je obavezno!");
+            } else if (txtPrezime.Text == "") {
+                MessageBox.Show("Prezime je obavezno!");
+            } else {
+                var _zaposlenik = new zaposlenik {
+                    ime = txtIme.Text,
+                    prezime = txtPrezime.Text,
+                    email = txtEmail.Text,
+                    lozinka = txtLozinka.Text,
+                    uloga = cmbRadnoMjesto.SelectedItem as uloga,
+                    slika = imageBytes,
+
+
+                };
                 zaposlenikServices.AddZaposlenik(_zaposlenik);
                 Close();
-            }
-            else
-            {
-                MessageBox.Show("Krivo upisani podaci.");
+                var frmLogin = new MainForm();
+                Hide();
+                frmLogin.ShowDialog();
+                Close();
             }
 
-            var frmLogin = new MainForm();
-            Hide();
-            frmLogin.ShowDialog();
-            Close();
-          
         }
 
-        private bool validacijaMail(string email)
-        {
-            try
-            {
+        private bool validacijaMail(string email) {
+            try {
                 var addr = new System.Net.Mail.MailAddress(email);
                 return addr.Address == email;
-            }
-            catch
-            {
+            } catch {
                 return false;
             }
         }
 
-        private void FrmRegistracija_Load(object sender, EventArgs e)
-        {
+        private void FrmRegistracija_Load(object sender, EventArgs e) {
             UcitajUloge();
+            PostavljanjeIzboraKamere();
         }
 
-        private void UcitajUloge()
-        {
+        private void PostavljanjeIzboraKamere() {
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterInfo in filterInfoCollection) {
+                cboDevices.Items.Add(filterInfo.Name);
+            }
+            cboDevices.SelectedIndex = 0;
+        }
+
+        private void UcitajUloge() {
             var ulogaServices = new UlogaServices();
             var uloge = ulogaServices.GetUloge();
             cmbRadnoMjesto.DataSource = uloge;
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
+        private void btnBack_Click(object sender, EventArgs e) {
             var form = new MainForm();
             Hide();
             form.ShowDialog();
             Close();
         }
 
-        private void FrmRegistracija_HelpRequested(object sender, HelpEventArgs hlpevent)
-        {
+        private void FrmRegistracija_HelpRequested(object sender, HelpEventArgs hlpevent) {
             Help.ShowHelp(this, "..\\..\\HelpCHM\\Help.chm", HelpNavigator.KeywordIndex, "Registracija");
         }
     }

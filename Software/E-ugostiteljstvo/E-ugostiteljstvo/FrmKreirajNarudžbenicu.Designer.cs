@@ -50,6 +50,7 @@
             this.dgvNarudžbenica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNarudžbenica.Location = new System.Drawing.Point(48, 467);
             this.dgvNarudžbenica.Name = "dgvNarudžbenica";
+            this.dgvNarudžbenica.ReadOnly = true;
             this.dgvNarudžbenica.RowHeadersWidth = 51;
             this.dgvNarudžbenica.RowTemplate.Height = 24;
             this.dgvNarudžbenica.Size = new System.Drawing.Size(868, 279);
@@ -60,6 +61,7 @@
             this.dgvNamirnice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNamirnice.Location = new System.Drawing.Point(48, 73);
             this.dgvNamirnice.Name = "dgvNamirnice";
+            this.dgvNamirnice.ReadOnly = true;
             this.dgvNamirnice.RowHeadersWidth = 51;
             this.dgvNamirnice.RowTemplate.Height = 24;
             this.dgvNamirnice.Size = new System.Drawing.Size(868, 279);

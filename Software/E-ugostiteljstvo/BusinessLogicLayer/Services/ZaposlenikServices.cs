@@ -53,5 +53,31 @@ namespace BusinessLogicLayer.Services
                 return repo.GetZaposlenikZaNarzdzbenicu(zaposlenikId);
             }
         }
+        ///<author>Matej Ritoša</author>
+        public bool PasswordStrenght(string password) {
+            if (string.IsNullOrEmpty(password) || password.Length < 8) {
+                return false;
+            }
+
+            bool hasUppercase = false;
+            bool hasLowercase = false;
+            bool hasDigit = false;
+            bool hasSpecialCharacter = false;
+
+            foreach (char c in password) {
+                if (char.IsUpper(c)) {
+                    hasUppercase = true;
+                } else if (char.IsLower(c)) {
+                    hasLowercase = true;
+                } else if (char.IsDigit(c)) {
+                    hasDigit = true;
+                } else if (!char.IsLetterOrDigit(c)) {
+                    hasSpecialCharacter = true;
+                }
+            }
+
+            return hasUppercase && hasLowercase && hasDigit && hasSpecialCharacter;
+
+        }
     }
 }
