@@ -53,6 +53,7 @@
             this.dgvNarudzbenice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNarudzbenice.Location = new System.Drawing.Point(35, 103);
             this.dgvNarudzbenice.Name = "dgvNarudzbenice";
+            this.dgvNarudzbenice.ReadOnly = true;
             this.dgvNarudzbenice.RowHeadersWidth = 51;
             this.dgvNarudzbenice.RowTemplate.Height = 24;
             this.dgvNarudzbenice.Size = new System.Drawing.Size(743, 243);
@@ -70,6 +71,7 @@
             // 
             // cmbSortiraj
             // 
+            this.cmbSortiraj.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSortiraj.FormattingEnabled = true;
             this.cmbSortiraj.Items.AddRange(new object[] {
             "Datumu kreiranja",

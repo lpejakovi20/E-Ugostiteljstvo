@@ -33,7 +33,7 @@ namespace BusinessLogicLayer.Services
         {
             using (var repo = new NarudzbenicaRepository())
             {
-                return repo.GetAll().OrderBy(x => x.datum_kreiranja).ToList();
+                return repo.GetAll().OrderByDescending(x => x.datum_kreiranja).ToList();
             }
         }
         public List<narudzbenica> SortirajPoBrojuStavkiNajmanji()

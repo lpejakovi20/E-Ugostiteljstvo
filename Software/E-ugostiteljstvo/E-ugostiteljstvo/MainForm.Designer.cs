@@ -119,7 +119,7 @@
             // 
             // txtLozinka
             // 
-            this.txtLozinka.Location = new System.Drawing.Point(649, 170);
+            this.txtLozinka.Location = new System.Drawing.Point(649, 173);
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(196, 22);
             this.txtLozinka.TabIndex = 8;
