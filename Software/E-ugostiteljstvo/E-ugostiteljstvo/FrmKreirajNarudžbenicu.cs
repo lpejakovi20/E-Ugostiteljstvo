@@ -71,25 +71,29 @@ namespace E_ugostiteljstvo
             }
             else
             {
-                var selektiranaNamirnica = dgvNamirnice.CurrentRow.DataBoundItem as namirnica_u_katalogu;
-                StavkaNarudzbenice novaStavka = new StavkaNarudzbenice
-                {
+                if (!int.TryParse(txtKolicina.Text, out int kolicina)) {
+                    MessageBox.Show("Unesena vrijednost nije validan broj!");
+                } else {
+                    var selektiranaNamirnica = dgvNamirnice.CurrentRow.DataBoundItem as namirnica_u_katalogu;
+                    StavkaNarudzbenice novaStavka = new StavkaNarudzbenice {
 
-                   Id = selektiranaNamirnica.id,
-                   Naziv = selektiranaNamirnica.naziv,
-                   Vrsta = selektiranaNamirnica.vrsta,
-                   Kolicina = Int32.Parse(txtKolicina.Text),
-                   MjernaJedinica = selektiranaNamirnica.mjerna_jedinica,
-                  Cijena =  selektiranaNamirnica.cijena,
-                  Iznos =  selektiranaNamirnica.cijena * Int32.Parse(txtKolicina.Text)
-                };
+                        Id = selektiranaNamirnica.id,
+                        Naziv = selektiranaNamirnica.naziv,
+                        Vrsta = selektiranaNamirnica.vrsta,
+                        Kolicina = Int32.Parse(txtKolicina.Text),
+                        MjernaJedinica = selektiranaNamirnica.mjerna_jedinica,
+                        Cijena = selektiranaNamirnica.cijena,
+                        Iznos = selektiranaNamirnica.cijena * Int32.Parse(txtKolicina.Text)
+                    };
 
-               
-               
+
+
+
+                    dohvaceneStavke.Add(novaStavka);
+                    OsvjeziStavkeNarudzbenice();
+                    txtKolicina.Text = "";
+                }
                 
-                dohvaceneStavke.Add(novaStavka);
-                OsvjeziStavkeNarudzbenice();
-                txtKolicina.Text = "";
             }
             
 

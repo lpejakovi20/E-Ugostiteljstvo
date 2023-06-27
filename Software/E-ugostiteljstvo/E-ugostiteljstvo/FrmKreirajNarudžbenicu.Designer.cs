@@ -37,10 +37,10 @@
             this.txtTraži = new System.Windows.Forms.TextBox();
             this.btnMakni = new System.Windows.Forms.Button();
             this.txtKolicina = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblKolicina = new System.Windows.Forms.Label();
             this.btnOdustani = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNamirniceUKatalogu = new System.Windows.Forms.Label();
+            this.lblStavkeNarudzbenice = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudžbenica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNamirnice)).BeginInit();
             this.SuspendLayout();
@@ -131,14 +131,14 @@
             this.txtKolicina.Size = new System.Drawing.Size(56, 22);
             this.txtKolicina.TabIndex = 8;
             // 
-            // label1
+            // lblKolicina
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(695, 378);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Količina:";
+            this.lblKolicina.AutoSize = true;
+            this.lblKolicina.Location = new System.Drawing.Point(695, 378);
+            this.lblKolicina.Name = "lblKolicina";
+            this.lblKolicina.Size = new System.Drawing.Size(57, 16);
+            this.lblKolicina.TabIndex = 9;
+            this.lblKolicina.Text = "Količina:";
             // 
             // btnOdustani
             // 
@@ -150,33 +150,33 @@
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
-            // label2
+            // lblNamirniceUKatalogu
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 16);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Namirnice iz kataloga:";
+            this.lblNamirniceUKatalogu.AutoSize = true;
+            this.lblNamirniceUKatalogu.Location = new System.Drawing.Point(45, 36);
+            this.lblNamirniceUKatalogu.Name = "lblNamirniceUKatalogu";
+            this.lblNamirniceUKatalogu.Size = new System.Drawing.Size(139, 16);
+            this.lblNamirniceUKatalogu.TabIndex = 11;
+            this.lblNamirniceUKatalogu.Text = "Namirnice iz kataloga:";
             // 
-            // label3
+            // lblStavkeNarudzbenice
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 431);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Stavke u narudžbenici:";
+            this.lblStavkeNarudzbenice.AutoSize = true;
+            this.lblStavkeNarudzbenice.Location = new System.Drawing.Point(45, 431);
+            this.lblStavkeNarudzbenice.Name = "lblStavkeNarudzbenice";
+            this.lblStavkeNarudzbenice.Size = new System.Drawing.Size(141, 16);
+            this.lblStavkeNarudzbenice.TabIndex = 12;
+            this.lblStavkeNarudzbenice.Text = "Stavke u narudžbenici:";
             // 
             // FrmKreirajNarudžbenicu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(996, 875);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblStavkeNarudzbenice);
+            this.Controls.Add(this.lblNamirniceUKatalogu);
             this.Controls.Add(this.btnOdustani);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblKolicina);
             this.Controls.Add(this.txtKolicina);
             this.Controls.Add(this.btnMakni);
             this.Controls.Add(this.txtTraži);
@@ -211,9 +211,9 @@
         private System.Windows.Forms.TextBox txtTraži;
         private System.Windows.Forms.Button btnMakni;
         private System.Windows.Forms.TextBox txtKolicina;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblKolicina;
         private System.Windows.Forms.Button btnOdustani;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNamirniceUKatalogu;
+        private System.Windows.Forms.Label lblStavkeNarudzbenice;
     }
 }

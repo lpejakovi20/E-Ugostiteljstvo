@@ -80,10 +80,10 @@ namespace E_ugostiteljstvo {
         }
 
         private void btnCapture_Click(object sender, EventArgs e) {
-            startCamera();
+            StartCamera();
         }
 
-        private void startCamera() {
+        private void StartCamera() {
             captureDevice = new VideoCaptureDevice(filterInfoCollection[cboDevices.SelectedIndex].MonikerString);
             captureDevice.NewFrame += Camera_On;
             captureDevice.Start();

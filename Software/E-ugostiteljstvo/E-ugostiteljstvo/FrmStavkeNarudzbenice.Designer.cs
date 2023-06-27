@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblStavkeNarudzbenice = new System.Windows.Forms.Label();
             this.dgvStavkeNarudzbenice = new System.Windows.Forms.DataGridView();
             this.lblSveukupanIznos = new System.Windows.Forms.Label();
             this.btnIzradiPrimku = new System.Windows.Forms.Button();
@@ -37,14 +37,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavkeNarudzbenice)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblStavkeNarudzbenice
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Stavke narudžbenice:";
+            this.lblStavkeNarudzbenice.AutoSize = true;
+            this.lblStavkeNarudzbenice.Location = new System.Drawing.Point(41, 66);
+            this.lblStavkeNarudzbenice.Name = "lblStavkeNarudzbenice";
+            this.lblStavkeNarudzbenice.Size = new System.Drawing.Size(136, 16);
+            this.lblStavkeNarudzbenice.TabIndex = 0;
+            this.lblStavkeNarudzbenice.Text = "Stavke narudžbenice:";
             // 
             // dgvStavkeNarudzbenice
             // 
@@ -105,7 +105,7 @@
             this.Controls.Add(this.btnIzradiPrimku);
             this.Controls.Add(this.lblSveukupanIznos);
             this.Controls.Add(this.dgvStavkeNarudzbenice);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblStavkeNarudzbenice);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmStavkeNarudzbenice";
@@ -121,7 +121,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblStavkeNarudzbenice;
         private System.Windows.Forms.DataGridView dgvStavkeNarudzbenice;
         private System.Windows.Forms.Label lblSveukupanIznos;
         private System.Windows.Forms.Button btnIzradiPrimku;

@@ -32,12 +32,12 @@
             this.btnScan = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegistracija = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblOr = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblLozinka = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtLozinka = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.cboDevices = new System.Windows.Forms.ComboBox();
             this.btnCapture = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
@@ -83,32 +83,32 @@
             this.btnRegistracija.UseVisualStyleBackColor = true;
             this.btnRegistracija.Click += new System.EventHandler(this.btnRegistracija_Click_1);
             // 
-            // label1
+            // lblOr
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(469, 282);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "ili";
+            this.lblOr.AutoSize = true;
+            this.lblOr.Location = new System.Drawing.Point(469, 282);
+            this.lblOr.Name = "lblOr";
+            this.lblOr.Size = new System.Drawing.Size(16, 16);
+            this.lblOr.TabIndex = 4;
+            this.lblOr.Text = "ili";
             // 
-            // label2
+            // lblEmail
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(586, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "e-mail:";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(586, 129);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(47, 16);
+            this.lblEmail.TabIndex = 5;
+            this.lblEmail.Text = "e-mail:";
             // 
-            // label3
+            // lblLozinka
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(581, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "lozinka:";
+            this.lblLozinka.AutoSize = true;
+            this.lblLozinka.Location = new System.Drawing.Point(581, 173);
+            this.lblLozinka.Name = "lblLozinka";
+            this.lblLozinka.Size = new System.Drawing.Size(52, 16);
+            this.lblLozinka.TabIndex = 6;
+            this.lblLozinka.Text = "lozinka:";
             // 
             // txtEmail
             // 
@@ -124,15 +124,15 @@
             this.txtLozinka.Size = new System.Drawing.Size(196, 22);
             this.txtLozinka.TabIndex = 8;
             // 
-            // label4
+            // lblTitle
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(430, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 38);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Prijava";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(430, 27);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(117, 38);
+            this.lblTitle.TabIndex = 9;
+            this.lblTitle.Text = "Prijava";
             // 
             // cboDevices
             // 
@@ -160,12 +160,12 @@
             this.ClientSize = new System.Drawing.Size(1002, 596);
             this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.cboDevices);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLozinka);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblOr);
             this.Controls.Add(this.btnRegistracija);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnScan);
@@ -189,12 +189,12 @@
         private System.Windows.Forms.Button btnScan;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnRegistracija;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblOr;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblLozinka;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtLozinka;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ComboBox cboDevices;
         private System.Windows.Forms.Button btnCapture;
     }

@@ -30,7 +30,7 @@
         {
             this.pcbSlika = new System.Windows.Forms.PictureBox();
             this.btnSlikaj = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.cmbRadnoMjesto = new System.Windows.Forms.ComboBox();
             this.btnRegistriraj = new System.Windows.Forms.Button();
             this.btnUkljuci = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblRegistracija = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.pcbSlika2 = new System.Windows.Forms.PictureBox();
             this.cboDevices = new System.Windows.Forms.ComboBox();
@@ -70,14 +70,14 @@
             this.btnSlikaj.UseVisualStyleBackColor = true;
             this.btnSlikaj.Click += new System.EventHandler(this.btnSlikaj_Click);
             // 
-            // label1
+            // lblEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(541, 323);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "E-mail";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(541, 323);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(45, 16);
+            this.lblEmail.TabIndex = 2;
+            this.lblEmail.Text = "E-mail";
             // 
             // label2
             // 
@@ -172,15 +172,15 @@
             this.btnUkljuci.UseVisualStyleBackColor = true;
             this.btnUkljuci.Click += new System.EventHandler(this.btnUkljuci_Click);
             // 
-            // label6
+            // lblRegistracija
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(189, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 32);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Registracija";
+            this.lblRegistracija.AutoSize = true;
+            this.lblRegistracija.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistracija.Location = new System.Drawing.Point(189, 63);
+            this.lblRegistracija.Name = "lblRegistracija";
+            this.lblRegistracija.Size = new System.Drawing.Size(164, 32);
+            this.lblRegistracija.TabIndex = 15;
+            this.lblRegistracija.Text = "Registracija";
             // 
             // btnBack
             // 
@@ -219,7 +219,7 @@
             this.Controls.Add(this.cboDevices);
             this.Controls.Add(this.pcbSlika2);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblRegistracija);
             this.Controls.Add(this.btnUkljuci);
             this.Controls.Add(this.btnRegistriraj);
             this.Controls.Add(this.cmbRadnoMjesto);
@@ -231,7 +231,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.btnSlikaj);
             this.Controls.Add(this.pcbSlika);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -252,7 +252,7 @@
 
         private System.Windows.Forms.PictureBox pcbSlika;
         private System.Windows.Forms.Button btnSlikaj;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -264,7 +264,7 @@
         private System.Windows.Forms.ComboBox cmbRadnoMjesto;
         private System.Windows.Forms.Button btnRegistriraj;
         private System.Windows.Forms.Button btnUkljuci;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblRegistracija;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.PictureBox pcbSlika2;
         private System.Windows.Forms.ComboBox cboDevices;

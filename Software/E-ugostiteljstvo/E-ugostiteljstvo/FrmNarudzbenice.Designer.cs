@@ -32,7 +32,7 @@
             this.dgvNarudzbenice = new System.Windows.Forms.DataGridView();
             this.btnOtvori = new System.Windows.Forms.Button();
             this.cmbSortiraj = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSortirajPrema = new System.Windows.Forms.Label();
             this.btnSortiraj = new System.Windows.Forms.Button();
             this.btnIzvjestaj = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
@@ -84,14 +84,14 @@
             this.cmbSortiraj.Size = new System.Drawing.Size(156, 24);
             this.cmbSortiraj.TabIndex = 3;
             // 
-            // label2
+            // lblSortirajPrema
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(439, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Sortiraj prema";
+            this.lblSortirajPrema.AutoSize = true;
+            this.lblSortirajPrema.Location = new System.Drawing.Point(439, 61);
+            this.lblSortirajPrema.Name = "lblSortirajPrema";
+            this.lblSortirajPrema.Size = new System.Drawing.Size(91, 16);
+            this.lblSortirajPrema.TabIndex = 7;
+            this.lblSortirajPrema.Text = "Sortiraj prema";
             // 
             // btnSortiraj
             // 
@@ -132,7 +132,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnIzvjestaj);
             this.Controls.Add(this.btnSortiraj);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblSortirajPrema);
             this.Controls.Add(this.cmbSortiraj);
             this.Controls.Add(this.btnOtvori);
             this.Controls.Add(this.dgvNarudzbenice);
@@ -156,7 +156,7 @@
         private System.Windows.Forms.DataGridView dgvNarudzbenice;
         private System.Windows.Forms.Button btnOtvori;
         private System.Windows.Forms.ComboBox cmbSortiraj;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSortirajPrema;
         private System.Windows.Forms.Button btnSortiraj;
         private System.Windows.Forms.Button btnIzvjestaj;
         private System.Windows.Forms.Button btnBack;

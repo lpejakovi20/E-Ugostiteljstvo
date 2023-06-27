@@ -48,10 +48,10 @@ namespace E_ugostiteljstvo {
 
 
         private void btnUkljuci_Click(object sender, EventArgs e) {
-            startCamera();
+            StartCamera();
         }
 
-        private void startCamera() {
+        private void StartCamera() {
             captureDevice = new VideoCaptureDevice(filterInfoCollection[cboDevices.SelectedIndex].MonikerString);
             captureDevice.NewFrame += Camera_On;
             captureDevice.Start();
@@ -70,7 +70,7 @@ namespace E_ugostiteljstvo {
             if (!provjeraLozinke) {
                 MessageBox.Show("Lozinka mora sadržavati minimalno 8 znakova, jedno veliko slovo, jedno malo slovo i jedan broj!");
 
-            } else if (!validacijaMail(txtEmail.Text)) {
+            } else if (!ValidacijaMail(txtEmail.Text)) {
                 MessageBox.Show("E-mail format nije ispravan!");
 
             } else if (pcbSlika2.Image == null) {
@@ -100,7 +100,7 @@ namespace E_ugostiteljstvo {
 
         }
 
-        private bool validacijaMail(string email) {
+        private bool ValidacijaMail(string email) {
             try {
                 var addr = new System.Net.Mail.MailAddress(email);
                 return addr.Address == email;
