@@ -80,6 +80,7 @@
             // 
             // cmbMjJed
             // 
+            this.cmbMjJed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMjJed.FormattingEnabled = true;
             this.cmbMjJed.Items.AddRange(new object[] {
             "kom",
@@ -196,6 +197,7 @@
             // 
             // cmbVrstanNamirnice
             // 
+            this.cmbVrstanNamirnice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVrstanNamirnice.FormattingEnabled = true;
             this.cmbVrstanNamirnice.Items.AddRange(new object[] {
             "Mliječni",

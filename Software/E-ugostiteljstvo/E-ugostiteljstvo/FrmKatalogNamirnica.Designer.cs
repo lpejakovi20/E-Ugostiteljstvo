@@ -86,6 +86,7 @@
             // 
             // cmbFilters
             // 
+            this.cmbFilters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFilters.FormattingEnabled = true;
             this.cmbFilters.Items.AddRange(new object[] {
             "Mliječni",
@@ -110,6 +111,7 @@
             this.dgvKatalogNamirnica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKatalogNamirnica.Location = new System.Drawing.Point(42, 136);
             this.dgvKatalogNamirnica.Name = "dgvKatalogNamirnica";
+            this.dgvKatalogNamirnica.ReadOnly = true;
             this.dgvKatalogNamirnica.RowHeadersWidth = 51;
             this.dgvKatalogNamirnica.RowTemplate.Height = 24;
             this.dgvKatalogNamirnica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -119,6 +121,7 @@
             // 
             // cmbSort
             // 
+            this.cmbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSort.FormattingEnabled = true;
             this.cmbSort.Items.AddRange(new object[] {
             "Sortiraj po najkraćem roku",
@@ -156,6 +159,7 @@
             this.dgvNamirniceUSkladistu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNamirniceUSkladistu.Location = new System.Drawing.Point(42, 454);
             this.dgvNamirniceUSkladistu.Name = "dgvNamirniceUSkladistu";
+            this.dgvNamirniceUSkladistu.ReadOnly = true;
             this.dgvNamirniceUSkladistu.RowHeadersWidth = 51;
             this.dgvNamirniceUSkladistu.RowTemplate.Height = 24;
             this.dgvNamirniceUSkladistu.Size = new System.Drawing.Size(497, 235);
